@@ -2,10 +2,29 @@
   "design": {
     "design_info": {
       "boundary_crc": "0x0",
+      "device": "xc7z010clg400-1",
       "name": "aes7",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2018.3"
     },
-    "design_tree": {}
+    "design_tree": {
+      "processing_system7_0": ""
+    },
+    "components": {
+      "processing_system7_0": {
+        "vlnv": "xilinx.com:ip:processing_system7:5.5",
+        "xci_name": "aes7_processing_system7_0_0"
+      }
+    },
+    "addressing": {
+      "/processing_system7_0": {
+        "address_spaces": {
+          "Data": {
+            "range": "4G",
+            "width": "32"
+          }
+        }
+      }
+    }
   }
 }
