@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
---Date        : Tue Dec 18 18:05:12 2018
+--Date        : Tue Dec 18 19:56:04 2018
 --Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 --Command     : generate_target aes7_wrapper.bd
 --Design      : aes7_wrapper
@@ -33,7 +33,9 @@ entity aes7_wrapper is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    rgb : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
 end aes7_wrapper;
 
@@ -60,7 +62,9 @@ architecture STRUCTURE of aes7_wrapper is
     DDR_dm : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 )
+    DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
+    leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    rgb : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component aes7;
 begin
@@ -86,6 +90,8 @@ aes7_i: component aes7
       FIXED_IO_mio(53 downto 0) => FIXED_IO_mio(53 downto 0),
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
-      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb
+      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      leds(3 downto 0) => leds(3 downto 0),
+      rgb(2 downto 0) => rgb(2 downto 0)
     );
 end STRUCTURE;

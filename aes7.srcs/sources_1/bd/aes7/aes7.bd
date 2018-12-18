@@ -1,11 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x8E28C13774B27178",
+      "boundary_crc": "0xCA3A2F2593A17E3B",
       "device": "xc7z010clg400-1",
       "name": "aes7",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2018.3"
+      "tool_version": "2018.3",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -18,17 +19,78 @@
     "interface_ports": {
       "DDR": {
         "mode": "Master",
-        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0"
+        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0",
+        "parameters": {
+          "AXI_ARBITRATION_SCHEME": {
+            "value": "TDM",
+            "value_src": "default"
+          },
+          "BURST_LENGTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "CAS_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CAS_WRITE_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CS_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_MASK_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_WIDTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "MEMORY_TYPE": {
+            "value": "COMPONENTS",
+            "value_src": "default"
+          },
+          "MEM_ADDR_MAP": {
+            "value": "ROW_COLUMN_BANK",
+            "value_src": "default"
+          },
+          "SLOT": {
+            "value": "Single",
+            "value_src": "default"
+          },
+          "TIMEPERIOD_PS": {
+            "value": "1250",
+            "value_src": "default"
+          }
+        }
       },
       "FIXED_IO": {
         "mode": "Master",
-        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0"
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          }
+        }
       }
     },
     "ports": {
       "leds": {
         "direction": "O",
         "left": "3",
+        "right": "0"
+      },
+      "rgb": {
+        "direction": "O",
+        "left": "2",
         "right": "0"
       }
     },
@@ -1061,6 +1123,9 @@
         "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
         "xci_name": "aes7_axi_bram_ctrl_0_0",
         "parameters": {
+          "DATA_WIDTH": {
+            "value": "32"
+          },
           "PROTOCOL": {
             "value": "AXI4"
           },
@@ -1170,7 +1235,17 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "aes7_processing_system7_0_0_FCLK_CLK1",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "1000000",
+                "value_src": "user_prop"
+              }
+            }
           },
           "bram_rst": {
             "type": "rst",
@@ -1197,6 +1272,11 @@
           "leds": {
             "direction": "O",
             "left": "3",
+            "right": "0"
+          },
+          "rgb": {
+            "direction": "O",
+            "left": "2",
             "right": "0"
           }
         }
@@ -1270,12 +1350,6 @@
           "leds"
         ]
       },
-      "axi_bram_ctrl_0_bram_addr_a": {
-        "ports": [
-          "axi_bram_ctrl_0/bram_addr_a",
-          "blk_mem_gen_1/addra"
-        ]
-      },
       "axi_bram_ctrl_0_bram_clk_a": {
         "ports": [
           "axi_bram_ctrl_0/bram_clk_a",
@@ -1340,6 +1414,18 @@
         "ports": [
           "setpointgenerator_0/bram_en",
           "blk_mem_gen_1/enb"
+        ]
+      },
+      "axi_bram_ctrl_0_bram_addr_a": {
+        "ports": [
+          "axi_bram_ctrl_0/bram_addr_a",
+          "blk_mem_gen_1/addra"
+        ]
+      },
+      "setpointgenerator_0_rgb": {
+        "ports": [
+          "setpointgenerator_0/rgb",
+          "rgb"
         ]
       }
     },

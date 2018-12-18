@@ -42,24 +42,29 @@ entity setpointgenerator is
         bram_rst : out std_logic_vector := "0";
         bram_we : out std_logic_vector(3 downto 0) := "0000";
         
-        leds : out std_logic_vector(3 downto 0)
+        leds : out std_logic_vector(3 downto 0);
+        rgb : out std_logic_vector(2 downto 0)
     );
 end setpointgenerator;
 
 architecture Behavioral of setpointgenerator is
     constant base : std_logic_vector(31 downto 0) := "01000000000000000000000000000000"; -- 0x4000_0000
-    constant offset : std_logic_vector(31 downto 0) := x"0";
+    constant offset : std_logic_vector(12 downto 0) := (others => '0');
 begin
     process(clk) is
     begin
         -- Set read address
         if falling_edge(clk) then
             bram_addr <= std_logic_vector(unsigned(offset));
+            rgb(0) <= '1';
+            rgb(2) <= '0';
         end if;
         
         -- Read the data
         if rising_edge(clk) then
             leds <= bram_data(3 downto 0);
+            rgb(0) <= '0';
+            rgb(2) <= '1';
         end if;
     end process;
 end Behavioral;

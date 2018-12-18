@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Dec 18 19:38:50 2018
+# Process ID: 3662
+# Current directory: /media/psf/Home/vivado/aes7/aes7.runs/aes7_axi_smc_0_synth_1
+# Command line: vivado -log aes7_axi_smc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source aes7_axi_smc_0.tcl
+# Log file: /media/psf/Home/vivado/aes7/aes7.runs/aes7_axi_smc_0_synth_1/aes7_axi_smc_0.vds
+# Journal file: /media/psf/Home/vivado/aes7/aes7.runs/aes7_axi_smc_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source aes7_axi_smc_0.tcl -notrace
