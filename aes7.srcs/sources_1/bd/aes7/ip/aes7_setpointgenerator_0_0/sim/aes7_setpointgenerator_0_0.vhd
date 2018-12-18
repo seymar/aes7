@@ -56,7 +56,8 @@ USE ieee.numeric_std.ALL;
 ENTITY aes7_setpointgenerator_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
-    bram_addr : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
+    bram_clk : OUT STD_LOGIC;
+    bram_addr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     bram_data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     bram_en : OUT STD_LOGIC;
     bram_rst : OUT STD_LOGIC;
@@ -72,7 +73,8 @@ ARCHITECTURE aes7_setpointgenerator_0_0_arch OF aes7_setpointgenerator_0_0 IS
   COMPONENT setpointgenerator IS
     PORT (
       clk : IN STD_LOGIC;
-      bram_addr : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
+      bram_clk : OUT STD_LOGIC;
+      bram_addr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       bram_data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       bram_en : OUT STD_LOGIC;
       bram_rst : OUT STD_LOGIC;
@@ -87,12 +89,15 @@ ARCHITECTURE aes7_setpointgenerator_0_0_arch OF aes7_setpointgenerator_0_0 IS
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF bram_rst: SIGNAL IS "XIL_INTERFACENAME bram_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF bram_rst: SIGNAL IS "xilinx.com:signal:reset:1.0 bram_rst RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 1000000, PHASE 0.000, CLK_DOMAIN aes7_processing_system7_0_0_FCLK_CLK1, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF bram_clk: SIGNAL IS "XIL_INTERFACENAME bram_clk, ASSOCIATED_RESET bram_rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN aes7_setpointgenerator_0_0_bram_clk, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF bram_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 bram_clk CLK";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN aes7_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : setpointgenerator
     PORT MAP (
       clk => clk,
+      bram_clk => bram_clk,
       bram_addr => bram_addr,
       bram_data => bram_data,
       bram_en => bram_en,

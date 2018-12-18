@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1545159532">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1545167511">
   <File Type="VDS-TIMING-PB" Name="aes7_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="aes7_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="aes7_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="aes7_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="aes7_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="aes7_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="aes7_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="aes7_wrapper_reports.tcl"/>
   <File Type="PA-TCL" Name="aes7_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="aes7_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="aes7_wrapper.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="aes7_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="aes7_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="aes7_wrapper_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/setpointgenerator.vhd">
@@ -57,15 +57,13 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="aes7_blk_mem_gen_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="aes7_setpointgenerator_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="aes7_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aes7_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="aes7_axi_bram_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="aes7_rst_ps7_0_50M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="aes7_processing_system7_0_0"/>
 </GenRun>

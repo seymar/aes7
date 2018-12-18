@@ -1,0 +1,8 @@
+12:53:27 **** Incremental Build of configuration Debug for project fillmemory ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+
+12:53:27 Build Finished (took 112ms)
+

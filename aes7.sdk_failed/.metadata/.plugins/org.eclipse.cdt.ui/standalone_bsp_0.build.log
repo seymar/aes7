@@ -1,0 +1,6 @@
+11:45:04 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+make: *** No rule to make target 'all'.
+
+11:45:04 Build Finished (took 141ms)
+

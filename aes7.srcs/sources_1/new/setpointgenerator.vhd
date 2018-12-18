@@ -36,7 +36,8 @@ entity setpointgenerator is
     Port (
         clk : in STD_LOGIC;
         
-        bram_addr : out std_logic_vector(12 downto 0);
+        bram_clk : out std_logic;
+        bram_addr : out std_logic_vector(31 downto 0) := (others => '0');
         bram_data : in std_logic_vector(31 downto 0);
         bram_en : out std_logic_vector := "1";
         bram_rst : out std_logic_vector := "0";
@@ -49,22 +50,32 @@ end setpointgenerator;
 
 architecture Behavioral of setpointgenerator is
     constant base : std_logic_vector(31 downto 0) := "01000000000000000000000000000000"; -- 0x4000_0000
-    constant offset : std_logic_vector(12 downto 0) := (others => '0');
+    constant offset : std_logic_vector(31 downto 0) := (others => '0');
+    signal readstate : std_logic := '0';
 begin
+    -- Fix the address to 0
+    -- bram_addr <= std_logic_vector(unsigned(offset));
+    
     process(clk) is
     begin
         -- Set read address
-        if falling_edge(clk) then
-            bram_addr <= std_logic_vector(unsigned(offset));
-            rgb(0) <= '1';
-            rgb(2) <= '0';
-        end if;
-        
-        -- Read the data
-        if rising_edge(clk) then
-            leds <= bram_data(3 downto 0);
-            rgb(0) <= '0';
-            rgb(2) <= '1';
+        if (clk'event and clk = '1')  then
+            if readstate = '0' then
+                bram_clk <= '1';
+                rgb(2) <= '1';
+                rgb(0) <= '0';
+                
+                readstate <= '1';
+            else
+                bram_clk <= '0';
+                rgb(2) <= '0';
+                rgb(0) <= '1';
+                
+                readstate <= '0';
+            end if;
         end if;
     end process;
+    
+    -- Route data to leds
+    leds <= bram_data(3 downto 0);
 end Behavioral;

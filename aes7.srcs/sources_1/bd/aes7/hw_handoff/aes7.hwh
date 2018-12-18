@@ -1,9 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec 18 19:56:07 2018" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec 18 22:09:55 2018" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.0" DEVICE="7z010" NAME="aes7" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
+    <PORT DIR="O" LEFT="3" NAME="leds" RIGHT="0" SIGIS="undef" SIGNAME="setpointgenerator_0_leds">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="setpointgenerator_0" PORT="leds"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="rgb" RIGHT="0" SIGIS="undef" SIGNAME="setpointgenerator_0_rgb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="setpointgenerator_0" PORT="rgb"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
@@ -107,16 +117,6 @@
     <PORT DIR="IO" LEFT="3" NAME="DDR_dqs_p" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_DQS">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DQS"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="leds" RIGHT="0" SIGIS="undef" SIGNAME="setpointgenerator_0_leds">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="setpointgenerator_0" PORT="leds"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="2" NAME="rgb" RIGHT="0" SIGIS="undef" SIGNAME="setpointgenerator_0_rgb">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="setpointgenerator_0" PORT="rgb"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -1548,11 +1548,12 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_rddata_a"/>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_rddata_a"/>
+            <CONNECTION INSTANCE="setpointgenerator_0" PORT="bram_data"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="1000000" DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK1"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rstb" SIGIS="rst" SIGNAME="setpointgenerator_0_bram_rst">
@@ -1576,11 +1577,7 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_1_doutb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="setpointgenerator_0" PORT="bram_data"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="rsta_busy" SIGIS="undef"/>
         <PORT DIR="O" NAME="rstb_busy" SIGIS="undef"/>
       </PORTS>
@@ -2767,14 +2764,11 @@
             <CONNECTION INSTANCE="axi_smc" PORT="aclk"/>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="rst_ps7_0_50M" PORT="slowest_sync_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="1000000" DIR="O" NAME="FCLK_CLK1" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
-          <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="clkb"/>
             <CONNECTION INSTANCE="setpointgenerator_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
+        <PORT CLKFREQUENCY="1000000" DIR="O" NAME="FCLK_CLK1" SIGIS="clk"/>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_ps7_0_50M" PORT="ext_reset_in"/>
@@ -3072,19 +3066,20 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="1000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK1"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="12" NAME="bram_addr" RIGHT="0" SIGIS="undef" SIGNAME="setpointgenerator_0_bram_addr">
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="bram_clk" SIGIS="clk"/>
+        <PORT DIR="O" LEFT="31" NAME="bram_addr" RIGHT="0" SIGIS="undef" SIGNAME="setpointgenerator_0_bram_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="addrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="bram_data" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_1_doutb">
+        <PORT DIR="I" LEFT="31" NAME="bram_data" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_1_douta">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="blk_mem_gen_1" PORT="doutb"/>
+            <CONNECTION INSTANCE="blk_mem_gen_1" PORT="douta"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="bram_en" SIGIS="undef" SIGNAME="setpointgenerator_0_bram_en">

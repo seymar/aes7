@@ -23,33 +23,33 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /media/psf/Home/vivado/aes7/aes7.cache/wt [current_project]
-set_property parent.project_path /media/psf/Home/vivado/aes7/aes7.xpr [current_project]
+set_property webtalk.parent_dir /home/parallels/vivado/aes7/aes7.cache/wt [current_project]
+set_property parent.project_path /home/parallels/vivado/aes7/aes7.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
-set_property ip_output_repo /media/psf/Home/vivado/aes7/aes7.cache/ip [current_project]
+set_property ip_output_repo /home/parallels/vivado/aes7/aes7.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/hdl/aes7_wrapper.vhd
-add_files /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/aes7.bd
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_bram_ctrl_0_0/aes7_axi_bram_ctrl_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_1/bd_5ef8_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_1/bd_5ef8_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_5/bd_5ef8_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_6/bd_5ef8_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_7/bd_5ef8_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_8/bd_5ef8_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_9/bd_5ef8_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_10/bd_5ef8_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_11/bd_5ef8_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_rst_ps7_0_50M_0/aes7_rst_ps7_0_50M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_rst_ps7_0_50M_0/aes7_rst_ps7_0_50M_0.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_rst_ps7_0_50M_0/aes7_rst_ps7_0_50M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_blk_mem_gen_1_0/aes7_blk_mem_gen_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/aes7_ooc.xdc]
+read_vhdl -library xil_defaultlib /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/hdl/aes7_wrapper.vhd
+add_files /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/aes7.bd
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_bram_ctrl_0_0/aes7_axi_bram_ctrl_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_1/bd_5ef8_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_1/bd_5ef8_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_5/bd_5ef8_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_6/bd_5ef8_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_7/bd_5ef8_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_8/bd_5ef8_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_9/bd_5ef8_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_10/bd_5ef8_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_smc_0/bd_0/ip/ip_11/bd_5ef8_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_rst_ps7_0_50M_0/aes7_rst_ps7_0_50M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_rst_ps7_0_50M_0/aes7_rst_ps7_0_50M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_rst_ps7_0_50M_0/aes7_rst_ps7_0_50M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_blk_mem_gen_1_0/aes7_blk_mem_gen_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/aes7_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -59,8 +59,8 @@ set_property used_in_implementation false [get_files -all /media/psf/Home/vivado
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /media/psf/Home/vivado/aes7/aes7.srcs/constrs_1/imports/digilent-xdc/Zybo-Z7-Master.xdc
-set_property used_in_implementation false [get_files /media/psf/Home/vivado/aes7/aes7.srcs/constrs_1/imports/digilent-xdc/Zybo-Z7-Master.xdc]
+read_xdc /home/parallels/vivado/aes7/aes7.srcs/constrs_1/imports/digilent-xdc/Zybo-Z7-Master.xdc
+set_property used_in_implementation false [get_files /home/parallels/vivado/aes7/aes7.srcs/constrs_1/imports/digilent-xdc/Zybo-Z7-Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

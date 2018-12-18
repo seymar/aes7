@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Tue Dec 18 20:41:18 2018
+# Process ID: 25538
+# Current directory: /media/psf/Home/vivado/aes7/aes7.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /media/psf/Home/vivado/aes7/aes7.sdk/webtalk/webtalk.log
+# Journal file: /media/psf/Home/vivado/aes7/aes7.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

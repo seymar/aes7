@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/media/psf/Home/vivado/aes7/aes7.runs/impl_1'
+HD_PWD='/home/parallels/vivado/aes7/aes7.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

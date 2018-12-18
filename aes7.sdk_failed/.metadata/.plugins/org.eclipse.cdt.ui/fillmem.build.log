@@ -1,0 +1,16 @@
+11:46:08 **** Auto Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/fillmem.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fillmem.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/fillmem.d" -MT"src/fillmem.o" -o "src/fillmem.o" "../src/fillmem.c"
+../src/fillmem.c:3:10: fatal error: xgpiops.h: No such file or directory
+ #include "xgpiops.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/fillmem.o] Error 1
+src/subdir.mk:24: recipe for target 'src/fillmem.o' failed
+
+11:46:08 Build Finished (took 177ms)
+

@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
---Date        : Tue Dec 18 19:56:04 2018
+--Date        : Tue Dec 18 22:09:52 2018
 --Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 --Command     : generate_target aes7.bd
 --Design      : aes7
@@ -272,7 +272,8 @@ architecture STRUCTURE of aes7 is
   component aes7_setpointgenerator_0_0 is
   port (
     clk : in STD_LOGIC;
-    bram_addr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    bram_clk : out STD_LOGIC;
+    bram_addr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bram_data : in STD_LOGIC_VECTOR ( 31 downto 0 );
     bram_en : out STD_LOGIC;
     bram_rst : out STD_LOGIC;
@@ -319,7 +320,6 @@ architecture STRUCTURE of aes7 is
   signal axi_smc_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_smc_M00_AXI_WVALID : STD_LOGIC;
   signal blk_mem_gen_1_douta : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal blk_mem_gen_1_doutb : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -336,7 +336,6 @@ architecture STRUCTURE of aes7 is
   signal processing_system7_0_DDR_RESET_N : STD_LOGIC;
   signal processing_system7_0_DDR_WE_N : STD_LOGIC;
   signal processing_system7_0_FCLK_CLK0 : STD_LOGIC;
-  signal processing_system7_0_FCLK_CLK1 : STD_LOGIC;
   signal processing_system7_0_FCLK_RESET0_N : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRN : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRP : STD_LOGIC;
@@ -383,7 +382,7 @@ architecture STRUCTURE of aes7 is
   signal processing_system7_0_M_AXI_GP0_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal processing_system7_0_M_AXI_GP0_WVALID : STD_LOGIC;
   signal rst_ps7_0_50M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal setpointgenerator_0_bram_addr : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal setpointgenerator_0_bram_addr : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal setpointgenerator_0_bram_en : STD_LOGIC;
   signal setpointgenerator_0_bram_rst : STD_LOGIC;
   signal setpointgenerator_0_bram_we : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -394,13 +393,15 @@ architecture STRUCTURE of aes7 is
   signal NLW_blk_mem_gen_1_rsta_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_blk_mem_gen_1_rstb_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_blk_mem_gen_1_addra_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 13 );
-  signal NLW_blk_mem_gen_1_addrb_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 13 );
+  signal NLW_blk_mem_gen_1_doutb_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_processing_system7_0_FCLK_CLK1_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_PORT_INDCTL_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_rst_ps7_0_50M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_50M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_50M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_50M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_setpointgenerator_0_bram_clk_UNCONNECTED : STD_LOGIC;
   attribute BMM_INFO_ADDRESS_SPACE : string;
   attribute BMM_INFO_ADDRESS_SPACE of axi_bram_ctrl_0 : label is "byte  0x40000000 32 > aes7 blk_mem_gen_1";
   attribute KEEP_HIERARCHY : string;
@@ -559,14 +560,13 @@ blk_mem_gen_1: component aes7_blk_mem_gen_1_0
      port map (
       addra(31 downto 13) => NLW_blk_mem_gen_1_addra_UNCONNECTED(31 downto 13),
       addra(12 downto 0) => axi_bram_ctrl_0_bram_addr_a(12 downto 0),
-      addrb(31 downto 13) => NLW_blk_mem_gen_1_addrb_UNCONNECTED(31 downto 13),
-      addrb(12 downto 0) => setpointgenerator_0_bram_addr(12 downto 0),
+      addrb(31 downto 0) => setpointgenerator_0_bram_addr(31 downto 0),
       clka => axi_bram_ctrl_0_bram_clk_a,
-      clkb => processing_system7_0_FCLK_CLK1,
+      clkb => processing_system7_0_FCLK_CLK0,
       dina(31 downto 0) => axi_bram_ctrl_0_bram_wrdata_a(31 downto 0),
       dinb(31 downto 0) => B"00000000000000000000000000001000",
       douta(31 downto 0) => blk_mem_gen_1_douta(31 downto 0),
-      doutb(31 downto 0) => blk_mem_gen_1_doutb(31 downto 0),
+      doutb(31 downto 0) => NLW_blk_mem_gen_1_doutb_UNCONNECTED(31 downto 0),
       ena => axi_bram_ctrl_0_bram_en_a,
       enb => setpointgenerator_0_bram_en,
       rsta => axi_bram_ctrl_0_bram_rst_a,
@@ -596,7 +596,7 @@ processing_system7_0: component aes7_processing_system7_0_0
       DDR_VRP => FIXED_IO_ddr_vrp,
       DDR_WEB => DDR_we_n,
       FCLK_CLK0 => processing_system7_0_FCLK_CLK0,
-      FCLK_CLK1 => processing_system7_0_FCLK_CLK1,
+      FCLK_CLK1 => NLW_processing_system7_0_FCLK_CLK1_UNCONNECTED,
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,
       MIO(53 downto 0) => FIXED_IO_mio(53 downto 0),
       M_AXI_GP0_ACLK => processing_system7_0_FCLK_CLK0,
@@ -660,12 +660,13 @@ rst_ps7_0_50M: component aes7_rst_ps7_0_50M_0
     );
 setpointgenerator_0: component aes7_setpointgenerator_0_0
      port map (
-      bram_addr(12 downto 0) => setpointgenerator_0_bram_addr(12 downto 0),
-      bram_data(31 downto 0) => blk_mem_gen_1_doutb(31 downto 0),
+      bram_addr(31 downto 0) => setpointgenerator_0_bram_addr(31 downto 0),
+      bram_clk => NLW_setpointgenerator_0_bram_clk_UNCONNECTED,
+      bram_data(31 downto 0) => blk_mem_gen_1_douta(31 downto 0),
       bram_en => setpointgenerator_0_bram_en,
       bram_rst => setpointgenerator_0_bram_rst,
       bram_we(3 downto 0) => setpointgenerator_0_bram_we(3 downto 0),
-      clk => processing_system7_0_FCLK_CLK1,
+      clk => processing_system7_0_FCLK_CLK0,
       leds(3 downto 0) => setpointgenerator_0_leds(3 downto 0),
       rgb(2 downto 0) => setpointgenerator_0_rgb(2 downto 0)
     );

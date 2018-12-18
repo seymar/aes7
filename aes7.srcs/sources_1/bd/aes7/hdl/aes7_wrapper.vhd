@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
---Date        : Tue Dec 18 19:56:04 2018
+--Date        : Tue Dec 18 22:09:52 2018
 --Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 --Command     : generate_target aes7_wrapper.bd
 --Design      : aes7_wrapper
@@ -42,6 +42,8 @@ end aes7_wrapper;
 architecture STRUCTURE of aes7_wrapper is
   component aes7 is
   port (
+    leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    rgb : out STD_LOGIC_VECTOR ( 2 downto 0 );
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ddr_vrn : inout STD_LOGIC;
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
@@ -62,9 +64,7 @@ architecture STRUCTURE of aes7_wrapper is
     DDR_dm : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rgb : out STD_LOGIC_VECTOR ( 2 downto 0 )
+    DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component aes7;
 begin

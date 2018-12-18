@@ -1,0 +1,1669 @@
+11:24:38 **** Incremental Build of configuration Debug for project fillmemory ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.cc
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+
+cc1plus: out of memory allocating 86870997662338 bytes after a total of 880640 bytes
+src/subdir.mk:28: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:25:21 **** Incremental Build of configuration Debug for project fillmemory ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.cc
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+
+cc1plus: out of memory allocating 86870997662338 bytes after a total of 880640 bytes
+make: *** [src/main.o] Error 1
+src/subdir.mk:28: recipe for target 'src/main.o' failed
+11:26:13 **** Incremental Build of configuration Debug for project fillmemory ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.cc
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+
+cc1plus: out of memory allocating 86870997662338 bytes after a total of 839680 bytes
+src/subdir.mk:28: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:27:42 **** Incremental Build of configuration Debug for project fillmemory ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.cc
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+
+cc1plus: out of memory allocating 86870997662338 bytes after a total of 880640 bytes
+src/subdir.mk:28: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:28:13 **** Build of project test_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling sdps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+Makefile:25: recipe for target 'xsdps_sinit.o' failed
+make[1]: *** [xsdps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1011712 bytes
+Makefile:25: recipe for target 'xsdps.o' failed
+make[1]: *** [xsdps.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xsdps_g.o] Error 1
+Makefile:25: recipe for target 'xsdps_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1007616 bytes
+Makefile:25: recipe for target 'xsdps_options.o' failed
+make[1]: *** [xsdps_options.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/sdps_v3_6/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/sdps_v3_6/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling standalone
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 937984 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 942080 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 921600 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 917504 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 942080 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 921600 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 913408 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 946176 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 643072 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 651264 bytes
+Makefile:64: recipe for target 'standalone_libs' failed
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/standalone_v6_8/src/make.libs' failed
+make[1]: *** [standalone_libs] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/standalone_v6_8/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling dmaps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 917504 bytes
+make[1]: *** [xdmaps_hw.o] Error 1
+Makefile:25: recipe for target 'xdmaps_hw.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xdmaps_g.o' failed
+make[1]: *** [xdmaps_g.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+make[1]: *** [xdmaps_selftest.o] Error 1
+Makefile:25: recipe for target 'xdmaps_selftest.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+Makefile:25: recipe for target 'xdmaps_sinit.o' failed
+make[1]: *** [xdmaps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 999424 bytes
+Makefile:25: recipe for target 'xdmaps.o' failed
+make[1]: *** [xdmaps.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/dmaps_v2_4/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/dmaps_v2_4/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling emacps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1007616 bytes
+Makefile:25: recipe for target 'xemacps_hw.o' failed
+make[1]: *** [xemacps_hw.o] Error 1
+
+Makefile:25: recipe for target 'xemacps_bdring.o' failed
+cc1: out of memory allocating 86870997662338 bytes after a total of 1044480 bytes
+make[1]: *** [xemacps_bdring.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1024000 bytes
+Makefile:25: recipe for target 'xemacps_control.o' failed
+make[1]: *** [xemacps_control.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1060864 bytes
+Makefile:25: recipe for target 'xemacps_intr.o' failed
+make[1]: *** [xemacps_intr.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1052672 bytes
+Makefile:25: recipe for target 'xemacps_sinit.o' failed
+make[1]: *** [xemacps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1069056 bytes
+make[1]: *** [xemacps.o] Error 1
+Makefile:25: recipe for target 'xemacps.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xemacps_g.o] Error 1
+Makefile:25: recipe for target 'xemacps_g.o' failed
+make[1]: Target 'libs' not remade because of errors.
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/emacps_v3_8/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make: *** [ps7_cortexa9_0/libsrc/emacps_v3_8/src/make.libs] Error 2
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpiops
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xgpiops_g.o] Error 1
+Makefile:25: recipe for target 'xgpiops_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 892928 bytes
+Makefile:25: recipe for target 'xgpiops_intr.o' failed
+make[1]: *** [xgpiops_intr.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 913408 bytes
+Makefile:25: recipe for target 'xgpiops_hw.o' failed
+make[1]: *** [xgpiops_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 868352 bytes
+Makefile:25: recipe for target 'xgpiops_selftest.o' failed
+make[1]: *** [xgpiops_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 872448 bytes
+make[1]: *** [xgpiops_sinit.o] Error 1
+Makefile:25: recipe for target 'xgpiops_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 888832 bytes
+Makefile:25: recipe for target 'xgpiops.o' failed
+make[1]: *** [xgpiops.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/gpiops_v3_4/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/gpiops_v3_4/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling qspips
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xqspips_g.o' failed
+make[1]: *** [xqspips_g.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+make[1]: *** [xqspips_hw.o] Error 1
+Makefile:25: recipe for target 'xqspips_hw.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1036288 bytes
+make[1]: *** [xqspips_selftest.o] Error 1
+Makefile:25: recipe for target 'xqspips_selftest.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1028096 bytes
+Makefile:25: recipe for target 'xqspips_sinit.o' failed
+make[1]: *** [xqspips_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1073152 bytes
+Makefile:25: recipe for target 'xqspips.o' failed
+make[1]: *** [xqspips.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1044480 bytes
+Makefile:25: recipe for target 'xqspips_options.o' failed
+make[1]: *** [xqspips_options.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/qspips_v3_5/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/qspips_v3_5/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+Makefile:25: recipe for target 'xscugic_selftest.o' failed
+make[1]: *** [xscugic_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+Makefile:25: recipe for target 'xscugic_sinit.o' failed
+make[1]: *** [xscugic_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 892928 bytes
+Makefile:25: recipe for target 'xscugic.o' failed
+make[1]: *** [xscugic.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 749568 bytes
+make[1]: *** [xscugic_g.o] Error 1
+Makefile:25: recipe for target 'xscugic_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 942080 bytes
+make[1]: *** [xscugic_hw.o] Error 1
+Makefile:25: recipe for target 'xscugic_hw.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 864256 bytes
+make[1]: *** [xscugic_intr.o] Error 1
+Makefile:25: recipe for target 'xscugic_intr.o' failed
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/scugic_v3_10/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/scugic_v3_10/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xadcps_g.o' failed
+make[1]: *** [xadcps_g.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+Makefile:25: recipe for target 'xadcps_selftest.o' failed
+make[1]: *** [xadcps_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+Makefile:25: recipe for target 'xadcps_sinit.o' failed
+make[1]: *** [xadcps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1069056 bytes
+make[1]: *** [xadcps.o] Error 1
+Makefile:25: recipe for target 'xadcps.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1024000 bytes
+Makefile:25: recipe for target 'xadcps_intr.o' failed
+make[1]: *** [xadcps_intr.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/xadcps_v2_3/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/xadcps_v2_3/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling bram
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 872448 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 876544 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 884736 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+make[1]: *** [libs] Error 1
+make: *** [ps7_cortexa9_0/libsrc/bram_v4_2/src/make.libs] Error 2
+Makefile:19: recipe for target 'libs' failed
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/bram_v4_2/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xdevcfg_g.o' failed
+make[1]: *** [xdevcfg_g.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1024000 bytes
+Makefile:25: recipe for target 'xdevcfg_intr.o' failed
+make[1]: *** [xdevcfg_intr.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 872448 bytes
+Makefile:25: recipe for target 'xdevcfg_hw.o' failed
+make[1]: *** [xdevcfg_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+Makefile:25: recipe for target 'xdevcfg_selftest.o' failed
+make[1]: *** [xdevcfg_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+Makefile:25: recipe for target 'xdevcfg_sinit.o' failed
+make[1]: *** [xdevcfg_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1044480 bytes
+make[1]: *** [xdevcfg.o] Error 1
+Makefile:25: recipe for target 'xdevcfg.o' failed
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/devcfg_v3_5/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/devcfg_v3_5/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scuwdt
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 872448 bytes
+Makefile:25: recipe for target 'xscuwdt_selftest.o' failed
+make[1]: *** [xscuwdt_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 872448 bytes
+make[1]: *** [xscuwdt_sinit.o] Error 1
+Makefile:25: recipe for target 'xscuwdt_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 876544 bytes
+Makefile:25: recipe for target 'xscuwdt.o' failed
+make[1]: *** [xscuwdt.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xscuwdt_g.o' failed
+make[1]: *** [xscuwdt_g.o] Error 1
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/scuwdt_v2_1/src/make.libs' failed
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/scuwdt_v2_1/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling uartps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xuartps_g.o' failed
+make[1]: *** [xuartps_g.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+Makefile:25: recipe for target 'xuartps_selftest.o' failed
+make[1]: *** [xuartps_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1003520 bytes
+make[1]: *** [xuartps.o] Error 1
+Makefile:25: recipe for target 'xuartps.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+make[1]: *** [xuartps_hw.o] Error 1
+Makefile:25: recipe for target 'xuartps_hw.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+Makefile:25: recipe for target 'xuartps_sinit.o' failed
+make[1]: *** [xuartps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1036288 bytes
+make[1]: *** [xuartps_options.o] Error 1
+Makefile:25: recipe for target 'xuartps_options.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1028096 bytes
+Makefile:25: recipe for target 'xuartps_intr.o' failed
+make[1]: *** [xuartps_intr.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/uartps_v3_7/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/uartps_v3_7/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling usbps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1040384 bytes
+Makefile:25: recipe for target 'xusbps_hw.o' failed
+make[1]: *** [xusbps_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1011712 bytes
+Makefile:25: recipe for target 'xusbps_intr.o' failed
+make[1]: *** [xusbps_intr.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1040384 bytes
+Makefile:25: recipe for target 'xusbps_sinit.o' failed
+make[1]: *** [xusbps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 991232 bytes
+Makefile:25: recipe for target 'xusbps_endpoint.o' failed
+make[1]: *** [xusbps_endpoint.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1060864 bytes
+Makefile:25: recipe for target 'xusbps.o' failed
+make[1]: *** [xusbps.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xusbps_g.o' failed
+make[1]: *** [xusbps_g.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/usbps_v2_4/src/make.libs' failed
+make: *** [ps7_cortexa9_0/libsrc/usbps_v2_4/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xscutimer_g.o] Error 1
+Makefile:25: recipe for target 'xscutimer_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 999424 bytes
+make[1]: *** [xscutimer_sinit.o] Error 1
+Makefile:25: recipe for target 'xscutimer_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 999424 bytes
+Makefile:25: recipe for target 'xscutimer_selftest.o' failed
+make[1]: *** [xscutimer_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 876544 bytes
+Makefile:25: recipe for target 'xscutimer.o' failed
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/scutimer_v2_1/src/make.libs' failed
+make[1]: *** [xscutimer.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/scutimer_v2_1/src/make.libs] Error 2
+make: Target 'all' not remade because of errors.
+11:28:19 **** Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1040384 bytes
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+11:28:50 **** Build of project fillmem_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling sdps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+make[1]: *** [xsdps_sinit.o] Error 1
+Makefile:25: recipe for target 'xsdps_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1011712 bytes
+make[1]: *** [xsdps.o] Error 1
+Makefile:25: recipe for target 'xsdps.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xsdps_g.o] Error 1
+Makefile:25: recipe for target 'xsdps_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1007616 bytes
+Makefile:25: recipe for target 'xsdps_options.o' failed
+make[1]: *** [xsdps_options.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/sdps_v3_6/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/sdps_v3_6/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling standalone
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 937984 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 942080 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 921600 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 950272 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 942080 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 921600 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 913408 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 946176 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 643072 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 618496 bytes
+Makefile:64: recipe for target 'standalone_libs' failed
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/standalone_v6_8/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make[1]: *** [standalone_libs] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/standalone_v6_8/src/make.libs] Error 2
+Compiling dmaps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 917504 bytes
+Makefile:25: recipe for target 'xdmaps_hw.o' failed
+make[1]: *** [xdmaps_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xdmaps_g.o] Error 1
+Makefile:25: recipe for target 'xdmaps_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+Makefile:25: recipe for target 'xdmaps_selftest.o' failed
+make[1]: *** [xdmaps_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+make[1]: *** [xdmaps_sinit.o] Error 1
+Makefile:25: recipe for target 'xdmaps_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 999424 bytes
+Makefile:25: recipe for target 'xdmaps.o' failed
+make[1]: *** [xdmaps.o] Error 1
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/dmaps_v2_4/src/make.libs' failed
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/dmaps_v2_4/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling emacps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1007616 bytes
+Makefile:25: recipe for target 'xemacps_hw.o' failed
+make[1]: *** [xemacps_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1044480 bytes
+make[1]: *** [xemacps_bdring.o] Error 1
+Makefile:25: recipe for target 'xemacps_bdring.o' failed
+
+Makefile:25: recipe for target 'xemacps_control.o' failed
+cc1: out of memory allocating 86870997662338 bytes after a total of 1024000 bytes
+make[1]: *** [xemacps_control.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1060864 bytes
+make[1]: *** [xemacps_intr.o] Error 1
+Makefile:25: recipe for target 'xemacps_intr.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1052672 bytes
+make[1]: *** [xemacps_sinit.o] Error 1
+Makefile:25: recipe for target 'xemacps_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1069056 bytes
+Makefile:25: recipe for target 'xemacps.o' failed
+make[1]: *** [xemacps.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 749568 bytes
+make[1]: *** [xemacps_g.o] Error 1
+Makefile:25: recipe for target 'xemacps_g.o' failed
+make[1]: Target 'libs' not remade because of errors.
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/emacps_v3_8/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make: *** [ps7_cortexa9_0/libsrc/emacps_v3_8/src/make.libs] Error 2
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpiops
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xgpiops_g.o] Error 1
+Makefile:25: recipe for target 'xgpiops_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 897024 bytes
+make[1]: *** [xgpiops_intr.o] Error 1
+Makefile:25: recipe for target 'xgpiops_intr.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 913408 bytes
+Makefile:25: recipe for target 'xgpiops_hw.o' failed
+make[1]: *** [xgpiops_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 868352 bytes
+Makefile:25: recipe for target 'xgpiops_selftest.o' failed
+make[1]: *** [xgpiops_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 872448 bytes
+Makefile:25: recipe for target 'xgpiops_sinit.o' failed
+make[1]: *** [xgpiops_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 888832 bytes
+Makefile:25: recipe for target 'xgpiops.o' failed
+make[1]: *** [xgpiops.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/gpiops_v3_4/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make: *** [ps7_cortexa9_0/libsrc/gpiops_v3_4/src/make.libs] Error 2
+Compiling qspips
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xqspips_g.o] Error 1
+Makefile:25: recipe for target 'xqspips_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+Makefile:25: recipe for target 'xqspips_hw.o' failed
+make[1]: *** [xqspips_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1036288 bytes
+Makefile:25: recipe for target 'xqspips_selftest.o' failed
+make[1]: *** [xqspips_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1028096 bytes
+Makefile:25: recipe for target 'xqspips_sinit.o' failed
+make[1]: *** [xqspips_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1073152 bytes
+make[1]: *** [xqspips.o] Error 1
+Makefile:25: recipe for target 'xqspips.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1044480 bytes
+make[1]: *** [xqspips_options.o] Error 1
+Makefile:25: recipe for target 'xqspips_options.o' failed
+make[1]: Target 'libs' not remade because of errors.
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/qspips_v3_5/src/make.libs' failed
+make: *** [ps7_cortexa9_0/libsrc/qspips_v3_5/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+make[1]: *** [xscugic_selftest.o] Error 1
+Makefile:25: recipe for target 'xscugic_selftest.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+Makefile:25: recipe for target 'xscugic_sinit.o' failed
+make[1]: *** [xscugic_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 892928 bytes
+Makefile:25: recipe for target 'xscugic.o' failed
+make[1]: *** [xscugic.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 749568 bytes
+Makefile:25: recipe for target 'xscugic_g.o' failed
+make[1]: *** [xscugic_g.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 942080 bytes
+Makefile:25: recipe for target 'xscugic_hw.o' failed
+make[1]: *** [xscugic_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 864256 bytes
+Makefile:25: recipe for target 'xscugic_intr.o' failed
+make[1]: *** [xscugic_intr.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/scugic_v3_10/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/scugic_v3_10/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xadcps_g.o' failed
+make[1]: *** [xadcps_g.o] Error 1
+
+Makefile:25: recipe for target 'xadcps_selftest.o' failed
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+make[1]: *** [xadcps_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+Makefile:25: recipe for target 'xadcps_sinit.o' failed
+make[1]: *** [xadcps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1069056 bytes
+make[1]: *** [xadcps.o] Error 1
+Makefile:25: recipe for target 'xadcps.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1024000 bytes
+Makefile:25: recipe for target 'xadcps_intr.o' failed
+make[1]: *** [xadcps_intr.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/xadcps_v2_3/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/xadcps_v2_3/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling bram
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 872448 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 876544 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 884736 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+Makefile:19: recipe for target 'libs' failed
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/bram_v4_2/src/make.libs' failed
+make[1]: *** [libs] Error 1
+make: *** [ps7_cortexa9_0/libsrc/bram_v4_2/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xdevcfg_g.o' failed
+make[1]: *** [xdevcfg_g.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1024000 bytes
+Makefile:25: recipe for target 'xdevcfg_intr.o' failed
+make[1]: *** [xdevcfg_intr.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 937984 bytes
+Makefile:25: recipe for target 'xdevcfg_hw.o' failed
+make[1]: *** [xdevcfg_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+Makefile:25: recipe for target 'xdevcfg_selftest.o' failed
+make[1]: *** [xdevcfg_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+Makefile:25: recipe for target 'xdevcfg_sinit.o' failed
+make[1]: *** [xdevcfg_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1044480 bytes
+make[1]: *** [xdevcfg.o] Error 1
+Makefile:25: recipe for target 'xdevcfg.o' failed
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/devcfg_v3_5/src/make.libs' failed
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/devcfg_v3_5/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scuwdt
+
+Makefile:25: recipe for target 'xscuwdt_selftest.o' failed
+cc1: out of memory allocating 86870997662338 bytes after a total of 872448 bytes
+make[1]: *** [xscuwdt_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1003520 bytes
+Makefile:25: recipe for target 'xscuwdt_sinit.o' failed
+make[1]: *** [xscuwdt_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1007616 bytes
+make[1]: *** [xscuwdt.o] Error 1
+Makefile:25: recipe for target 'xscuwdt.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xscuwdt_g.o] Error 1
+Makefile:25: recipe for target 'xscuwdt_g.o' failed
+make[1]: Target 'libs' not remade because of errors.
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/scuwdt_v2_1/src/make.libs' failed
+make: *** [ps7_cortexa9_0/libsrc/scuwdt_v2_1/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling uartps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xuartps_g.o' failed
+make[1]: *** [xuartps_g.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+Makefile:25: recipe for target 'xuartps_selftest.o' failed
+make[1]: *** [xuartps_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1036288 bytes
+make[1]: *** [xuartps.o] Error 1
+Makefile:25: recipe for target 'xuartps.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+Makefile:25: recipe for target 'xuartps_hw.o' failed
+make[1]: *** [xuartps_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+Makefile:25: recipe for target 'xuartps_sinit.o' failed
+make[1]: *** [xuartps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1036288 bytes
+Makefile:25: recipe for target 'xuartps_options.o' failed
+make[1]: *** [xuartps_options.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1028096 bytes
+Makefile:25: recipe for target 'xuartps_intr.o' failed
+make[1]: *** [xuartps_intr.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/uartps_v3_7/src/make.libs' failed
+make: *** [ps7_cortexa9_0/libsrc/uartps_v3_7/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling usbps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1040384 bytes
+Makefile:25: recipe for target 'xusbps_hw.o' failed
+make[1]: *** [xusbps_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1044480 bytes
+Makefile:25: recipe for target 'xusbps_intr.o' failed
+make[1]: *** [xusbps_intr.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1040384 bytes
+make[1]: *** [xusbps_sinit.o] Error 1
+Makefile:25: recipe for target 'xusbps_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 991232 bytes
+Makefile:25: recipe for target 'xusbps_endpoint.o' failed
+make[1]: *** [xusbps_endpoint.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1060864 bytes
+make[1]: *** [xusbps.o] Error 1
+Makefile:25: recipe for target 'xusbps.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 749568 bytes
+Makefile:25: recipe for target 'xusbps_g.o' failed
+make[1]: *** [xusbps_g.o] Error 1
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/usbps_v2_4/src/make.libs' failed
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/usbps_v2_4/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xscutimer_g.o' failed
+make[1]: *** [xscutimer_g.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 999424 bytes
+make[1]: *** [xscutimer_sinit.o] Error 1
+Makefile:25: recipe for target 'xscutimer_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 999424 bytes
+Makefile:25: recipe for target 'xscutimer_selftest.o' failed
+make[1]: *** [xscutimer_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1007616 bytes
+make[1]: *** [xscutimer.o] Error 1
+Makefile:25: recipe for target 'xscutimer.o' failed
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/scutimer_v2_1/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/scutimer_v2_1/src/make.libs' failed
+make: Target 'all' not remade because of errors.
+11:28:57 **** Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fillmem_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1032192 bytes
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+11:29:25 **** Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1032192 bytes
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+11:29:57 **** Auto Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1048576 bytes
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+11:30:12 **** Incremental Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1048576 bytes
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+11:30:52 **** Incremental Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1048576 bytes
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+11:31:50 **** Incremental Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1048576 bytes
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+11:32:56 **** Incremental Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1048576 bytes
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+11:33:22 **** Auto Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:3:10: fatal error: xil_io.h: No such file or directory
+ #include "xil_io.h"
+          ^~~~~~~~~~
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+11:33:28 **** Incremental Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:3:10: fatal error: xil_io.h: No such file or directory
+ #include "xil_io.h"
+          ^~~~~~~~~~
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+11:34:38 **** Build of project standalone_bsp_0 ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling sdps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+Makefile:25: recipe for target 'xsdps_sinit.o' failed
+make[1]: *** [xsdps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1011712 bytes
+Makefile:25: recipe for target 'xsdps.o' failed
+make[1]: *** [xsdps.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 749568 bytes
+make[1]: *** [xsdps_g.o] Error 1
+Makefile:25: recipe for target 'xsdps_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1007616 bytes
+Makefile:25: recipe for target 'xsdps_options.o' failed
+make[1]: *** [xsdps_options.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/sdps_v3_6/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make: *** [ps7_cortexa9_0/libsrc/sdps_v3_6/src/make.libs] Error 2
+Compiling standalone
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 937984 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 942080 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 921600 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 749568 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 950272 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 942080 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 921600 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 913408 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 946176 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 909312 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 643072 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 651264 bytes
+Makefile:64: recipe for target 'standalone_libs' failed
+make[1]: *** [standalone_libs] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/standalone_v6_8/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/standalone_v6_8/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling dmaps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 917504 bytes
+Makefile:25: recipe for target 'xdmaps_hw.o' failed
+make[1]: *** [xdmaps_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xdmaps_g.o] Error 1
+Makefile:25: recipe for target 'xdmaps_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 753664 bytes
+make[1]: *** [xdmaps_selftest.o] Error 1
+Makefile:25: recipe for target 'xdmaps_selftest.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+Makefile:25: recipe for target 'xdmaps_sinit.o' failed
+make[1]: *** [xdmaps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 999424 bytes
+Makefile:25: recipe for target 'xdmaps.o' failed
+make[1]: *** [xdmaps.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/dmaps_v2_4/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/dmaps_v2_4/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling emacps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1007616 bytes
+make[1]: *** [xemacps_hw.o] Error 1
+Makefile:25: recipe for target 'xemacps_hw.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1044480 bytes
+Makefile:25: recipe for target 'xemacps_bdring.o' failed
+make[1]: *** [xemacps_bdring.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1024000 bytes
+Makefile:25: recipe for target 'xemacps_control.o' failed
+make[1]: *** [xemacps_control.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1060864 bytes
+make[1]: *** [xemacps_intr.o] Error 1
+Makefile:25: recipe for target 'xemacps_intr.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1052672 bytes
+Makefile:25: recipe for target 'xemacps_sinit.o' failed
+make[1]: *** [xemacps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1069056 bytes
+make[1]: *** [xemacps.o] Error 1
+Makefile:25: recipe for target 'xemacps.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xemacps_g.o' failed
+make[1]: *** [xemacps_g.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/emacps_v3_8/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/emacps_v3_8/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpiops
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xgpiops_g.o' failed
+make[1]: *** [xgpiops_g.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 897024 bytes
+make[1]: *** [xgpiops_intr.o] Error 1
+Makefile:25: recipe for target 'xgpiops_intr.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 913408 bytes
+Makefile:25: recipe for target 'xgpiops_hw.o' failed
+make[1]: *** [xgpiops_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 868352 bytes
+Makefile:25: recipe for target 'xgpiops_selftest.o' failed
+make[1]: *** [xgpiops_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 872448 bytes
+make[1]: *** [xgpiops_sinit.o] Error 1
+Makefile:25: recipe for target 'xgpiops_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 892928 bytes
+make[1]: *** [xgpiops.o] Error 1
+Makefile:25: recipe for target 'xgpiops.o' failed
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/gpiops_v3_4/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/gpiops_v3_4/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling qspips
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xqspips_g.o] Error 1
+Makefile:25: recipe for target 'xqspips_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+Makefile:25: recipe for target 'xqspips_hw.o' failed
+make[1]: *** [xqspips_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1036288 bytes
+make[1]: *** [xqspips_selftest.o] Error 1
+Makefile:25: recipe for target 'xqspips_selftest.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1028096 bytes
+Makefile:25: recipe for target 'xqspips_sinit.o' failed
+make[1]: *** [xqspips_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1015808 bytes
+make[1]: *** [xqspips.o] Error 1
+Makefile:25: recipe for target 'xqspips.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1044480 bytes
+Makefile:25: recipe for target 'xqspips_options.o' failed
+make[1]: *** [xqspips_options.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/qspips_v3_5/src/make.libs' failed
+make: *** [ps7_cortexa9_0/libsrc/qspips_v3_5/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+make[1]: *** [xscugic_selftest.o] Error 1
+Makefile:25: recipe for target 'xscugic_selftest.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+make[1]: *** [xscugic_sinit.o] Error 1
+Makefile:25: recipe for target 'xscugic_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 892928 bytes
+make[1]: *** [xscugic.o] Error 1
+Makefile:25: recipe for target 'xscugic.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+Makefile:25: recipe for target 'xscugic_g.o' failed
+make[1]: *** [xscugic_g.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 942080 bytes
+Makefile:25: recipe for target 'xscugic_hw.o' failed
+make[1]: *** [xscugic_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 864256 bytes
+Makefile:25: recipe for target 'xscugic_intr.o' failed
+make[1]: *** [xscugic_intr.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/scugic_v3_10/src/make.libs' failed
+make: *** [ps7_cortexa9_0/libsrc/scugic_v3_10/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xadcps_g.o] Error 1
+Makefile:25: recipe for target 'xadcps_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+Makefile:25: recipe for target 'xadcps_selftest.o' failed
+make[1]: *** [xadcps_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+Makefile:25: recipe for target 'xadcps_sinit.o' failed
+make[1]: *** [xadcps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1003520 bytes
+Makefile:25: recipe for target 'xadcps.o' failed
+make[1]: *** [xadcps.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1024000 bytes
+Makefile:25: recipe for target 'xadcps_intr.o' failed
+make[1]: *** [xadcps_intr.o] Error 1
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/xadcps_v2_3/src/make.libs' failed
+make[1]: Target 'libs' not remade because of errors.
+Running Make libs in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make: *** [ps7_cortexa9_0/libsrc/xadcps_v2_3/src/make.libs] Error 2
+Compiling bram
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1003520 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 876544 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 884736 bytes
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 765952 bytes
+Makefile:19: recipe for target 'libs' failed
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/bram_v4_2/src/make.libs' failed
+make[1]: *** [libs] Error 1
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make: *** [ps7_cortexa9_0/libsrc/bram_v4_2/src/make.libs] Error 2
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xdevcfg_g.o] Error 1
+Makefile:25: recipe for target 'xdevcfg_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1028096 bytes
+Makefile:25: recipe for target 'xdevcfg_intr.o' failed
+make[1]: *** [xdevcfg_intr.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 937984 bytes
+make[1]: *** [xdevcfg_hw.o] Error 1
+Makefile:25: recipe for target 'xdevcfg_hw.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+Makefile:25: recipe for target 'xdevcfg_selftest.o' failed
+make[1]: *** [xdevcfg_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 987136 bytes
+make[1]: *** [xdevcfg_sinit.o] Error 1
+Makefile:25: recipe for target 'xdevcfg_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1044480 bytes
+make[1]: *** [xdevcfg.o] Error 1
+Makefile:25: recipe for target 'xdevcfg.o' failed
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/devcfg_v3_5/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/devcfg_v3_5/src/make.libs] Error 2
+Compiling scuwdt
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 872448 bytes
+make[1]: *** [xscuwdt_selftest.o] Error 1
+Makefile:25: recipe for target 'xscuwdt_selftest.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1003520 bytes
+Makefile:25: recipe for target 'xscuwdt_sinit.o' failed
+make[1]: *** [xscuwdt_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1007616 bytes
+Makefile:25: recipe for target 'xscuwdt.o' failed
+make[1]: *** [xscuwdt.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 724992 bytes
+Makefile:25: recipe for target 'xscuwdt_g.o' failed
+make[1]: *** [xscuwdt_g.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/scuwdt_v2_1/src/make.libs] Error 2
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/scuwdt_v2_1/src/make.libs' failed
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling uartps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xuartps_g.o] Error 1
+Makefile:25: recipe for target 'xuartps_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1019904 bytes
+Makefile:25: recipe for target 'xuartps_selftest.o' failed
+make[1]: *** [xuartps_selftest.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1036288 bytes
+make[1]: *** [xuartps.o] Error 1
+Makefile:25: recipe for target 'xuartps.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 925696 bytes
+make[1]: *** [xuartps_hw.o] Error 1
+Makefile:25: recipe for target 'xuartps_hw.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 761856 bytes
+make[1]: *** [xuartps_sinit.o] Error 1
+Makefile:25: recipe for target 'xuartps_sinit.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1036288 bytes
+make[1]: *** [xuartps_options.o] Error 1
+Makefile:25: recipe for target 'xuartps_options.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1028096 bytes
+Makefile:25: recipe for target 'xuartps_intr.o' failed
+make[1]: *** [xuartps_intr.o] Error 1
+make[1]: Target 'libs' not remade because of errors.
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/uartps_v3_7/src/make.libs' failed
+make: *** [ps7_cortexa9_0/libsrc/uartps_v3_7/src/make.libs] Error 2
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling usbps
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1040384 bytes
+Makefile:25: recipe for target 'xusbps_hw.o' failed
+make[1]: *** [xusbps_hw.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1044480 bytes
+make[1]: *** [xusbps_intr.o] Error 1
+Makefile:25: recipe for target 'xusbps_intr.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1040384 bytes
+Makefile:25: recipe for target 'xusbps_sinit.o' failed
+make[1]: *** [xusbps_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 991232 bytes
+make[1]: *** [xusbps_endpoint.o] Error 1
+Makefile:25: recipe for target 'xusbps_endpoint.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1060864 bytes
+Makefile:25: recipe for target 'xusbps.o' failed
+make[1]: *** [xusbps.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xusbps_g.o] Error 1
+Makefile:25: recipe for target 'xusbps_g.o' failed
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/usbps_v2_4/src/make.libs' failed
+make[1]: Target 'libs' not remade because of errors.
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make: *** [ps7_cortexa9_0/libsrc/usbps_v2_4/src/make.libs] Error 2
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 757760 bytes
+make[1]: *** [xscutimer_g.o] Error 1
+Makefile:25: recipe for target 'xscutimer_g.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 999424 bytes
+Makefile:25: recipe for target 'xscutimer_sinit.o' failed
+make[1]: *** [xscutimer_sinit.o] Error 1
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 999424 bytes
+make[1]: *** [xscutimer_selftest.o] Error 1
+Makefile:25: recipe for target 'xscutimer_selftest.o' failed
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1003520 bytes
+make[1]: *** [xscutimer.o] Error 1
+Makefile:25: recipe for target 'xscutimer.o' failed
+Makefile:29: recipe for target 'ps7_cortexa9_0/libsrc/scutimer_v2_1/src/make.libs' failed
+make[1]: Target 'libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/scutimer_v2_1/src/make.libs] Error 2
+make: Target 'all' not remade because of errors.
+11:34:44 **** Auto Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+
+cc1: out of memory allocating 86870997662338 bytes after a total of 1048576 bytes
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+11:41:02 **** Incremental Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:3:10: fatal error: xil_io.h: No such file or directory
+ #include "xil_io.h"
+          ^~~~~~~~~~
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+11:42:34 **** Incremental Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:3:10: fatal error: xil_io.h: No such file or directory
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+ #include "xil_io.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+11:44:41 **** Incremental Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:3:10: fatal error: xil_io.h: No such file or directory
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+ #include "xil_io.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+11:45:04 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+make: *** No rule to make target 'all'.
+11:45:05 **** Clean-only build of configuration Debug for project fillmem ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  fillmem.elf.size  fillmem.elf
+ 
+11:45:05 **** Auto Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/fillmem.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fillmem.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/fillmem.d" -MT"src/fillmem.o" -o "src/fillmem.o" "../src/fillmem.c"
+../src/fillmem.c:3:10: fatal error: xil_io.h: No such file or directory
+src/subdir.mk:24: recipe for target 'src/fillmem.o' failed
+ #include "xil_io.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/fillmem.o] Error 1
+11:45:14 **** Auto Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/fillmem.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fillmem.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/fillmem.d" -MT"src/fillmem.o" -o "src/fillmem.o" "../src/fillmem.c"
+../src/fillmem.c: In function 'main':
+../src/fillmem.c:14:5: error: unknown type name 'XGpioPs'
+     XGpioPs my_Gpio;
+     ^~~~~~~
+../src/fillmem.c:15:5: error: unknown type name 'XGpioPs_Config'
+     XGpioPs_Config* GPIO_Config = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
+     ^~~~~~~~~~~~~~
+../src/fillmem.c:15:35: warning: implicit declaration of function 'XGpioPs_LookupConfig' [-Wimplicit-function-declaration]
+     XGpioPs_Config* GPIO_Config = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
+                                   ^~~~~~~~~~~~~~~~~~~~
+../src/fillmem.c:15:56: error: 'XPAR_PS7_GPIO_0_DEVICE_ID' undeclared (first use in this function)
+     XGpioPs_Config* GPIO_Config = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/fillmem.c:15:56: note: each undeclared identifier is reported only once for each function it appears in
+../src/fillmem.c:16:5: warning: implicit declaration of function 'XGpioPs_CfgInitialize' [-Wimplicit-function-declaration]
+     XGpioPs_CfgInitialize(&my_Gpio, GPIO_Config, GPIO_Config->BaseAddr);
+     ^~~~~~~~~~~~~~~~~~~~~
+../src/fillmem.c:16:61: error: request for member 'BaseAddr' in something not a structure or union
+     XGpioPs_CfgInitialize(&my_Gpio, GPIO_Config, GPIO_Config->BaseAddr);
+                                                             ^~
+../src/fillmem.c:18:5: warning: implicit declaration of function 'XGpioPs_SetDirectionPin' [-Wimplicit-function-declaration]
+     XGpioPs_SetDirectionPin(&my_Gpio, _LD4, 1);
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/fillmem.c:19:5: warning: implicit declaration of function 'XGpioPs_SetOutputEnablePin' [-Wimplicit-function-declaration]
+     XGpioPs_SetOutputEnablePin(&my_Gpio, _LD4, 1);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/fillmem.c:21:5: warning: implicit declaration of function 'print'; did you mean 'printf'? [-Wimplicit-function-declaration]
+     print("Initializing...\n\r");
+     ^~~~~
+     printf
+../src/fillmem.c:23:5: warning: implicit declaration of function 'Xil_Out16' [-Wimplicit-function-declaration]
+     Xil_Out16(LOCADDR(0), 0b10101010101010101);
+     ^~~~~~~~~
+../src/fillmem.c:8:20: error: 'XPAR_AXI_BRAM_CTRL_0_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_PS7_GPIO_0_DEVICE_ID'?
+ #define LOCADDR(I) XPAR_AXI_BRAM_CTRL_0_DEVICE_ID + sizeof(uint16_t) * I
+                    ^
+../src/fillmem.c:23:15: note: in expansion of macro 'LOCADDR'
+     Xil_Out16(LOCADDR(0), 0b10101010101010101);
+               ^~~~~~~
+../src/fillmem.c:36:8: warning: implicit declaration of function 'XGpioPs_WritePin' [-Wimplicit-function-declaration]
+        XGpioPs_WritePin(&my_Gpio, _LD4, 1);
+        ^~~~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/fillmem.o' failed
+make: *** [src/fillmem.o] Error 1
+11:45:19 **** Auto Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/fillmem.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fillmem.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/fillmem.d" -MT"src/fillmem.o" -o "src/fillmem.o" "../src/fillmem.c"
+../src/fillmem.c:3:10: fatal error: xgpiops.h: No such file or directory
+ #include "xgpiops.h"
+          ^~~~~~~~~~~
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/fillmem.o' failed
+make: *** [src/fillmem.o] Error 1
+11:45:26 **** Incremental Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/fillmem.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fillmem.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/fillmem.d" -MT"src/fillmem.o" -o "src/fillmem.o" "../src/fillmem.c"
+../src/fillmem.c:3:10: fatal error: xgpiops.h: No such file or directory
+ #include "xgpiops.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/fillmem.o] Error 1
+src/subdir.mk:24: recipe for target 'src/fillmem.o' failed
+11:46:00 **** Auto Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/fillmem.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fillmem.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/fillmem.d" -MT"src/fillmem.o" -o "src/fillmem.o" "../src/fillmem.c"
+../src/fillmem.c:3:10: fatal error: xgpiops.h: No such file or directory
+ #include <xgpiops.h>
+          ^~~~~~~~~~~
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/fillmem.o' failed
+make: *** [src/fillmem.o] Error 1
+11:46:08 **** Auto Build of configuration Debug for project fillmem ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/fillmem.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fillmem.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/fillmem.d" -MT"src/fillmem.o" -o "src/fillmem.o" "../src/fillmem.c"
+../src/fillmem.c:3:10: fatal error: xgpiops.h: No such file or directory
+ #include "xgpiops.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/fillmem.o] Error 1
+src/subdir.mk:24: recipe for target 'src/fillmem.o' failed
