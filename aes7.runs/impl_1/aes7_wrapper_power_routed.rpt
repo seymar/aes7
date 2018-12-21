@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Tue Dec 18 22:13:58 2018
-| Host             : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
+| Date             : Tue Dec 18 22:33:17 2018
+| Host             : parallels-Parallels-Virtual-Platform running 64-bit unknown
 | Command          : report_power -file aes7_wrapper_power_routed.rpt -pb aes7_wrapper_power_summary_routed.pb -rpx aes7_wrapper_power_routed.rpx
 | Design           : aes7_wrapper
 | Device           : xc7z010clg400-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.542        |
+| Total On-Chip Power (W)  | 1.528        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.421        |
-| Device Static (W)        | 0.121        |
+| Dynamic (W)              | 1.408        |
+| Device Static (W)        | 0.120        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 67.2         |
-| Junction Temperature (C) | 42.8         |
+| Max Ambient (C)          | 67.4         |
+| Junction Temperature (C) | 42.6         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -49,24 +49,22 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+--------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
-+--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.004 |        4 |       --- |             --- |
-| Slice Logic              |     0.003 |     4216 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     1352 |     17600 |            7.68 |
-|   LUT as Distributed RAM |    <0.001 |      100 |      6000 |            1.67 |
-|   Register               |    <0.001 |     1863 |     35200 |            5.29 |
-|   LUT as Shift Register  |    <0.001 |      135 |      6000 |            2.25 |
-|   CARRY4                 |    <0.001 |        4 |      4400 |            0.09 |
-|   Others                 |     0.000 |      284 |       --- |             --- |
-| Signals                  |     0.004 |     2787 |       --- |             --- |
-| Block RAM                |     0.002 |        2 |        60 |            3.33 |
-| I/O                      |     0.010 |        6 |       100 |            6.00 |
-| PS7                      |     1.399 |        1 |       --- |             --- |
-| Static Power             |     0.121 |          |           |                 |
-| Total                    |     1.542 |          |           |                 |
-+--------------------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.002 |        4 |       --- |             --- |
+| Slice Logic             |    <0.001 |     1444 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      391 |     17600 |            2.22 |
+|   Register              |    <0.001 |      666 |     35200 |            1.89 |
+|   CARRY4                |    <0.001 |       18 |      4400 |            0.41 |
+|   LUT as Shift Register |    <0.001 |       60 |      6000 |            1.00 |
+|   Others                |     0.000 |      191 |       --- |             --- |
+| Signals                 |    <0.001 |     1051 |       --- |             --- |
+| I/O                     |     0.006 |        6 |       100 |            6.00 |
+| PS7                     |     1.399 |        1 |       --- |             --- |
+| Static Power            |     0.120 |          |           |                 |
+| Total                   |     1.528 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -75,20 +73,20 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.012 |      0.007 |
+| Vccint    |       1.000 |     0.010 |       0.003 |      0.007 |
 | Vccaux    |       1.800 |     0.008 |       0.000 |      0.008 |
-| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.746 |       0.717 |      0.028 |
+| Vccpint   |       1.000 |     0.745 |       0.717 |      0.028 |
 | Vccpaux   |       1.800 |     0.061 |       0.051 |      0.010 |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
 | Vcco_ddr  |       1.350 |     0.413 |       0.411 |      0.002 |
@@ -151,16 +149,12 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| aes7_wrapper             |     1.421 |
-|   aes7_i                 |     1.411 |
-|     axi_bram_ctrl_0      |     0.001 |
-|       U0                 |     0.001 |
-|     axi_smc              |     0.009 |
-|       inst               |     0.009 |
-|     blk_mem_gen_1        |     0.002 |
-|       U0                 |     0.002 |
+| aes7_wrapper             |     1.408 |
+|   aes7_i                 |     1.402 |
 |     processing_system7_0 |     1.399 |
 |       inst               |     1.399 |
+|     ps7_0_axi_periph     |     0.002 |
+|       s00_couplers       |     0.002 |
 +--------------------------+-----------+
 
 

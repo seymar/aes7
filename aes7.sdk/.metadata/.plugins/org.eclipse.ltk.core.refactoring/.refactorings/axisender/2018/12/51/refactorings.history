@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;axisender/src/fillmemory.c&apos; to &apos;axisender.c&apos;" description="Rename resource &apos;fillmemory.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/fillmemory.c" name="axisender.c" stamp="1545168511663" updateReferences="true"/>
+</session>

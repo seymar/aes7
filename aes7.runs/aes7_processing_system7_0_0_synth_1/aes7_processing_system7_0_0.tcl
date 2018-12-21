@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7z010clg400-1
@@ -25,16 +26,16 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /media/psf/Home/vivado/aes7/aes7.cache/wt [current_project]
-set_property parent.project_path /media/psf/Home/vivado/aes7/aes7.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+set_property webtalk.parent_dir /home/parallels/vivado/aes7/aes7.cache/wt [current_project]
+set_property parent.project_path /home/parallels/vivado/aes7/aes7.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
-set_property ip_output_repo /media/psf/Home/vivado/aes7/aes7.cache/ip [current_project]
+set_property ip_output_repo /home/parallels/vivado/aes7/aes7.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0.xci
-set_property used_in_implementation false [get_files -all /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0.xdc]
+read_ip -quiet /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0.xci
+set_property used_in_implementation false [get_files -all /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -48,7 +49,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir /media/psf/Home/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1 -new_name aes7_processing_system7_0_0 -ip [get_ips aes7_processing_system7_0_0]]
+set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir /home/parallels/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1 -new_name aes7_processing_system7_0_0 -ip [get_ips aes7_processing_system7_0_0]]
 
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
@@ -89,32 +90,32 @@ write_checkpoint -force -noxdef aes7_processing_system7_0_0.dcp
 create_report "aes7_processing_system7_0_0_synth_1_synth_report_utilization_0" "report_utilization -file aes7_processing_system7_0_0_utilization_synth.rpt -pb aes7_processing_system7_0_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force /media/psf/Home/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0.dcp /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0.dcp
+  file copy -force /home/parallels/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0.dcp /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.v
+  write_verilog -force -mode synth_stub /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.vhdl
+  write_vhdl -force -mode synth_stub /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_sim_netlist.v
+  write_verilog -force -mode funcsim /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -124,47 +125,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /media/psf/Home/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0.dcp /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0.dcp
+  file copy -force /home/parallels/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0.dcp /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /media/psf/Home/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0_stub.v /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.v
+  file rename -force /home/parallels/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0_stub.v /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /media/psf/Home/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0_stub.vhdl /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.vhdl
+  file rename -force /home/parallels/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0_stub.vhdl /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /media/psf/Home/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0_sim_netlist.v /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_sim_netlist.v
+  file rename -force /home/parallels/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0_sim_netlist.v /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /media/psf/Home/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0_sim_netlist.vhdl /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_sim_netlist.vhdl
+  file rename -force /home/parallels/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0_sim_netlist.vhdl /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir /media/psf/Home/vivado/aes7/aes7.ip_user_files/ip/aes7_processing_system7_0_0]} {
+if {[file isdir /home/parallels/vivado/aes7/aes7.ip_user_files/ip/aes7_processing_system7_0_0]} {
   catch { 
-    file copy -force /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.v /media/psf/Home/vivado/aes7/aes7.ip_user_files/ip/aes7_processing_system7_0_0
+    file copy -force /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.v /home/parallels/vivado/aes7/aes7.ip_user_files/ip/aes7_processing_system7_0_0
   }
 }
 
-if {[file isdir /media/psf/Home/vivado/aes7/aes7.ip_user_files/ip/aes7_processing_system7_0_0]} {
+if {[file isdir /home/parallels/vivado/aes7/aes7.ip_user_files/ip/aes7_processing_system7_0_0]} {
   catch { 
-    file copy -force /media/psf/Home/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.vhdl /media/psf/Home/vivado/aes7/aes7.ip_user_files/ip/aes7_processing_system7_0_0
+    file copy -force /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0_stub.vhdl /home/parallels/vivado/aes7/aes7.ip_user_files/ip/aes7_processing_system7_0_0
   }
 }
 file delete __synthesis_is_running__

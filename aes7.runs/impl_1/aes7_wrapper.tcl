@@ -65,6 +65,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z010clg400-1
   set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -73,7 +74,7 @@ set rc [catch {
   set_property parent.project_path /home/parallels/vivado/aes7/aes7.xpr [current_project]
   set_property ip_output_repo /home/parallels/vivado/aes7/aes7.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet /home/parallels/vivado/aes7/aes7.runs/synth_1/aes7_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
@@ -162,9 +163,8 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force aes7_wrapper.mmi }
-  catch { write_bmm -force aes7_wrapper_bd.bmm }
   write_bitstream -force aes7_wrapper.bit 
   catch { write_sysdef -hwdef aes7_wrapper.hwdef -bitfile aes7_wrapper.bit -meminfo aes7_wrapper.mmi -file aes7_wrapper.sysdef }
   catch {write_debug_probes -quiet -force aes7_wrapper}
