@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Dec 18 22:32:56 2018
-| Host         : parallels-Parallels-Virtual-Platform running 64-bit unknown
+| Date         : Fri Dec 21 14:43:10 2018
+| Host         : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_drc -file aes7_wrapper_drc_opted.rpt -pb aes7_wrapper_drc_opted.pb -rpx aes7_wrapper_drc_opted.rpx
 | Design       : aes7_wrapper
 | Device       : xc7z010clg400-1

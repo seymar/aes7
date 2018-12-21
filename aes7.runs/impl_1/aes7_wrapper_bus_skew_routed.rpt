@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Dec 18 22:33:17 2018
-| Host         : parallels-Parallels-Virtual-Platform running 64-bit unknown
+| Date         : Fri Dec 21 14:43:31 2018
+| Host         : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_bus_skew -warn_on_violation -file aes7_wrapper_bus_skew_routed.rpt -pb aes7_wrapper_bus_skew_routed.pb -rpx aes7_wrapper_bus_skew_routed.rpx
 | Design       : aes7_wrapper
 | Device       : 7z010-clg400

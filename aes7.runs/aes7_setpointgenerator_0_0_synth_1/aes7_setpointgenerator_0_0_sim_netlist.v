@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Tue Dec 18 22:12:19 2018
+// Date        : Fri Dec 21 14:42:10 2018
 // Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ aes7_setpointgenerator_0_0_sim_netlist.v
@@ -17,118 +17,55 @@
 (* NotValidForBitStream *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (clk,
-    bram_clk,
-    bram_addr,
-    bram_data,
-    bram_en,
-    bram_rst,
-    bram_we,
-    leds,
-    rgb);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN aes7_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 bram_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME bram_clk, ASSOCIATED_RESET bram_rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN aes7_setpointgenerator_0_0_bram_clk, INSERT_VIP 0" *) output bram_clk;
-  output [31:0]bram_addr;
-  input [31:0]bram_data;
-  output bram_en;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 bram_rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME bram_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) output bram_rst;
-  output [3:0]bram_we;
-  output [3:0]leds;
-  output [2:0]rgb;
+    data,
+    SP,
+    P,
+    I,
+    D,
+    RST,
+    PID);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET RST, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN aes7_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
+  input [31:0]data;
+  output [10:0]SP;
+  output [7:0]P;
+  output [7:0]I;
+  output [7:0]D;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) output RST;
+  output [12:0]PID;
 
   wire \<const0> ;
   wire \<const1> ;
-  wire bram_clk;
-  wire [31:0]bram_data;
-  wire clk;
-  wire [2:0]rgb;
+  wire [31:0]data;
 
-  assign bram_addr[31] = \<const0> ;
-  assign bram_addr[30] = \<const0> ;
-  assign bram_addr[29] = \<const0> ;
-  assign bram_addr[28] = \<const0> ;
-  assign bram_addr[27] = \<const0> ;
-  assign bram_addr[26] = \<const0> ;
-  assign bram_addr[25] = \<const0> ;
-  assign bram_addr[24] = \<const0> ;
-  assign bram_addr[23] = \<const0> ;
-  assign bram_addr[22] = \<const0> ;
-  assign bram_addr[21] = \<const0> ;
-  assign bram_addr[20] = \<const0> ;
-  assign bram_addr[19] = \<const0> ;
-  assign bram_addr[18] = \<const0> ;
-  assign bram_addr[17] = \<const0> ;
-  assign bram_addr[16] = \<const0> ;
-  assign bram_addr[15] = \<const0> ;
-  assign bram_addr[14] = \<const0> ;
-  assign bram_addr[13] = \<const0> ;
-  assign bram_addr[12] = \<const0> ;
-  assign bram_addr[11] = \<const0> ;
-  assign bram_addr[10] = \<const0> ;
-  assign bram_addr[9] = \<const0> ;
-  assign bram_addr[8] = \<const0> ;
-  assign bram_addr[7] = \<const0> ;
-  assign bram_addr[6] = \<const0> ;
-  assign bram_addr[5] = \<const0> ;
-  assign bram_addr[4] = \<const0> ;
-  assign bram_addr[3] = \<const0> ;
-  assign bram_addr[2] = \<const0> ;
-  assign bram_addr[1] = \<const0> ;
-  assign bram_addr[0] = \<const0> ;
-  assign bram_en = \<const1> ;
-  assign bram_rst = \<const0> ;
-  assign bram_we[3] = \<const0> ;
-  assign bram_we[2] = \<const0> ;
-  assign bram_we[1] = \<const0> ;
-  assign bram_we[0] = \<const0> ;
-  assign leds[3:0] = bram_data[3:0];
+  assign D[7:0] = data[26:19];
+  assign I[7] = \<const0> ;
+  assign I[6] = \<const0> ;
+  assign I[5] = \<const0> ;
+  assign I[4] = \<const0> ;
+  assign I[3] = \<const0> ;
+  assign I[2] = \<const0> ;
+  assign I[1] = \<const0> ;
+  assign I[0] = \<const0> ;
+  assign P[7:0] = data[18:11];
+  assign PID[12] = \<const1> ;
+  assign PID[11] = \<const0> ;
+  assign PID[10] = \<const0> ;
+  assign PID[9] = \<const0> ;
+  assign PID[8] = \<const0> ;
+  assign PID[7] = \<const0> ;
+  assign PID[6] = \<const0> ;
+  assign PID[5] = \<const0> ;
+  assign PID[4] = \<const0> ;
+  assign PID[3] = \<const0> ;
+  assign PID[2] = \<const0> ;
+  assign PID[1] = \<const0> ;
+  assign PID[0] = \<const0> ;
+  assign RST = data[27];
+  assign SP[10:0] = data[10:0];
   GND GND
        (.G(\<const0> ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_setpointgenerator U0
-       (.bram_clk(bram_clk),
-        .clk(clk),
-        .rgb({rgb[2],rgb[0]}));
   VCC VCC
        (.P(\<const1> ));
-endmodule
-
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_setpointgenerator
-   (bram_clk,
-    rgb,
-    clk);
-  output bram_clk;
-  output [1:0]rgb;
-  input clk;
-
-  wire bram_clk;
-  wire clk;
-  wire p_0_in;
-  wire [1:0]rgb;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    bram_clk_i_1
-       (.I0(bram_clk),
-        .O(p_0_in));
-  FDRE #(
-    .INIT(1'b0)) 
-    bram_clk_reg
-       (.C(clk),
-        .CE(1'b1),
-        .D(p_0_in),
-        .Q(bram_clk),
-        .R(1'b0));
-  FDRE \rgb_reg[0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(bram_clk),
-        .Q(rgb[0]),
-        .R(1'b0));
-  FDRE \rgb_reg[2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(p_0_in),
-        .Q(rgb[1]),
-        .R(1'b0));
 endmodule
 `ifndef GLBL
 `define GLBL

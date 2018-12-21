@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Tue Dec 18 22:33:17 2018
-| Host             : parallels-Parallels-Virtual-Platform running 64-bit unknown
+| Date             : Fri Dec 21 14:43:31 2018
+| Host             : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 | Command          : report_power -file aes7_wrapper_power_routed.rpt -pb aes7_wrapper_power_summary_routed.pb -rpx aes7_wrapper_power_routed.rpx
 | Design           : aes7_wrapper
 | Device           : xc7z010clg400-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.528        |
+| Total On-Chip Power (W)  | 1.522        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.408        |
+| Dynamic (W)              | 1.402        |
 | Device Static (W)        | 0.120        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 67.4         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.002 |        4 |       --- |             --- |
-| Slice Logic             |    <0.001 |     1444 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      391 |     17600 |            2.22 |
-|   Register              |    <0.001 |      666 |     35200 |            1.89 |
-|   CARRY4                |    <0.001 |       18 |      4400 |            0.41 |
+| Slice Logic             |    <0.001 |     1463 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      397 |     17600 |            2.26 |
+|   Register              |    <0.001 |      673 |     35200 |            1.91 |
+|   CARRY4                |    <0.001 |       23 |      4400 |            0.52 |
 |   LUT as Shift Register |    <0.001 |       60 |      6000 |            1.00 |
-|   Others                |     0.000 |      191 |       --- |             --- |
-| Signals                 |    <0.001 |     1051 |       --- |             --- |
-| I/O                     |     0.006 |        6 |       100 |            6.00 |
+|   Others                |     0.000 |      192 |       --- |             --- |
+| Signals                 |    <0.001 |     1059 |       --- |             --- |
+| I/O                     |    <0.001 |        3 |       100 |            3.00 |
 | PS7                     |     1.399 |        1 |       --- |             --- |
 | Static Power            |     0.120 |          |           |                 |
-| Total                   |     1.528 |          |           |                 |
+| Total                   |     1.522 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.010 |       0.003 |      0.007 |
+| Vccint    |       1.000 |     0.009 |       0.003 |      0.007 |
 | Vccaux    |       1.800 |     0.008 |       0.000 |      0.008 |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -137,6 +137,7 @@ Table of Contents
 | Clock      | Domain                                                  | Constraint (ns) |
 +------------+---------------------------------------------------------+-----------------+
 | clk_fpga_0 | aes7_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            20.0 |
+| clk_fpga_1 | aes7_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1] |          3969.0 |
 +------------+---------------------------------------------------------+-----------------+
 
 
@@ -149,7 +150,7 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| aes7_wrapper             |     1.408 |
+| aes7_wrapper             |     1.402 |
 |   aes7_i                 |     1.402 |
 |     processing_system7_0 |     1.399 |
 |       inst               |     1.399 |

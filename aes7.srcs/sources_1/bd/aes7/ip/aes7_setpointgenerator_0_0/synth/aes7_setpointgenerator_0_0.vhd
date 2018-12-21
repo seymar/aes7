@@ -56,14 +56,13 @@ USE ieee.numeric_std.ALL;
 ENTITY aes7_setpointgenerator_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
-    bram_clk : OUT STD_LOGIC;
-    bram_addr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    bram_data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    bram_en : OUT STD_LOGIC;
-    bram_rst : OUT STD_LOGIC;
-    bram_we : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    leds : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    rgb : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
+    data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    SP : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
+    P : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    I : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    D : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    RST : OUT STD_LOGIC;
+    PID : OUT STD_LOGIC_VECTOR(12 DOWNTO 0)
   );
 END aes7_setpointgenerator_0_0;
 
@@ -73,14 +72,13 @@ ARCHITECTURE aes7_setpointgenerator_0_0_arch OF aes7_setpointgenerator_0_0 IS
   COMPONENT setpointgenerator IS
     PORT (
       clk : IN STD_LOGIC;
-      bram_clk : OUT STD_LOGIC;
-      bram_addr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      bram_data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      bram_en : OUT STD_LOGIC;
-      bram_rst : OUT STD_LOGIC;
-      bram_we : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      leds : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      rgb : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
+      data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      SP : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
+      P : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+      I : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+      D : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+      RST : OUT STD_LOGIC;
+      PID : OUT STD_LOGIC_VECTOR(12 DOWNTO 0)
     );
   END COMPONENT setpointgenerator;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -93,23 +91,20 @@ ARCHITECTURE aes7_setpointgenerator_0_0_arch OF aes7_setpointgenerator_0_0 IS
   ATTRIBUTE IP_DEFINITION_SOURCE OF aes7_setpointgenerator_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF bram_rst: SIGNAL IS "XIL_INTERFACENAME bram_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF bram_rst: SIGNAL IS "xilinx.com:signal:reset:1.0 bram_rst RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF bram_clk: SIGNAL IS "XIL_INTERFACENAME bram_clk, ASSOCIATED_RESET bram_rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN aes7_setpointgenerator_0_0_bram_clk, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF bram_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 bram_clk CLK";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN aes7_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF RST: SIGNAL IS "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF RST: SIGNAL IS "xilinx.com:signal:reset:1.0 RST RST";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_RESET RST, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN aes7_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : setpointgenerator
     PORT MAP (
       clk => clk,
-      bram_clk => bram_clk,
-      bram_addr => bram_addr,
-      bram_data => bram_data,
-      bram_en => bram_en,
-      bram_rst => bram_rst,
-      bram_we => bram_we,
-      leds => leds,
-      rgb => rgb
+      data => data,
+      SP => SP,
+      P => P,
+      I => I,
+      D => D,
+      RST => RST,
+      PID => PID
     );
 END aes7_setpointgenerator_0_0_arch;

@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Dec 18 22:30:32 2018
-# Process ID: 5032
+# Start of session at: Fri Dec 21 14:30:54 2018
+# Process ID: 7410
 # Current directory: /home/parallels/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1
 # Command line: vivado -log aes7_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source aes7_processing_system7_0_0.tcl
 # Log file: /home/parallels/vivado/aes7/aes7.runs/aes7_processing_system7_0_0_synth_1/aes7_processing_system7_0_0.vds

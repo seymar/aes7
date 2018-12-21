@@ -21,6 +21,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==aes7_axi_gpio_0
 # IP: bd/aes7/ip/aes7_ps7_0_axi_periph_1/aes7_ps7_0_axi_periph_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==aes7_ps7_0_axi_periph_1 || ORIG_REF_NAME==aes7_ps7_0_axi_periph_1} -quiet] -quiet
 
+# IP: bd/aes7/ip/aes7_PWM_MODULE_0_0/aes7_PWM_MODULE_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==aes7_PWM_MODULE_0_0 || ORIG_REF_NAME==aes7_PWM_MODULE_0_0} -quiet] -quiet
+
 # IP: bd/aes7/ip/aes7_auto_pc_0/aes7_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==aes7_auto_pc_0 || ORIG_REF_NAME==aes7_auto_pc_0} -quiet] -quiet
 

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCA3A2F2593A17E3B",
+      "boundary_crc": "0xD22084CBE0761E13",
       "device": "xc7z010clg400-1",
       "name": "aes7",
       "synth_flow_mode": "Hierarchical",
@@ -10,14 +10,15 @@
     },
     "design_tree": {
       "processing_system7_0": "",
-      "setpointgenerator_0": "",
       "rst_ps7_0_50M": "",
       "axi_gpio_0": "",
       "ps7_0_axi_periph": {
         "s00_couplers": {
           "auto_pc": ""
         }
-      }
+      },
+      "PWM_MODULE_0": "",
+      "setpointgenerator_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -86,15 +87,25 @@
       }
     },
     "ports": {
-      "leds": {
+      "ldr": {
+        "type": "rst",
         "direction": "O",
-        "left": "3",
-        "right": "0"
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
-      "rgb": {
-        "direction": "O",
-        "left": "2",
-        "right": "0"
+      "L": {
+        "direction": "O"
+      },
+      "R": {
+        "direction": "O"
       }
     },
     "components": {
@@ -121,7 +132,7 @@
             "value": "50.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "1.000000"
+            "value": "0.251953"
           },
           "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -181,7 +192,7 @@
             "value": "50000000"
           },
           "PCW_CLK1_FREQ": {
-            "value": "1000000"
+            "value": "251952"
           },
           "PCW_CLK2_FREQ": {
             "value": "10000000"
@@ -274,7 +285,7 @@
             "value": "TRUE"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "1"
+            "value": "0.2"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
@@ -1128,73 +1139,6 @@
           }
         }
       },
-      "setpointgenerator_0": {
-        "vlnv": "xilinx.com:module_ref:setpointgenerator:1.0",
-        "xci_name": "aes7_setpointgenerator_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "setpointgenerator",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "aes7_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "bram_clk": {
-            "type": "clk",
-            "direction": "O",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "bram_rst",
-                "value_src": "constant"
-              }
-            }
-          },
-          "bram_rst": {
-            "type": "rst",
-            "direction": "O"
-          },
-          "bram_addr": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "bram_data": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "bram_en": {
-            "direction": "O"
-          },
-          "bram_we": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "leds": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "rgb": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          }
-        }
-      },
       "rst_ps7_0_50M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "aes7_rst_ps7_0_50M_2"
@@ -1385,16 +1329,16 @@
           }
         },
         "interface_nets": {
-          "ps7_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "s00_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "s00_couplers/M_AXI"
+            ]
+          },
+          "ps7_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -1424,31 +1368,136 @@
             ]
           }
         }
+      },
+      "PWM_MODULE_0": {
+        "vlnv": "xilinx.com:module_ref:PWM_MODULE:1.0",
+        "xci_name": "aes7_PWM_MODULE_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PWM_MODULE",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "aes7_processing_system7_0_0_FCLK_CLK1",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "251952",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "PID": {
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "PWM": {
+            "direction": "O"
+          },
+          "DIR": {
+            "direction": "O"
+          },
+          "L": {
+            "direction": "O"
+          },
+          "R": {
+            "direction": "O"
+          }
+        }
+      },
+      "setpointgenerator_0": {
+        "vlnv": "xilinx.com:module_ref:setpointgenerator:1.0",
+        "xci_name": "aes7_setpointgenerator_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "setpointgenerator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "aes7_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "RST": {
+            "type": "rst",
+            "direction": "O"
+          },
+          "data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "SP": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "P": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "I": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "D": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "PID": {
+            "direction": "O",
+            "left": "12",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
-        ]
-      },
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
           "axi_gpio_0/S_AXI"
         ]
       },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
-        ]
-      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
           "processing_system7_0/DDR"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       }
     },
@@ -1457,24 +1506,12 @@
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
-          "setpointgenerator_0/clk",
           "rst_ps7_0_50M/slowest_sync_clk",
           "ps7_0_axi_periph/S00_ACLK",
           "axi_gpio_0/s_axi_aclk",
           "ps7_0_axi_periph/M00_ACLK",
-          "ps7_0_axi_periph/ACLK"
-        ]
-      },
-      "setpointgenerator_0_leds": {
-        "ports": [
-          "setpointgenerator_0/leds",
-          "leds"
-        ]
-      },
-      "setpointgenerator_0_rgb": {
-        "ports": [
-          "setpointgenerator_0/rgb",
-          "rgb"
+          "ps7_0_axi_periph/ACLK",
+          "setpointgenerator_0/clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1495,7 +1532,37 @@
       "axi_gpio_0_gpio_io_o": {
         "ports": [
           "axi_gpio_0/gpio_io_o",
-          "setpointgenerator_0/bram_data"
+          "setpointgenerator_0/data"
+        ]
+      },
+      "setpointgenerator_0_RST": {
+        "ports": [
+          "setpointgenerator_0/RST",
+          "ldr"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK1": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK1",
+          "PWM_MODULE_0/CLK"
+        ]
+      },
+      "setpointgenerator_0_PID": {
+        "ports": [
+          "setpointgenerator_0/PID",
+          "PWM_MODULE_0/PID"
+        ]
+      },
+      "PWM_MODULE_0_L": {
+        "ports": [
+          "PWM_MODULE_0/L",
+          "L"
+        ]
+      },
+      "PWM_MODULE_0_R": {
+        "ports": [
+          "PWM_MODULE_0/R",
+          "R"
         ]
       }
     },

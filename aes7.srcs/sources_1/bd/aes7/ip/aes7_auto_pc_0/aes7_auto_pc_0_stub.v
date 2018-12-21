@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Tue Dec 18 22:31:54 2018
+// Date        : Tue Dec 18 22:31:53 2018
 // Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_auto_pc_0/aes7_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top aes7_auto_pc_0 -prefix
+//               aes7_auto_pc_0_ aes7_auto_pc_0_stub.v
 // Design      : aes7_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1
