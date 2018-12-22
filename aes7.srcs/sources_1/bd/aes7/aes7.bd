@@ -17,9 +17,9 @@
           "auto_pc": ""
         }
       },
-      "quaddecoder_0": "",
       "pscommunicator_0": "",
-      "pwm_0": ""
+      "pwm_0": "",
+      "quaddecoder_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1207,7 +1207,7 @@
             "value": "1"
           },
           "C_DOUT_DEFAULT": {
-            "value": "0xFFFFFFFF"
+            "value": "0x00000000"
           },
           "C_GPIO_WIDTH": {
             "value": "32"
@@ -1422,37 +1422,6 @@
           }
         }
       },
-      "quaddecoder_0": {
-        "vlnv": "xilinx.com:module_ref:quaddecoder:1.0",
-        "xci_name": "aes7_quaddecoder_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "quaddecoder",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "RESET": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "A": {
-            "direction": "I"
-          },
-          "B": {
-            "direction": "I"
-          },
-          "AV": {
-            "direction": "O",
-            "left": "12",
-            "right": "0"
-          },
-          "leds": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          }
-        }
-      },
       "pscommunicator_0": {
         "vlnv": "xilinx.com:module_ref:pscommunicator:1.0",
         "xci_name": "aes7_pscommunicator_0_0",
@@ -1482,7 +1451,12 @@
           },
           "RST": {
             "type": "rst",
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
           },
           "data": {
             "direction": "I",
@@ -1553,6 +1527,42 @@
             "direction": "O"
           }
         }
+      },
+      "quaddecoder_0": {
+        "vlnv": "xilinx.com:module_ref:quaddecoder:1.0",
+        "xci_name": "aes7_quaddecoder_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "quaddecoder",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "RESET": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "A": {
+            "direction": "I"
+          },
+          "B": {
+            "direction": "I"
+          },
+          "AV": {
+            "direction": "O",
+            "left": "12",
+            "right": "0"
+          },
+          "leds": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1560,12 +1570,6 @@
         "interface_ports": [
           "DDR",
           "processing_system7_0/DDR"
-        ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
         ]
       },
       "processing_system7_0_M_AXI_GP0": {
@@ -1578,6 +1582,12 @@
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
           "axi_gpio_0/S_AXI"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       }
     },

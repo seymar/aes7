@@ -22,25 +22,25 @@ entity quaddecoder is
         RESET : in std_logic;
            
         -- OUTPUT PORTS
-        AV : out std_logic_vector(12 downto 0) := (others => '0');
+        AV : out signed(12 downto 0);
         leds : out std_logic_vector(3 downto 0)
     );
 end quaddecoder;
 
 architecture Behavioral of quaddecoder is
-    signal countar : integer := 0;
-    signal countaf : integer := 0;
-    signal countbr : integer := 0;
-    signal countbf : integer := 0;
-    signal count : integer := 0;
+    signal c1, c2, c3, c4, count : signed(12 downto 0);
 begin
     process(A) is
     begin
         if rising_edge(A) then
             if (B = '0') then
-                countar <= countar + 1;
+                c1 <= c1 + 1;
             else
-                countar <= countar - 1;
+                c1 <= c1 - 1;
+            end if;
+            
+            if RESET = '1' then
+                c1 <= to_signed(0, 13);
             end if;
         end if;
     end process;
@@ -49,9 +49,13 @@ begin
     begin
         if falling_edge(A) then
             if (B = '1') then
-                countaf <= countaf + 1;
+                c2 <= c2 + 1;
             else
-                countaf <= countaf - 1;
+                c2 <= c2 - 1;
+            end if;
+            
+            if RESET = '1' then
+                c2 <= to_signed(0, 13);
             end if;
         end if;
     end process;
@@ -61,9 +65,13 @@ begin
     begin
         if rising_edge(B) then
             if (A = '1') then
-                countbr <= countbr + 1;
+                c3 <= c3 + 1;
             else
-                countbr <= countbr - 1;
+                c3 <= c3 - 1;
+            end if;
+            
+            if RESET = '1' then
+                c3 <= to_signed(0, 13);
             end if;
         end if;
     end process;
@@ -72,15 +80,19 @@ begin
     begin
         if falling_edge(B) then
             if (A = '0') then
-                countbf <= countbf + 1;
+                c4 <= c4 + 1;
             else
-                countbf <= countbf - 1;
+                c4 <= c4 - 1;
+            end if;
+            
+            if RESET = '1' then
+                c4 <= to_signed(0, 13);
             end if;
         end if;
     end process;
     
-    count <= countar + countaf + countbr + countbf;
+    count <= c1 + c2 + c3 + c4;
     
-    AV <= std_logic_vector(to_unsigned(count, 13));
-    leds <= std_logic_vector(to_unsigned(count, 4));
+    AV <= count;
+    leds <= std_logic_vector(count(3 downto 0));
 end Behavioral;

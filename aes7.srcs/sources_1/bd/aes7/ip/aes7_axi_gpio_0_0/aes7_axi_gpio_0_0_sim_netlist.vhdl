@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
--- Date        : Tue Dec 18 22:31:04 2018
+-- Date        : Sat Dec 22 17:29:55 2018
 -- Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_gpio_0_0/aes7_axi_gpio_0_0_sim_netlist.vhdl
@@ -337,357 +337,357 @@ begin
       Q => \Not_Dual.ALLOUT_ND.READ_REG_GEN[9].reg1_reg\,
       R => \Read_Reg_Rst__0\
     );
-\Not_Dual.gpio_Data_Out_reg[0]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[0]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(31),
       Q => \^gpio_io_o\(31),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[10]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[10]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(21),
       Q => \^gpio_io_o\(21),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[11]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[11]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(20),
       Q => \^gpio_io_o\(20),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[12]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[12]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(19),
       Q => \^gpio_io_o\(19),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[13]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[13]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(18),
       Q => \^gpio_io_o\(18),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[14]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[14]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(17),
       Q => \^gpio_io_o\(17),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[15]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[15]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(16),
       Q => \^gpio_io_o\(16),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[16]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[16]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(15),
       Q => \^gpio_io_o\(15),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[17]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[17]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(14),
       Q => \^gpio_io_o\(14),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[18]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[18]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(13),
       Q => \^gpio_io_o\(13),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[19]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[19]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(12),
       Q => \^gpio_io_o\(12),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[1]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[1]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(30),
       Q => \^gpio_io_o\(30),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[20]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[20]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(11),
       Q => \^gpio_io_o\(11),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[21]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[21]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(10),
       Q => \^gpio_io_o\(10),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[22]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[22]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(9),
       Q => \^gpio_io_o\(9),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[23]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[23]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(8),
       Q => \^gpio_io_o\(8),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[24]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[24]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(7),
       Q => \^gpio_io_o\(7),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[25]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[25]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(6),
       Q => \^gpio_io_o\(6),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[26]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[26]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(5),
       Q => \^gpio_io_o\(5),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[27]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[27]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(4),
       Q => \^gpio_io_o\(4),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[28]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[28]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(3),
       Q => \^gpio_io_o\(3),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[29]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[29]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(2),
       Q => \^gpio_io_o\(2),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[2]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[2]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(29),
       Q => \^gpio_io_o\(29),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[30]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[30]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(1),
       Q => \^gpio_io_o\(1),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[31]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[31]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(0),
       Q => \^gpio_io_o\(0),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[3]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[3]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(28),
       Q => \^gpio_io_o\(28),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[4]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[4]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(27),
       Q => \^gpio_io_o\(27),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[5]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[5]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(26),
       Q => \^gpio_io_o\(26),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[6]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[6]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(25),
       Q => \^gpio_io_o\(25),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[7]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[7]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(24),
       Q => \^gpio_io_o\(24),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[8]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[8]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(23),
       Q => \^gpio_io_o\(23),
-      S => SS(0)
+      R => SS(0)
     );
-\Not_Dual.gpio_Data_Out_reg[9]\: unisim.vcomponents.FDSE
+\Not_Dual.gpio_Data_Out_reg[9]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => s_axi_wdata(22),
       Q => \^gpio_io_o\(22),
-      S => SS(0)
+      R => SS(0)
     );
 \Not_Dual.gpio_OE_reg[0]\: unisim.vcomponents.FDSE
     generic map(
@@ -2804,7 +2804,7 @@ entity aes7_axi_gpio_0_0_axi_gpio is
   attribute C_ALL_OUTPUTS_2 : integer;
   attribute C_ALL_OUTPUTS_2 of aes7_axi_gpio_0_0_axi_gpio : entity is 0;
   attribute C_DOUT_DEFAULT : integer;
-  attribute C_DOUT_DEFAULT of aes7_axi_gpio_0_0_axi_gpio : entity is -1;
+  attribute C_DOUT_DEFAULT of aes7_axi_gpio_0_0_axi_gpio : entity is 0;
   attribute C_DOUT_DEFAULT_2 : integer;
   attribute C_DOUT_DEFAULT_2 of aes7_axi_gpio_0_0_axi_gpio : entity is 0;
   attribute C_FAMILY : string;
@@ -2858,38 +2858,38 @@ architecture STRUCTURE of aes7_axi_gpio_0_0_axi_gpio is
   attribute sigis of s_axi_aclk : signal is "Clk";
   attribute sigis of s_axi_aresetn : signal is "Rst";
 begin
-  gpio2_io_o(31) <= \<const1>\;
-  gpio2_io_o(30) <= \<const1>\;
-  gpio2_io_o(29) <= \<const1>\;
-  gpio2_io_o(28) <= \<const1>\;
-  gpio2_io_o(27) <= \<const1>\;
-  gpio2_io_o(26) <= \<const1>\;
-  gpio2_io_o(25) <= \<const1>\;
-  gpio2_io_o(24) <= \<const1>\;
-  gpio2_io_o(23) <= \<const1>\;
-  gpio2_io_o(22) <= \<const1>\;
-  gpio2_io_o(21) <= \<const1>\;
-  gpio2_io_o(20) <= \<const1>\;
-  gpio2_io_o(19) <= \<const1>\;
-  gpio2_io_o(18) <= \<const1>\;
-  gpio2_io_o(17) <= \<const1>\;
-  gpio2_io_o(16) <= \<const1>\;
-  gpio2_io_o(15) <= \<const1>\;
-  gpio2_io_o(14) <= \<const1>\;
-  gpio2_io_o(13) <= \<const1>\;
-  gpio2_io_o(12) <= \<const1>\;
-  gpio2_io_o(11) <= \<const1>\;
-  gpio2_io_o(10) <= \<const1>\;
-  gpio2_io_o(9) <= \<const1>\;
-  gpio2_io_o(8) <= \<const1>\;
-  gpio2_io_o(7) <= \<const1>\;
-  gpio2_io_o(6) <= \<const1>\;
-  gpio2_io_o(5) <= \<const1>\;
-  gpio2_io_o(4) <= \<const1>\;
-  gpio2_io_o(3) <= \<const1>\;
-  gpio2_io_o(2) <= \<const1>\;
-  gpio2_io_o(1) <= \<const1>\;
-  gpio2_io_o(0) <= \<const1>\;
+  gpio2_io_o(31) <= \<const0>\;
+  gpio2_io_o(30) <= \<const0>\;
+  gpio2_io_o(29) <= \<const0>\;
+  gpio2_io_o(28) <= \<const0>\;
+  gpio2_io_o(27) <= \<const0>\;
+  gpio2_io_o(26) <= \<const0>\;
+  gpio2_io_o(25) <= \<const0>\;
+  gpio2_io_o(24) <= \<const0>\;
+  gpio2_io_o(23) <= \<const0>\;
+  gpio2_io_o(22) <= \<const0>\;
+  gpio2_io_o(21) <= \<const0>\;
+  gpio2_io_o(20) <= \<const0>\;
+  gpio2_io_o(19) <= \<const0>\;
+  gpio2_io_o(18) <= \<const0>\;
+  gpio2_io_o(17) <= \<const0>\;
+  gpio2_io_o(16) <= \<const0>\;
+  gpio2_io_o(15) <= \<const0>\;
+  gpio2_io_o(14) <= \<const0>\;
+  gpio2_io_o(13) <= \<const0>\;
+  gpio2_io_o(12) <= \<const0>\;
+  gpio2_io_o(11) <= \<const0>\;
+  gpio2_io_o(10) <= \<const0>\;
+  gpio2_io_o(9) <= \<const0>\;
+  gpio2_io_o(8) <= \<const0>\;
+  gpio2_io_o(7) <= \<const0>\;
+  gpio2_io_o(6) <= \<const0>\;
+  gpio2_io_o(5) <= \<const0>\;
+  gpio2_io_o(4) <= \<const0>\;
+  gpio2_io_o(3) <= \<const0>\;
+  gpio2_io_o(2) <= \<const0>\;
+  gpio2_io_o(1) <= \<const0>\;
+  gpio2_io_o(0) <= \<const0>\;
   gpio2_io_t(31) <= \<const1>\;
   gpio2_io_t(30) <= \<const1>\;
   gpio2_io_t(29) <= \<const1>\;
@@ -3375,7 +3375,7 @@ architecture STRUCTURE of aes7_axi_gpio_0_0 is
   attribute C_ALL_OUTPUTS_2 : integer;
   attribute C_ALL_OUTPUTS_2 of U0 : label is 0;
   attribute C_DOUT_DEFAULT : integer;
-  attribute C_DOUT_DEFAULT of U0 : label is -1;
+  attribute C_DOUT_DEFAULT of U0 : label is 0;
   attribute C_DOUT_DEFAULT_2 : integer;
   attribute C_DOUT_DEFAULT_2 of U0 : label is 0;
   attribute C_FAMILY : string;

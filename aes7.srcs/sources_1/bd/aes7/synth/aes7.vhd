@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
---Date        : Sat Dec 22 11:40:03 2018
+--Date        : Sat Dec 22 17:29:15 2018
 --Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 --Command     : generate_target aes7.bd
 --Design      : aes7
@@ -724,15 +724,6 @@ architecture STRUCTURE of aes7 is
     gpio_io_o : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component aes7_axi_gpio_0_0;
-  component aes7_quaddecoder_0_0 is
-  port (
-    A : in STD_LOGIC;
-    B : in STD_LOGIC;
-    RESET : in STD_LOGIC;
-    AV : out STD_LOGIC_VECTOR ( 12 downto 0 );
-    leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component aes7_quaddecoder_0_0;
   component aes7_pscommunicator_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -755,6 +746,15 @@ architecture STRUCTURE of aes7 is
     r : out STD_LOGIC
   );
   end component aes7_pwm_0_0;
+  component aes7_quaddecoder_0_0 is
+  port (
+    A : in STD_LOGIC;
+    B : in STD_LOGIC;
+    RESET : in STD_LOGIC;
+    AV : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component aes7_quaddecoder_0_0;
   signal A_0_1 : STD_LOGIC;
   signal B_0_1 : STD_LOGIC;
   signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 31 downto 0 );

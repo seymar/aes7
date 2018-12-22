@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Tue Dec 18 22:31:04 2018
+// Date        : Sat Dec 22 17:29:55 2018
 // Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/parallels/vivado/aes7/aes7.srcs/sources_1/bd/aes7/ip/aes7_axi_gpio_0_0/aes7_axi_gpio_0_0_sim_netlist.v
@@ -85,7 +85,7 @@ module aes7_axi_gpio_0_0
   (* C_ALL_INPUTS_2 = "0" *) 
   (* C_ALL_OUTPUTS = "1" *) 
   (* C_ALL_OUTPUTS_2 = "0" *) 
-  (* C_DOUT_DEFAULT = "-1" *) 
+  (* C_DOUT_DEFAULT = "0" *) 
   (* C_DOUT_DEFAULT_2 = "0" *) 
   (* C_FAMILY = "zynq" *) 
   (* C_GPIO2_WIDTH = "32" *) 
@@ -410,262 +410,262 @@ module aes7_axi_gpio_0_0_GPIO_Core
         .D(gpio_io_o[22]),
         .Q(\Not_Dual.ALLOUT_ND.READ_REG_GEN[9].reg1_reg ),
         .R(Read_Reg_Rst__0));
-  FDSE #(
-    .INIT(1'b1)) 
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[0] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[31]),
         .Q(gpio_io_o[31]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[10] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[21]),
         .Q(gpio_io_o[21]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[11] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[20]),
         .Q(gpio_io_o[20]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[12] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[19]),
         .Q(gpio_io_o[19]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[13] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[18]),
         .Q(gpio_io_o[18]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[14] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[17]),
         .Q(gpio_io_o[17]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[15] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[16]),
         .Q(gpio_io_o[16]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[16] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[15]),
         .Q(gpio_io_o[15]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[17] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[14]),
         .Q(gpio_io_o[14]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[18] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[13]),
         .Q(gpio_io_o[13]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[19] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[12]),
         .Q(gpio_io_o[12]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[1] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[30]),
         .Q(gpio_io_o[30]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[20] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[11]),
         .Q(gpio_io_o[11]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[21] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[10]),
         .Q(gpio_io_o[10]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[22] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[9]),
         .Q(gpio_io_o[9]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[23] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[8]),
         .Q(gpio_io_o[8]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[24] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[7]),
         .Q(gpio_io_o[7]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[25] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[6]),
         .Q(gpio_io_o[6]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[26] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[5]),
         .Q(gpio_io_o[5]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[27] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[4]),
         .Q(gpio_io_o[4]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[28] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[3]),
         .Q(gpio_io_o[3]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[29] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[2]),
         .Q(gpio_io_o[2]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[2] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[29]),
         .Q(gpio_io_o[29]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[30] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[1]),
         .Q(gpio_io_o[1]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[31] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[0]),
         .Q(gpio_io_o[0]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[3] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[28]),
         .Q(gpio_io_o[28]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[4] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[27]),
         .Q(gpio_io_o[27]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[5] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[26]),
         .Q(gpio_io_o[26]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[6] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[25]),
         .Q(gpio_io_o[25]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[7] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[24]),
         .Q(gpio_io_o[24]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[8] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[23]),
         .Q(gpio_io_o[23]),
-        .S(SS));
-  FDSE #(
-    .INIT(1'b1)) 
+        .R(SS));
+  FDRE #(
+    .INIT(1'b0)) 
     \Not_Dual.gpio_Data_Out_reg[9] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[22]),
         .Q(gpio_io_o[22]),
-        .S(SS));
+        .R(SS));
   FDSE #(
     .INIT(1'b1)) 
     \Not_Dual.gpio_OE_reg[0] 
@@ -1478,7 +1478,7 @@ module aes7_axi_gpio_0_0_address_decoder
 endmodule
 
 (* C_ALL_INPUTS = "0" *) (* C_ALL_INPUTS_2 = "0" *) (* C_ALL_OUTPUTS = "1" *) 
-(* C_ALL_OUTPUTS_2 = "0" *) (* C_DOUT_DEFAULT = "-1" *) (* C_DOUT_DEFAULT_2 = "0" *) 
+(* C_ALL_OUTPUTS_2 = "0" *) (* C_DOUT_DEFAULT = "0" *) (* C_DOUT_DEFAULT_2 = "0" *) 
 (* C_FAMILY = "zynq" *) (* C_GPIO2_WIDTH = "32" *) (* C_GPIO_WIDTH = "32" *) 
 (* C_INTERRUPT_PRESENT = "0" *) (* C_IS_DUAL = "0" *) (* C_S_AXI_ADDR_WIDTH = "9" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRI_DEFAULT = "-1" *) (* C_TRI_DEFAULT_2 = "-1" *) 
@@ -1573,38 +1573,38 @@ module aes7_axi_gpio_0_0_axi_gpio
   wire s_axi_wready;
   wire s_axi_wvalid;
 
-  assign gpio2_io_o[31] = \<const1> ;
-  assign gpio2_io_o[30] = \<const1> ;
-  assign gpio2_io_o[29] = \<const1> ;
-  assign gpio2_io_o[28] = \<const1> ;
-  assign gpio2_io_o[27] = \<const1> ;
-  assign gpio2_io_o[26] = \<const1> ;
-  assign gpio2_io_o[25] = \<const1> ;
-  assign gpio2_io_o[24] = \<const1> ;
-  assign gpio2_io_o[23] = \<const1> ;
-  assign gpio2_io_o[22] = \<const1> ;
-  assign gpio2_io_o[21] = \<const1> ;
-  assign gpio2_io_o[20] = \<const1> ;
-  assign gpio2_io_o[19] = \<const1> ;
-  assign gpio2_io_o[18] = \<const1> ;
-  assign gpio2_io_o[17] = \<const1> ;
-  assign gpio2_io_o[16] = \<const1> ;
-  assign gpio2_io_o[15] = \<const1> ;
-  assign gpio2_io_o[14] = \<const1> ;
-  assign gpio2_io_o[13] = \<const1> ;
-  assign gpio2_io_o[12] = \<const1> ;
-  assign gpio2_io_o[11] = \<const1> ;
-  assign gpio2_io_o[10] = \<const1> ;
-  assign gpio2_io_o[9] = \<const1> ;
-  assign gpio2_io_o[8] = \<const1> ;
-  assign gpio2_io_o[7] = \<const1> ;
-  assign gpio2_io_o[6] = \<const1> ;
-  assign gpio2_io_o[5] = \<const1> ;
-  assign gpio2_io_o[4] = \<const1> ;
-  assign gpio2_io_o[3] = \<const1> ;
-  assign gpio2_io_o[2] = \<const1> ;
-  assign gpio2_io_o[1] = \<const1> ;
-  assign gpio2_io_o[0] = \<const1> ;
+  assign gpio2_io_o[31] = \<const0> ;
+  assign gpio2_io_o[30] = \<const0> ;
+  assign gpio2_io_o[29] = \<const0> ;
+  assign gpio2_io_o[28] = \<const0> ;
+  assign gpio2_io_o[27] = \<const0> ;
+  assign gpio2_io_o[26] = \<const0> ;
+  assign gpio2_io_o[25] = \<const0> ;
+  assign gpio2_io_o[24] = \<const0> ;
+  assign gpio2_io_o[23] = \<const0> ;
+  assign gpio2_io_o[22] = \<const0> ;
+  assign gpio2_io_o[21] = \<const0> ;
+  assign gpio2_io_o[20] = \<const0> ;
+  assign gpio2_io_o[19] = \<const0> ;
+  assign gpio2_io_o[18] = \<const0> ;
+  assign gpio2_io_o[17] = \<const0> ;
+  assign gpio2_io_o[16] = \<const0> ;
+  assign gpio2_io_o[15] = \<const0> ;
+  assign gpio2_io_o[14] = \<const0> ;
+  assign gpio2_io_o[13] = \<const0> ;
+  assign gpio2_io_o[12] = \<const0> ;
+  assign gpio2_io_o[11] = \<const0> ;
+  assign gpio2_io_o[10] = \<const0> ;
+  assign gpio2_io_o[9] = \<const0> ;
+  assign gpio2_io_o[8] = \<const0> ;
+  assign gpio2_io_o[7] = \<const0> ;
+  assign gpio2_io_o[6] = \<const0> ;
+  assign gpio2_io_o[5] = \<const0> ;
+  assign gpio2_io_o[4] = \<const0> ;
+  assign gpio2_io_o[3] = \<const0> ;
+  assign gpio2_io_o[2] = \<const0> ;
+  assign gpio2_io_o[1] = \<const0> ;
+  assign gpio2_io_o[0] = \<const0> ;
   assign gpio2_io_t[31] = \<const1> ;
   assign gpio2_io_t[30] = \<const1> ;
   assign gpio2_io_t[29] = \<const1> ;

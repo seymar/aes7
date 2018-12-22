@@ -183,7 +183,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_ALL_INPUTS {0} \
    CONFIG.C_ALL_INPUTS_2 {0} \
    CONFIG.C_ALL_OUTPUTS {1} \
-   CONFIG.C_DOUT_DEFAULT {0xFFFFFFFF} \
+   CONFIG.C_DOUT_DEFAULT {0x00000000} \
    CONFIG.C_GPIO2_WIDTH {32} \
    CONFIG.C_GPIO_WIDTH {32} \
    CONFIG.C_IS_DUAL {0} \
@@ -688,6 +688,10 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] [get_bd_pins /pscommunicator_0/RST]
+
   # Create instance: pwm_0, and set properties
   set block_name pwm
   set block_cell_name pwm_0
@@ -710,6 +714,10 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] [get_bd_pins /quaddecoder_0/RESET]
+
   # Create instance: rst_ps7_0_50M, and set properties
   set rst_ps7_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_50M ]
 

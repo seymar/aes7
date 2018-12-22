@@ -1,0 +1,84 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sat Dec 22 17:31:20 2018
+| Host         : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
+| Command      : report_incremental_reuse -file aes7_wrapper_incremental_reuse_routed.rpt
+| Design       : aes7_wrapper
+| Device       : xc7z010
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------
+
+Incremental Implementation Information
+
+Table of Contents
+-----------------
+1. Reuse Summary
+2. Reference Checkpoint Information
+3. Comparison with Reference Run
+4. Non Reuse Information
+
+1. Reuse Summary
+----------------
+
++-------+----------------------+--------------------+--------------------+-------+
+|  Type | Matched % (of Total) | Reuse % (of Total) | Fixed % (of Total) | Total |
++-------+----------------------+--------------------+--------------------+-------+
+| Cells |                98.07 |              98.07 |               8.59 |  1663 |
+| Nets  |               100.00 |              95.44 |               0.00 |  1339 |
+| Pins  |                    - |              96.86 |                  - |  5527 |
+| Ports |               100.00 |             100.00 |             100.00 |   142 |
++-------+----------------------+--------------------+--------------------+-------+
+
+
+2. Reference Checkpoint Information
+-----------------------------------
+
++----------------+--------------------------------------------------------------------------------------+
+| DCP Location:  | /home/parallels/vivado/aes7/aes7.srcs/utils_1/imports/impl_1/aes7_wrapper_routed.dcp |
++----------------+--------------------------------------------------------------------------------------+
+
+
++--------------------------------+----------------------------+
+|         DCP Information        |            Value           |
++--------------------------------+----------------------------+
+| Vivado Version                 |                    v2018.3 |
+| DCP State                      |                 POST_ROUTE |
+| Recorded WNS                   |                     13.356 |
+| Recorded WHS                   |                      0.044 |
+| Reference Speed File Version   | PRODUCTION 1.11 2014-09-11 |
+| Incremental Speed File Version | PRODUCTION 1.11 2014-09-11 |
++--------------------------------+----------------------------+
+* Recorded WNS/WHS timing numbers are estimated timing numbers. They may vary slightly from sign-off timing numbers.
+
+
+3. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| place_design    |      13.143 |      13.353 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| route_design    |      13.356 |      15.897 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+4. Non Reuse Information
+------------------------
+
++-----------------------+------+
+|          Type         |   %  |
++-----------------------+------+
+| Non-Reused Cells      | 1.92 |
+|   New                 | 1.92 |
+| Partially reused nets | 0.14 |
+| Non-Reused nets       | 4.40 |
+| Non-Reused Ports      | 0.00 |
++-----------------------+------+
+
+

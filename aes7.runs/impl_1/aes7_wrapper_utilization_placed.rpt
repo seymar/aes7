@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Dec 22 11:42:02 2018
+| Date         : Sat Dec 22 17:31:06 2018
 | Host         : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_utilization -file aes7_wrapper_utilization_placed.rpt -pb aes7_wrapper_utilization_placed.pb
 | Design       : aes7_wrapper
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs                 |  586 |     0 |     17600 |  3.33 |
-|   LUT as Logic             |  526 |     0 |     17600 |  2.99 |
+| Slice LUTs                 |  584 |     0 |     17600 |  3.32 |
+|   LUT as Logic             |  524 |     0 |     17600 |  2.98 |
 |   LUT as Memory            |   60 |     0 |      6000 |  1.00 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   60 |     0 |           |       |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 51    |          Yes |         Set |            - |
-| 675   |          Yes |       Reset |            - |
+| 19    |          Yes |         Set |            - |
+| 707   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,12 +69,12 @@ Table of Contents
 +--------------------------------------------+------+-------+-----------+-------+
 |                  Site Type                 | Used | Fixed | Available | Util% |
 +--------------------------------------------+------+-------+-----------+-------+
-| Slice                                      |  255 |     0 |      4400 |  5.80 |
-|   SLICEL                                   |  158 |     0 |           |       |
-|   SLICEM                                   |   97 |     0 |           |       |
-| LUT as Logic                               |  526 |     0 |     17600 |  2.99 |
+| Slice                                      |  261 |     0 |      4400 |  5.93 |
+|   SLICEL                                   |  159 |     0 |           |       |
+|   SLICEM                                   |  102 |     0 |           |       |
+| LUT as Logic                               |  524 |     0 |     17600 |  2.98 |
 |   using O5 output only                     |    0 |       |           |       |
-|   using O6 output only                     |  371 |       |           |       |
+|   using O6 output only                     |  369 |       |           |       |
 |   using O5 and O6                          |  155 |       |           |       |
 | LUT as Memory                              |   60 |     0 |      6000 |  1.00 |
 |   LUT as Distributed RAM                   |    0 |     0 |           |       |
@@ -83,10 +83,10 @@ Table of Contents
 |     using O6 output only                   |   56 |       |           |       |
 |     using O5 and O6                        |    4 |       |           |       |
 | Slice Registers                            |  726 |     0 |     35200 |  2.06 |
-|   Register driven from within the Slice    |  434 |       |           |       |
-|   Register driven from outside the Slice   |  292 |       |           |       |
-|     LUT in front of the register is unused |  270 |       |           |       |
-|     LUT in front of the register is used   |   22 |       |           |       |
+|   Register driven from within the Slice    |  431 |       |           |       |
+|   Register driven from outside the Slice   |  295 |       |           |       |
+|     LUT in front of the register is unused |  269 |       |           |       |
+|     LUT in front of the register is used   |   26 |       |           |       |
 | Unique Control Sets                        |   41 |       |      4400 |  0.93 |
 +--------------------------------------------+------+-------+-----------+-------+
 * Note: Available Control Sets calculated as Slice Registers / 8, Review the Control Sets Report for more information regarding control sets.
@@ -179,18 +179,18 @@ Table of Contents
 +----------+------+----------------------+
 | Ref Name | Used |  Functional Category |
 +----------+------+----------------------+
-| FDRE     |  675 |         Flop & Latch |
+| FDRE     |  707 |         Flop & Latch |
 | LUT3     |  220 |                  LUT |
 | LUT6     |  165 |                  LUT |
 | BIBUF    |  130 |                   IO |
-| LUT2     |  111 |                  LUT |
+| LUT2     |  109 |                  LUT |
 | LUT5     |   75 |                  LUT |
 | LUT4     |   57 |                  LUT |
 | LUT1     |   53 |                  LUT |
-| FDSE     |   51 |         Flop & Latch |
 | CARRY4   |   50 |           CarryLogic |
 | SRLC32E  |   45 |   Distributed Memory |
 | SRL16E   |   19 |   Distributed Memory |
+| FDSE     |   19 |         Flop & Latch |
 | OBUF     |    9 |                   IO |
 | IBUF     |    3 |                   IO |
 | PS7      |    1 | Specialized Resource |
@@ -215,6 +215,7 @@ Table of Contents
 | aes7_rst_ps7_0_50M_2        |    1 |
 | aes7_quaddecoder_0_0        |    1 |
 | aes7_pwm_0_0                |    1 |
+| aes7_pscommunicator_0_0     |    1 |
 | aes7_processing_system7_0_0 |    1 |
 | aes7_axi_gpio_0_0           |    1 |
 | aes7_auto_pc_0              |    1 |
