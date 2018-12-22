@@ -116,6 +116,8 @@ start_step place_design
 set ACTIVE_STEP place_design
 set rc [catch {
   create_msg_db place_design.pb
+  read_checkpoint -auto_incremental  -incremental /home/parallels/vivado/aes7/aes7.srcs/utils_1/imports/impl_1/aes7_wrapper_routed.dcp
+  catch { report_incremental_reuse -file aes7_wrapper_incremental_reuse_pre_placed.rpt }
   if { [llength [get_debug_cores -quiet] ] > 0 }  { 
     implement_debug_core 
   } 

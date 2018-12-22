@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1545399703">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1545475218" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/impl_1/aes7_wrapper_routed.dcp">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="aes7_wrapper.drc"/>
   <File Type="BG-BGN" Name="aes7_wrapper.bgn"/>
@@ -71,15 +71,25 @@
   <File Type="PA-TCL" Name="aes7_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/setpointgenerator.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/vivado/quaddecoder.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../quaddecoder.vhd"/>
+        <Attr Name="ImportTime" Val="1545413746"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Downloads/PWM_MODULE.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/vivado/pscommunicator.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../media/psf/Home/Downloads/PWM_MODULE.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../pscommunicator.vhd"/>
+        <Attr Name="ImportTime" Val="1545414208"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/vivado/pwm.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../pwm.vhd"/>
         <Attr Name="ImportTime" Val="1545398559"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -120,12 +130,24 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/impl_1/aes7_wrapper_routed.dcp">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PRUNDIR/impl_1/aes7_wrapper_routed.dcp"/>
+        <Attr Name="ImportTime" Val="1545475202"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="impl_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -136,8 +158,8 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="aes7_setpointgenerator_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="aes7_PWM_MODULE_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aes7_pscommunicator_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aes7_pwm_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aes7_quaddecoder_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="aes7_axi_gpio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="aes7_processing_system7_0_0"/>
 </GenRun>

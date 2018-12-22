@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# PWM_MODULE, setpointgenerator
+# pscommunicator, pwm, quaddecoder
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -167,21 +167,16 @@ proc create_root_design { parentCell } {
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
   # Create ports
+  set A [ create_bd_port -dir I A ]
+  set B [ create_bd_port -dir I B ]
   set L [ create_bd_port -dir O L ]
   set R [ create_bd_port -dir O R ]
-  set ldr [ create_bd_port -dir O -type rst ldr ]
+  set led [ create_bd_port -dir O -from 3 -to 0 led ]
+  set ledb [ create_bd_port -dir O -type data ledb ]
+  set ledg [ create_bd_port -dir O -type data ledg ]
+  set ledr [ create_bd_port -dir O -type data ledr ]
+  set pwmfreq [ create_bd_port -dir I -type clk pwmfreq ]
 
-  # Create instance: PWM_MODULE_0, and set properties
-  set block_name PWM_MODULE
-  set block_cell_name PWM_MODULE_0
-  if { [catch {set PWM_MODULE_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $PWM_MODULE_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
   set_property -dict [ list \
@@ -283,6 +278,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_EN_USB0 {1} \
    CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {5} \
    CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {4} \
+   CONFIG.PCW_FCLK1_PERIPHERAL_CLKSRC {IO PLL} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {63} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {63} \
    CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {1} \
@@ -681,20 +677,42 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_MI {1} \
  ] $ps7_0_axi_periph
 
-  # Create instance: rst_ps7_0_50M, and set properties
-  set rst_ps7_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_50M ]
-
-  # Create instance: setpointgenerator_0, and set properties
-  set block_name setpointgenerator
-  set block_cell_name setpointgenerator_0
-  if { [catch {set setpointgenerator_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  # Create instance: pscommunicator_0, and set properties
+  set block_name pscommunicator
+  set block_cell_name pscommunicator_0
+  if { [catch {set pscommunicator_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $setpointgenerator_0 eq "" } {
+   } elseif { $pscommunicator_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
   
+  # Create instance: pwm_0, and set properties
+  set block_name pwm
+  set block_cell_name pwm_0
+  if { [catch {set pwm_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $pwm_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: quaddecoder_0, and set properties
+  set block_name quaddecoder
+  set block_cell_name quaddecoder_0
+  if { [catch {set quaddecoder_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $quaddecoder_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: rst_ps7_0_50M, and set properties
+  set rst_ps7_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_50M ]
+
   # Create interface connections
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
@@ -702,15 +720,19 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
 
   # Create port connections
-  connect_bd_net -net PWM_MODULE_0_L [get_bd_ports L] [get_bd_pins PWM_MODULE_0/L]
-  connect_bd_net -net PWM_MODULE_0_R [get_bd_ports R] [get_bd_pins PWM_MODULE_0/R]
-  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins setpointgenerator_0/data]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk] [get_bd_pins setpointgenerator_0/clk]
-  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins PWM_MODULE_0/CLK] [get_bd_pins processing_system7_0/FCLK_CLK1]
+  connect_bd_net -net A_0_1 [get_bd_ports A] [get_bd_ports ledr] [get_bd_pins quaddecoder_0/A]
+  connect_bd_net -net B_0_1 [get_bd_ports B] [get_bd_ports ledg] [get_bd_pins quaddecoder_0/B]
+  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins pscommunicator_0/data]
+  connect_bd_net -net clk_0_1 [get_bd_ports pwmfreq] [get_bd_pins pwm_0/clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins pscommunicator_0/clk] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
+  connect_bd_net -net pscommunicator_0_RST [get_bd_pins pscommunicator_0/RST] [get_bd_pins quaddecoder_0/RESET]
+  connect_bd_net -net pwm_0_L [get_bd_ports L] [get_bd_pins pwm_0/l]
+  connect_bd_net -net pwm_0_R [get_bd_ports R] [get_bd_pins pwm_0/r]
+  connect_bd_net -net pwm_0_en [get_bd_ports ledb] [get_bd_pins pwm_0/en]
+  connect_bd_net -net quaddecoder_0_AV [get_bd_pins pwm_0/cv] [get_bd_pins quaddecoder_0/AV]
+  connect_bd_net -net quaddecoder_0_leds [get_bd_ports led] [get_bd_pins quaddecoder_0/leds]
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
-  connect_bd_net -net setpointgenerator_0_PID [get_bd_pins PWM_MODULE_0/PID] [get_bd_pins setpointgenerator_0/PID]
-  connect_bd_net -net setpointgenerator_0_RST [get_bd_ports ldr] [get_bd_pins setpointgenerator_0/RST]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg

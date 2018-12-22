@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Fri Dec 21 14:42:39 2018
-# Process ID: 11503
+# Start of session at: Sat Dec 22 11:41:16 2018
+# Process ID: 28512
 # Current directory: /home/parallels/vivado/aes7/aes7.runs/impl_1
 # Command line: vivado -log aes7_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source aes7_wrapper.tcl -notrace
 # Log file: /home/parallels/vivado/aes7/aes7.runs/impl_1/aes7_wrapper.vdi
