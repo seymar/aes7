@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
---Date        : Sat Dec 22 17:29:16 2018
+--Date        : Sat Dec 22 18:16:05 2018
 --Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 --Command     : generate_target aes7_wrapper.bd
 --Design      : aes7_wrapper
@@ -38,6 +38,7 @@ entity aes7_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     L : out STD_LOGIC;
     R : out STD_LOGIC;
+    btn0 : in STD_LOGIC;
     led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     ledb : out STD_LOGIC;
     ledg : out STD_LOGIC;
@@ -78,7 +79,8 @@ architecture STRUCTURE of aes7_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC;
+    btn0 : in STD_LOGIC
   );
   end component aes7;
 begin
@@ -109,6 +111,7 @@ aes7_i: component aes7
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       L => L,
       R => R,
+      btn0 => btn0,
       led(3 downto 0) => led(3 downto 0),
       ledb => ledb,
       ledg => ledg,

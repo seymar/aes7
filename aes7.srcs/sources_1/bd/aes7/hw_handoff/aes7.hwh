@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Dec 22 17:29:16 2018" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Dec 22 18:16:05 2018" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.0" DEVICE="7z010" NAME="aes7" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -7,13 +7,13 @@
     <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="External_Ports_A">
       <CONNECTIONS>
         <CONNECTION INSTANCE="External_Ports" PORT="ledr"/>
-        <CONNECTION INSTANCE="quaddecoder_0" PORT="A"/>
+        <CONNECTION INSTANCE="quaddecoder_0" PORT="a"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="B" SIGIS="undef" SIGNAME="External_Ports_B">
       <CONNECTIONS>
         <CONNECTION INSTANCE="External_Ports" PORT="ledg"/>
-        <CONNECTION INSTANCE="quaddecoder_0" PORT="B"/>
+        <CONNECTION INSTANCE="quaddecoder_0" PORT="b"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="ledr" SIGIS="data" SIGNAME="External_Ports_A">
@@ -154,6 +154,11 @@
     <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn0" SIGIS="rst" SIGNAME="External_Ports_btn0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="quaddecoder_0" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -2678,11 +2683,7 @@
         <PORT DIR="O" LEFT="7" NAME="P" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="7" NAME="I" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="7" NAME="D" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="RST" SIGIS="rst" SIGNAME="pscommunicator_0_RST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="quaddecoder_0" PORT="RESET"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" NAME="RST" SIGIS="rst"/>
         <PORT DIR="O" LEFT="12" NAME="PID" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
@@ -2699,9 +2700,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="pwmfreq"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="12" NAME="cv" RIGHT="0" SIGIS="undef" SIGNAME="quaddecoder_0_AV">
+        <PORT DIR="I" LEFT="12" NAME="cv" RIGHT="0" SIGIS="undef" SIGNAME="quaddecoder_0_av">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="quaddecoder_0" PORT="AV"/>
+            <CONNECTION INSTANCE="quaddecoder_0" PORT="av"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="pwm_0_en">
@@ -2730,22 +2731,22 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="External_Ports_A">
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="B" SIGIS="undef" SIGNAME="External_Ports_B">
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="External_Ports_B">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="B"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="RESET" SIGIS="rst" SIGNAME="pscommunicator_0_RST">
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_btn0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="pscommunicator_0" PORT="RST"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="12" NAME="AV" RIGHT="0" SIGIS="undef" SIGNAME="quaddecoder_0_AV">
+        <PORT DIR="O" LEFT="12" NAME="av" RIGHT="0" SIGIS="undef" SIGNAME="quaddecoder_0_av">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pwm_0" PORT="cv"/>
           </CONNECTIONS>

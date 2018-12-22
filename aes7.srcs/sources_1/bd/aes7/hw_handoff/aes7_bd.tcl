@@ -171,6 +171,10 @@ proc create_root_design { parentCell } {
   set B [ create_bd_port -dir I B ]
   set L [ create_bd_port -dir O L ]
   set R [ create_bd_port -dir O R ]
+  set btn0 [ create_bd_port -dir I -type rst btn0 ]
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] $btn0
   set led [ create_bd_port -dir O -from 3 -to 0 led ]
   set ledb [ create_bd_port -dir O -type data ledb ]
   set ledg [ create_bd_port -dir O -type data ledg ]
@@ -714,10 +718,6 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_HIGH} \
- ] [get_bd_pins /quaddecoder_0/RESET]
-
   # Create instance: rst_ps7_0_50M, and set properties
   set rst_ps7_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_50M ]
 
@@ -728,17 +728,17 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
 
   # Create port connections
-  connect_bd_net -net A_0_1 [get_bd_ports A] [get_bd_ports ledr] [get_bd_pins quaddecoder_0/A]
-  connect_bd_net -net B_0_1 [get_bd_ports B] [get_bd_ports ledg] [get_bd_pins quaddecoder_0/B]
+  connect_bd_net -net A_0_1 [get_bd_ports A] [get_bd_ports ledr] [get_bd_pins quaddecoder_0/a]
+  connect_bd_net -net B_0_1 [get_bd_ports B] [get_bd_ports ledg] [get_bd_pins quaddecoder_0/b]
+  connect_bd_net -net RESET_0_1 [get_bd_ports btn0] [get_bd_pins quaddecoder_0/reset]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins pscommunicator_0/data]
   connect_bd_net -net clk_0_1 [get_bd_ports pwmfreq] [get_bd_pins pwm_0/clk]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins pscommunicator_0/clk] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net pscommunicator_0_RST [get_bd_pins pscommunicator_0/RST] [get_bd_pins quaddecoder_0/RESET]
   connect_bd_net -net pwm_0_L [get_bd_ports L] [get_bd_pins pwm_0/l]
   connect_bd_net -net pwm_0_R [get_bd_ports R] [get_bd_pins pwm_0/r]
   connect_bd_net -net pwm_0_en [get_bd_ports ledb] [get_bd_pins pwm_0/en]
-  connect_bd_net -net quaddecoder_0_AV [get_bd_pins pwm_0/cv] [get_bd_pins quaddecoder_0/AV]
+  connect_bd_net -net quaddecoder_0_AV [get_bd_pins pwm_0/cv] [get_bd_pins quaddecoder_0/av]
   connect_bd_net -net quaddecoder_0_leds [get_bd_ports led] [get_bd_pins quaddecoder_0/leds]
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
 

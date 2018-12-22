@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Dec 22 17:31:19 2018
+| Date         : Sat Dec 22 18:18:03 2018
 | Host         : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_timing_summary -max_paths 10 -file aes7_wrapper_timing_summary_routed.rpt -pb aes7_wrapper_timing_summary_routed.pb -rpx aes7_wrapper_timing_summary_routed.rpx -warn_on_violation
 | Design       : aes7_wrapper
@@ -76,7 +76,7 @@ Table of Contents
 
 5. checking no_input_delay
 --------------------------
- There are 2 input ports with no input delay specified. (HIGH)
+ There are 3 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
@@ -1677,7 +1677,7 @@ Slack (MET) :             9996.226ns  (required time - arrival time)
   ---------------------------------------------------------------------------------
                                        slack                               9996.226    
 
-Slack (MET) :             9997.434ns  (required time - arrival time)
+Slack (MET) :             9997.435ns  (required time - arrival time)
   Source:                 aes7_i/pwm_0/U0/count_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
   Destination:            aes7_i/pwm_0/U0/count_reg[9]/D
@@ -1685,7 +1685,7 @@ Slack (MET) :             9997.434ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10000.000ns  (sys_clk_pin rise@10000.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.405ns  (logic 1.426ns (59.297%)  route 0.979ns (40.703%))
+  Data Path Delay:        2.404ns  (logic 1.426ns (59.311%)  route 0.978ns (40.689%))
   Logic Levels:           3  (CARRY4=3)
   Clock Path Skew:        -0.187ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    3.117ns = ( 10003.117 - 10000.000 ) 
@@ -1709,19 +1709,19 @@ Slack (MET) :             9997.434ns  (required time - arrival time)
                   SLICE_X40Y36         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[2]/C
   ---------------------------------------------------------------------------------    -------------------
     Routing       SLICE_X40Y36         FDRE (Prop_fdre_C_Q)         0.456     4.071 r  aes7_i/pwm_0/U0/count_reg[2]/Q
-                                       net (fo=3, routed)           0.979     5.050    aes7_i/pwm_0/U0/count_reg[2]
+                                       net (fo=3, routed)           0.978     5.049    aes7_i/pwm_0/U0/count_reg[2]
     Routing       SLICE_X40Y36                                                      r  aes7_i/pwm_0/U0/count_reg[0]_i_1/S[2]
     Routing       SLICE_X40Y36         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                                    0.522     5.572 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
-                                       net (fo=1, routed)           0.000     5.572    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
+                                                                    0.522     5.571 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000     5.571    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
     Routing       SLICE_X40Y37                                                      r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CI
     Routing       SLICE_X40Y37         CARRY4 (Prop_carry4_CI_CO[3])
-                                                                    0.114     5.686 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CO[3]
-                                       net (fo=1, routed)           0.000     5.686    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_0
+                                                                    0.114     5.685 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000     5.685    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_0
     Routing       SLICE_X40Y38                                                      r  aes7_i/pwm_0/U0/count_reg[8]_i_1/CI
     Routing       SLICE_X40Y38         CARRY4 (Prop_carry4_CI_O[1])
-                                                                    0.334     6.020 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[1]
-                                       net (fo=1, routed)           0.000     6.020    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_6
+                                                                    0.334     6.019 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[1]
+                                       net (fo=1, routed)           0.000     6.019    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_6
     Routing       SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[9]/D
   ---------------------------------------------------------------------------------    -------------------
 
@@ -1738,11 +1738,11 @@ Slack (MET) :             9997.434ns  (required time - arrival time)
                   SLICE_X40Y38         FDRE (Setup_fdre_C_D)        0.062 10003.454    aes7_i/pwm_0/U0/count_reg[9]
   ---------------------------------------------------------------------------------
                                        required time                      10003.454    
-                                       arrival time                          -6.020    
+                                       arrival time                          -6.019    
   ---------------------------------------------------------------------------------
-                                       slack                               9997.434    
+                                       slack                               9997.435    
 
-Slack (MET) :             9997.455ns  (required time - arrival time)
+Slack (MET) :             9997.456ns  (required time - arrival time)
   Source:                 aes7_i/pwm_0/U0/count_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
   Destination:            aes7_i/pwm_0/U0/count_reg[11]/D
@@ -1750,7 +1750,7 @@ Slack (MET) :             9997.455ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10000.000ns  (sys_clk_pin rise@10000.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.384ns  (logic 1.405ns (58.939%)  route 0.979ns (41.061%))
+  Data Path Delay:        2.383ns  (logic 1.405ns (58.952%)  route 0.978ns (41.048%))
   Logic Levels:           3  (CARRY4=3)
   Clock Path Skew:        -0.187ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    3.117ns = ( 10003.117 - 10000.000 ) 
@@ -1774,19 +1774,19 @@ Slack (MET) :             9997.455ns  (required time - arrival time)
                   SLICE_X40Y36         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[2]/C
   ---------------------------------------------------------------------------------    -------------------
     Routing       SLICE_X40Y36         FDRE (Prop_fdre_C_Q)         0.456     4.071 r  aes7_i/pwm_0/U0/count_reg[2]/Q
-                                       net (fo=3, routed)           0.979     5.050    aes7_i/pwm_0/U0/count_reg[2]
+                                       net (fo=3, routed)           0.978     5.049    aes7_i/pwm_0/U0/count_reg[2]
     Routing       SLICE_X40Y36                                                      r  aes7_i/pwm_0/U0/count_reg[0]_i_1/S[2]
     Routing       SLICE_X40Y36         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                                    0.522     5.572 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
-                                       net (fo=1, routed)           0.000     5.572    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
+                                                                    0.522     5.571 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000     5.571    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
     Routing       SLICE_X40Y37                                                      r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CI
     Routing       SLICE_X40Y37         CARRY4 (Prop_carry4_CI_CO[3])
-                                                                    0.114     5.686 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CO[3]
-                                       net (fo=1, routed)           0.000     5.686    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_0
+                                                                    0.114     5.685 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000     5.685    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_0
     Routing       SLICE_X40Y38                                                      r  aes7_i/pwm_0/U0/count_reg[8]_i_1/CI
     Routing       SLICE_X40Y38         CARRY4 (Prop_carry4_CI_O[3])
-                                                                    0.313     5.999 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[3]
-                                       net (fo=1, routed)           0.000     5.999    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_4
+                                                                    0.313     5.998 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[3]
+                                       net (fo=1, routed)           0.000     5.998    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_4
     Routing       SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[11]/D
   ---------------------------------------------------------------------------------    -------------------
 
@@ -1803,9 +1803,9 @@ Slack (MET) :             9997.455ns  (required time - arrival time)
                   SLICE_X40Y38         FDRE (Setup_fdre_C_D)        0.062 10003.454    aes7_i/pwm_0/U0/count_reg[11]
   ---------------------------------------------------------------------------------
                                        required time                      10003.454    
-                                       arrival time                          -5.999    
+                                       arrival time                          -5.998    
   ---------------------------------------------------------------------------------
-                                       slack                               9997.455    
+                                       slack                               9997.456    
 
 Slack (MET) :             9997.529ns  (required time - arrival time)
   Source:                 aes7_i/pwm_0/U0/count_reg[2]/C
@@ -1815,7 +1815,7 @@ Slack (MET) :             9997.529ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10000.000ns  (sys_clk_pin rise@10000.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.310ns  (logic 1.331ns (57.623%)  route 0.979ns (42.377%))
+  Data Path Delay:        2.309ns  (logic 1.331ns (57.637%)  route 0.978ns (42.363%))
   Logic Levels:           3  (CARRY4=3)
   Clock Path Skew:        -0.187ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    3.117ns = ( 10003.117 - 10000.000 ) 
@@ -1839,19 +1839,19 @@ Slack (MET) :             9997.529ns  (required time - arrival time)
                   SLICE_X40Y36         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[2]/C
   ---------------------------------------------------------------------------------    -------------------
     Routing       SLICE_X40Y36         FDRE (Prop_fdre_C_Q)         0.456     4.071 r  aes7_i/pwm_0/U0/count_reg[2]/Q
-                                       net (fo=3, routed)           0.979     5.050    aes7_i/pwm_0/U0/count_reg[2]
+                                       net (fo=3, routed)           0.978     5.049    aes7_i/pwm_0/U0/count_reg[2]
     Routing       SLICE_X40Y36                                                      r  aes7_i/pwm_0/U0/count_reg[0]_i_1/S[2]
     Routing       SLICE_X40Y36         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                                    0.522     5.572 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
-                                       net (fo=1, routed)           0.000     5.572    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
+                                                                    0.522     5.571 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000     5.571    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
     Routing       SLICE_X40Y37                                                      r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CI
     Routing       SLICE_X40Y37         CARRY4 (Prop_carry4_CI_CO[3])
-                                                                    0.114     5.686 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CO[3]
-                                       net (fo=1, routed)           0.000     5.686    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_0
+                                                                    0.114     5.685 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000     5.685    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_0
     Routing       SLICE_X40Y38                                                      r  aes7_i/pwm_0/U0/count_reg[8]_i_1/CI
     Routing       SLICE_X40Y38         CARRY4 (Prop_carry4_CI_O[2])
-                                                                    0.239     5.925 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[2]
-                                       net (fo=1, routed)           0.000     5.925    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_5
+                                                                    0.239     5.924 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[2]
+                                       net (fo=1, routed)           0.000     5.924    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_5
     Routing       SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[10]/D
   ---------------------------------------------------------------------------------    -------------------
 
@@ -1868,11 +1868,11 @@ Slack (MET) :             9997.529ns  (required time - arrival time)
                   SLICE_X40Y38         FDRE (Setup_fdre_C_D)        0.062 10003.454    aes7_i/pwm_0/U0/count_reg[10]
   ---------------------------------------------------------------------------------
                                        required time                      10003.454    
-                                       arrival time                          -5.925    
+                                       arrival time                          -5.924    
   ---------------------------------------------------------------------------------
                                        slack                               9997.529    
 
-Slack (MET) :             9997.545ns  (required time - arrival time)
+Slack (MET) :             9997.546ns  (required time - arrival time)
   Source:                 aes7_i/pwm_0/U0/count_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
   Destination:            aes7_i/pwm_0/U0/count_reg[8]/D
@@ -1880,7 +1880,7 @@ Slack (MET) :             9997.545ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10000.000ns  (sys_clk_pin rise@10000.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.294ns  (logic 1.315ns (57.328%)  route 0.979ns (42.672%))
+  Data Path Delay:        2.293ns  (logic 1.315ns (57.341%)  route 0.978ns (42.659%))
   Logic Levels:           3  (CARRY4=3)
   Clock Path Skew:        -0.187ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    3.117ns = ( 10003.117 - 10000.000 ) 
@@ -1904,19 +1904,19 @@ Slack (MET) :             9997.545ns  (required time - arrival time)
                   SLICE_X40Y36         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[2]/C
   ---------------------------------------------------------------------------------    -------------------
     Routing       SLICE_X40Y36         FDRE (Prop_fdre_C_Q)         0.456     4.071 r  aes7_i/pwm_0/U0/count_reg[2]/Q
-                                       net (fo=3, routed)           0.979     5.050    aes7_i/pwm_0/U0/count_reg[2]
+                                       net (fo=3, routed)           0.978     5.049    aes7_i/pwm_0/U0/count_reg[2]
     Routing       SLICE_X40Y36                                                      r  aes7_i/pwm_0/U0/count_reg[0]_i_1/S[2]
     Routing       SLICE_X40Y36         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                                    0.522     5.572 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
-                                       net (fo=1, routed)           0.000     5.572    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
+                                                                    0.522     5.571 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000     5.571    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
     Routing       SLICE_X40Y37                                                      r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CI
     Routing       SLICE_X40Y37         CARRY4 (Prop_carry4_CI_CO[3])
-                                                                    0.114     5.686 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CO[3]
-                                       net (fo=1, routed)           0.000     5.686    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_0
+                                                                    0.114     5.685 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000     5.685    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_0
     Routing       SLICE_X40Y38                                                      r  aes7_i/pwm_0/U0/count_reg[8]_i_1/CI
     Routing       SLICE_X40Y38         CARRY4 (Prop_carry4_CI_O[0])
-                                                                    0.223     5.909 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[0]
-                                       net (fo=1, routed)           0.000     5.909    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_7
+                                                                    0.223     5.908 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[0]
+                                       net (fo=1, routed)           0.000     5.908    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_7
     Routing       SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[8]/D
   ---------------------------------------------------------------------------------    -------------------
 
@@ -1933,9 +1933,9 @@ Slack (MET) :             9997.545ns  (required time - arrival time)
                   SLICE_X40Y38         FDRE (Setup_fdre_C_D)        0.062 10003.454    aes7_i/pwm_0/U0/count_reg[8]
   ---------------------------------------------------------------------------------
                                        required time                      10003.454    
-                                       arrival time                          -5.909    
+                                       arrival time                          -5.908    
   ---------------------------------------------------------------------------------
-                                       slack                               9997.545    
+                                       slack                               9997.546    
 
 Slack (MET) :             9997.686ns  (required time - arrival time)
   Source:                 aes7_i/pwm_0/U0/count_reg[2]/C
@@ -1945,7 +1945,7 @@ Slack (MET) :             9997.686ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10000.000ns  (sys_clk_pin rise@10000.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.291ns  (logic 1.312ns (57.272%)  route 0.979ns (42.728%))
+  Data Path Delay:        2.290ns  (logic 1.312ns (57.285%)  route 0.978ns (42.715%))
   Logic Levels:           2  (CARRY4=2)
   Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    3.254ns = ( 10003.255 - 10000.000 ) 
@@ -1969,15 +1969,15 @@ Slack (MET) :             9997.686ns  (required time - arrival time)
                   SLICE_X40Y36         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[2]/C
   ---------------------------------------------------------------------------------    -------------------
     Routing       SLICE_X40Y36         FDRE (Prop_fdre_C_Q)         0.456     4.071 r  aes7_i/pwm_0/U0/count_reg[2]/Q
-                                       net (fo=3, routed)           0.979     5.050    aes7_i/pwm_0/U0/count_reg[2]
+                                       net (fo=3, routed)           0.978     5.049    aes7_i/pwm_0/U0/count_reg[2]
     Routing       SLICE_X40Y36                                                      r  aes7_i/pwm_0/U0/count_reg[0]_i_1/S[2]
     Routing       SLICE_X40Y36         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                                    0.522     5.572 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
-                                       net (fo=1, routed)           0.000     5.572    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
+                                                                    0.522     5.571 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000     5.571    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
     Routing       SLICE_X40Y37                                                      r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CI
     Routing       SLICE_X40Y37         CARRY4 (Prop_carry4_CI_O[1])
-                                                                    0.334     5.906 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/O[1]
-                                       net (fo=1, routed)           0.000     5.906    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_6
+                                                                    0.334     5.905 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/O[1]
+                                       net (fo=1, routed)           0.000     5.905    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_6
     Routing       SLICE_X40Y37         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[5]/D
   ---------------------------------------------------------------------------------    -------------------
 
@@ -1994,7 +1994,7 @@ Slack (MET) :             9997.686ns  (required time - arrival time)
                   SLICE_X40Y37         FDRE (Setup_fdre_C_D)        0.062 10003.591    aes7_i/pwm_0/U0/count_reg[5]
   ---------------------------------------------------------------------------------
                                        required time                      10003.592    
-                                       arrival time                          -5.906    
+                                       arrival time                          -5.905    
   ---------------------------------------------------------------------------------
                                        slack                               9997.686    
 
@@ -2006,7 +2006,7 @@ Slack (MET) :             9997.707ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10000.000ns  (sys_clk_pin rise@10000.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.270ns  (logic 1.291ns (56.876%)  route 0.979ns (43.124%))
+  Data Path Delay:        2.269ns  (logic 1.291ns (56.890%)  route 0.978ns (43.110%))
   Logic Levels:           2  (CARRY4=2)
   Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    3.254ns = ( 10003.255 - 10000.000 ) 
@@ -2030,15 +2030,15 @@ Slack (MET) :             9997.707ns  (required time - arrival time)
                   SLICE_X40Y36         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[2]/C
   ---------------------------------------------------------------------------------    -------------------
     Routing       SLICE_X40Y36         FDRE (Prop_fdre_C_Q)         0.456     4.071 r  aes7_i/pwm_0/U0/count_reg[2]/Q
-                                       net (fo=3, routed)           0.979     5.050    aes7_i/pwm_0/U0/count_reg[2]
+                                       net (fo=3, routed)           0.978     5.049    aes7_i/pwm_0/U0/count_reg[2]
     Routing       SLICE_X40Y36                                                      r  aes7_i/pwm_0/U0/count_reg[0]_i_1/S[2]
     Routing       SLICE_X40Y36         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                                    0.522     5.572 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
-                                       net (fo=1, routed)           0.000     5.572    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
+                                                                    0.522     5.571 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000     5.571    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
     Routing       SLICE_X40Y37                                                      r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CI
     Routing       SLICE_X40Y37         CARRY4 (Prop_carry4_CI_O[3])
-                                                                    0.313     5.885 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/O[3]
-                                       net (fo=1, routed)           0.000     5.885    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_4
+                                                                    0.313     5.884 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/O[3]
+                                       net (fo=1, routed)           0.000     5.884    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_4
     Routing       SLICE_X40Y37         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[7]/D
   ---------------------------------------------------------------------------------    -------------------
 
@@ -2055,11 +2055,11 @@ Slack (MET) :             9997.707ns  (required time - arrival time)
                   SLICE_X40Y37         FDRE (Setup_fdre_C_D)        0.062 10003.591    aes7_i/pwm_0/U0/count_reg[7]
   ---------------------------------------------------------------------------------
                                        required time                      10003.592    
-                                       arrival time                          -5.885    
+                                       arrival time                          -5.884    
   ---------------------------------------------------------------------------------
                                        slack                               9997.707    
 
-Slack (MET) :             9997.780ns  (required time - arrival time)
+Slack (MET) :             9997.781ns  (required time - arrival time)
   Source:                 aes7_i/pwm_0/U0/count_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
   Destination:            aes7_i/pwm_0/U0/count_reg[6]/D
@@ -2067,7 +2067,7 @@ Slack (MET) :             9997.780ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10000.000ns  (sys_clk_pin rise@10000.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.196ns  (logic 1.217ns (55.423%)  route 0.979ns (44.577%))
+  Data Path Delay:        2.195ns  (logic 1.217ns (55.437%)  route 0.978ns (44.563%))
   Logic Levels:           2  (CARRY4=2)
   Clock Path Skew:        -0.050ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    3.254ns = ( 10003.255 - 10000.000 ) 
@@ -2091,15 +2091,15 @@ Slack (MET) :             9997.780ns  (required time - arrival time)
                   SLICE_X40Y36         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[2]/C
   ---------------------------------------------------------------------------------    -------------------
     Routing       SLICE_X40Y36         FDRE (Prop_fdre_C_Q)         0.456     4.071 r  aes7_i/pwm_0/U0/count_reg[2]/Q
-                                       net (fo=3, routed)           0.979     5.050    aes7_i/pwm_0/U0/count_reg[2]
+                                       net (fo=3, routed)           0.978     5.049    aes7_i/pwm_0/U0/count_reg[2]
     Routing       SLICE_X40Y36                                                      r  aes7_i/pwm_0/U0/count_reg[0]_i_1/S[2]
     Routing       SLICE_X40Y36         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                                    0.522     5.572 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
-                                       net (fo=1, routed)           0.000     5.572    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
+                                                                    0.522     5.571 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000     5.571    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_0
     Routing       SLICE_X40Y37                                                      r  aes7_i/pwm_0/U0/count_reg[4]_i_1/CI
     Routing       SLICE_X40Y37         CARRY4 (Prop_carry4_CI_O[2])
-                                                                    0.239     5.811 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/O[2]
-                                       net (fo=1, routed)           0.000     5.811    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_5
+                                                                    0.239     5.810 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/O[2]
+                                       net (fo=1, routed)           0.000     5.810    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_5
     Routing       SLICE_X40Y37         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[6]/D
   ---------------------------------------------------------------------------------    -------------------
 
@@ -2116,9 +2116,9 @@ Slack (MET) :             9997.780ns  (required time - arrival time)
                   SLICE_X40Y37         FDRE (Setup_fdre_C_D)        0.062 10003.591    aes7_i/pwm_0/U0/count_reg[6]
   ---------------------------------------------------------------------------------
                                        required time                      10003.592    
-                                       arrival time                          -5.811    
+                                       arrival time                          -5.810    
   ---------------------------------------------------------------------------------
-                                       slack                               9997.780    
+                                       slack                               9997.781    
 
 
 
@@ -2176,15 +2176,15 @@ Slack (MET) :             0.263ns  (arrival time - required time)
   ---------------------------------------------------------------------------------
                                        slack                                  0.263    
 
-Slack (MET) :             0.280ns  (arrival time - required time)
-  Source:                 aes7_i/pwm_0/U0/count_reg[10]/C
+Slack (MET) :             0.272ns  (arrival time - required time)
+  Source:                 aes7_i/pwm_0/U0/count_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
   Destination:            aes7_i/pwm_0/U0/en_reg/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.476ns  (logic 0.348ns (73.140%)  route 0.128ns (26.860%))
+  Data Path Delay:        0.467ns  (logic 0.340ns (72.791%)  route 0.127ns (27.209%))
   Logic Levels:           2  (CARRY4=1 LUT5=1)
   Clock Path Skew:        0.104ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    1.522ns
@@ -2200,17 +2200,17 @@ Slack (MET) :             0.280ns  (arrival time - required time)
                   K17                                                               r  pwmfreq_IBUF_inst/I
                   K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  pwmfreq_IBUF_inst/O
                                        net (fo=15, routed)          0.853     1.112    aes7_i/pwm_0/U0/clk
-                  SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[10]/C
+                  SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[8]/C
   ---------------------------------------------------------------------------------    -------------------
-    Routing       SLICE_X40Y38         FDRE (Prop_fdre_C_Q)         0.141     1.253 r  aes7_i/pwm_0/U0/count_reg[10]/Q
-                                       net (fo=3, routed)           0.128     1.381    aes7_i/pwm_0/U0/count_reg[10]
-    Routing       SLICE_X41Y37                                                      r  aes7_i/pwm_0/U0/en0_carry__0_i_4/I3
-    Routing       SLICE_X41Y37         LUT5 (Prop_lut5_I3_O)        0.045     1.426 r  aes7_i/pwm_0/U0/en0_carry__0_i_4/O
-                                       net (fo=1, routed)           0.000     1.426    aes7_i/pwm_0/U0/en0_carry__0_i_4_n_0
-    Routing       SLICE_X41Y37                                                      r  aes7_i/pwm_0/U0/en0_carry__0/S[1]
-    Routing       SLICE_X41Y37         CARRY4 (Prop_carry4_S[1]_CO[2])
-                                                                    0.162     1.588 r  aes7_i/pwm_0/U0/en0_carry__0/CO[2]
-                                       net (fo=3, routed)           0.000     1.588    aes7_i/pwm_0/U0/en0
+    Routing       SLICE_X40Y38         FDRE (Prop_fdre_C_Q)         0.141     1.253 r  aes7_i/pwm_0/U0/count_reg[8]/Q
+                                       net (fo=3, routed)           0.127     1.381    aes7_i/pwm_0/U0/count_reg[8]
+    Routing       SLICE_X41Y37                                                      r  aes7_i/pwm_0/U0/en0_carry__0_i_5/I3
+    Routing       SLICE_X41Y37         LUT5 (Prop_lut5_I3_O)        0.045     1.426 r  aes7_i/pwm_0/U0/en0_carry__0_i_5/O
+                                       net (fo=1, routed)           0.000     1.426    aes7_i/pwm_0/U0/en0_carry__0_i_5_n_0
+    Routing       SLICE_X41Y37                                                      r  aes7_i/pwm_0/U0/en0_carry__0/S[0]
+    Routing       SLICE_X41Y37         CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                                    0.154     1.580 r  aes7_i/pwm_0/U0/en0_carry__0/CO[2]
+                                       net (fo=3, routed)           0.000     1.580    aes7_i/pwm_0/U0/en0
     Routing       SLICE_X41Y37         FDRE                                         r  aes7_i/pwm_0/U0/en_reg/D
   ---------------------------------------------------------------------------------    -------------------
 
@@ -2226,11 +2226,11 @@ Slack (MET) :             0.280ns  (arrival time - required time)
                   SLICE_X41Y37         FDRE (Hold_fdre_C_D)         0.091     1.308    aes7_i/pwm_0/U0/en_reg
   ---------------------------------------------------------------------------------
                                        required time                         -1.308    
-                                       arrival time                           1.588    
+                                       arrival time                           1.580    
   ---------------------------------------------------------------------------------
-                                       slack                                  0.280    
+                                       slack                                  0.272    
 
-Slack (MET) :             0.281ns  (arrival time - required time)
+Slack (MET) :             0.292ns  (arrival time - required time)
   Source:                 aes7_i/pwm_0/U0/count_reg[10]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
   Destination:            aes7_i/pwm_0/U0/count_reg[10]/D
@@ -2238,7 +2238,7 @@ Slack (MET) :             0.281ns  (arrival time - required time)
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.386ns  (logic 0.252ns (65.354%)  route 0.134ns (34.646%))
+  Data Path Delay:        0.397ns  (logic 0.252ns (63.525%)  route 0.145ns (36.475%))
   Logic Levels:           1  (CARRY4=1)
   Clock Path Skew:        0.000ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    1.438ns
@@ -2257,11 +2257,11 @@ Slack (MET) :             0.281ns  (arrival time - required time)
                   SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[10]/C
   ---------------------------------------------------------------------------------    -------------------
     Routing       SLICE_X40Y38         FDRE (Prop_fdre_C_Q)         0.141     1.253 r  aes7_i/pwm_0/U0/count_reg[10]/Q
-                                       net (fo=3, routed)           0.134     1.387    aes7_i/pwm_0/U0/count_reg[10]
+                                       net (fo=3, routed)           0.145     1.398    aes7_i/pwm_0/U0/count_reg[10]
     Routing       SLICE_X40Y38                                                      r  aes7_i/pwm_0/U0/count_reg[8]_i_1/S[2]
     Routing       SLICE_X40Y38         CARRY4 (Prop_carry4_S[2]_O[2])
-                                                                    0.111     1.498 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[2]
-                                       net (fo=1, routed)           0.000     1.498    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_5
+                                                                    0.111     1.509 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[2]
+                                       net (fo=1, routed)           0.000     1.509    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_5
     Routing       SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[10]/D
   ---------------------------------------------------------------------------------    -------------------
 
@@ -2277,61 +2277,11 @@ Slack (MET) :             0.281ns  (arrival time - required time)
                   SLICE_X40Y38         FDRE (Hold_fdre_C_D)         0.105     1.217    aes7_i/pwm_0/U0/count_reg[10]
   ---------------------------------------------------------------------------------
                                        required time                         -1.217    
-                                       arrival time                           1.498    
+                                       arrival time                           1.509    
   ---------------------------------------------------------------------------------
-                                       slack                                  0.281    
+                                       slack                                  0.292    
 
-Slack (MET) :             0.284ns  (arrival time - required time)
-  Source:                 aes7_i/pwm_0/U0/r_reg/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
-  Destination:            aes7_i/pwm_0/U0/r_reg/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.391ns  (logic 0.230ns (58.756%)  route 0.161ns (41.244%))
-  Logic Levels:           1  (LUT3=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.415ns
-    Source Clock Delay      (SCD):    1.086ns
-    Clock Pessimism Removal (CPR):    0.329ns
-
-    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  ---------------------------------------------------------------------------------    -------------------
-                                       (clock sys_clk_pin rise edge)
-                                                                    0.000     0.000 r  
-                  K17                                               0.000     0.000 r  pwmfreq (IN)
-                                       net (fo=0)                   0.000     0.000    pwmfreq
-                  K17                                                               r  pwmfreq_IBUF_inst/I
-                  K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  pwmfreq_IBUF_inst/O
-                                       net (fo=15, routed)          0.826     1.086    aes7_i/pwm_0/U0/clk
-                  SLICE_X43Y35         FDRE                                         r  aes7_i/pwm_0/U0/r_reg/C
-  ---------------------------------------------------------------------------------    -------------------
-    Routing       SLICE_X43Y35         FDRE (Prop_fdre_C_Q)         0.128     1.214 r  aes7_i/pwm_0/U0/r_reg/Q
-                                       net (fo=2, routed)           0.161     1.375    aes7_i/pwm_0/U0/r
-    Routing       SLICE_X43Y35                                                      r  aes7_i/pwm_0/U0/r_i_1/I0
-    Routing       SLICE_X43Y35         LUT3 (Prop_lut3_I0_O)        0.102     1.477 r  aes7_i/pwm_0/U0/r_i_1/O
-                                       net (fo=1, routed)           0.000     1.477    aes7_i/pwm_0/U0/r_i_1_n_0
-    Routing       SLICE_X43Y35         FDRE                                         r  aes7_i/pwm_0/U0/r_reg/D
-  ---------------------------------------------------------------------------------    -------------------
-
-                                       (clock sys_clk_pin rise edge)
-                                                                    0.000     0.000 r  
-                  K17                                               0.000     0.000 r  pwmfreq (IN)
-                                       net (fo=0)                   0.000     0.000    pwmfreq
-                  K17                                                               r  pwmfreq_IBUF_inst/I
-                  K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  pwmfreq_IBUF_inst/O
-                                       net (fo=15, routed)          0.967     1.415    aes7_i/pwm_0/U0/clk
-                  SLICE_X43Y35         FDRE                                         r  aes7_i/pwm_0/U0/r_reg/C
-                                       clock pessimism             -0.329     1.086    
-                  SLICE_X43Y35         FDRE (Hold_fdre_C_D)         0.107     1.193    aes7_i/pwm_0/U0/r_reg
-  ---------------------------------------------------------------------------------
-                                       required time                         -1.193    
-                                       arrival time                           1.477    
-  ---------------------------------------------------------------------------------
-                                       slack                                  0.284    
-
-Slack (MET) :             0.314ns  (arrival time - required time)
+Slack (MET) :             0.325ns  (arrival time - required time)
   Source:                 aes7_i/pwm_0/U0/count_reg[10]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
   Destination:            aes7_i/pwm_0/U0/count_reg[11]/D
@@ -2339,7 +2289,7 @@ Slack (MET) :             0.314ns  (arrival time - required time)
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.419ns  (logic 0.285ns (68.085%)  route 0.134ns (31.915%))
+  Data Path Delay:        0.430ns  (logic 0.285ns (66.326%)  route 0.145ns (33.674%))
   Logic Levels:           1  (CARRY4=1)
   Clock Path Skew:        0.000ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    1.438ns
@@ -2358,11 +2308,11 @@ Slack (MET) :             0.314ns  (arrival time - required time)
                   SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[10]/C
   ---------------------------------------------------------------------------------    -------------------
     Routing       SLICE_X40Y38         FDRE (Prop_fdre_C_Q)         0.141     1.253 r  aes7_i/pwm_0/U0/count_reg[10]/Q
-                                       net (fo=3, routed)           0.134     1.387    aes7_i/pwm_0/U0/count_reg[10]
+                                       net (fo=3, routed)           0.145     1.398    aes7_i/pwm_0/U0/count_reg[10]
     Routing       SLICE_X40Y38                                                      r  aes7_i/pwm_0/U0/count_reg[8]_i_1/S[2]
     Routing       SLICE_X40Y38         CARRY4 (Prop_carry4_S[2]_O[3])
-                                                                    0.144     1.531 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[3]
-                                       net (fo=1, routed)           0.000     1.531    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_4
+                                                                    0.144     1.542 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[3]
+                                       net (fo=1, routed)           0.000     1.542    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_4
     Routing       SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[11]/D
   ---------------------------------------------------------------------------------    -------------------
 
@@ -2378,9 +2328,9 @@ Slack (MET) :             0.314ns  (arrival time - required time)
                   SLICE_X40Y38         FDRE (Hold_fdre_C_D)         0.105     1.217    aes7_i/pwm_0/U0/count_reg[11]
   ---------------------------------------------------------------------------------
                                        required time                         -1.217    
-                                       arrival time                           1.531    
+                                       arrival time                           1.542    
   ---------------------------------------------------------------------------------
-                                       slack                                  0.314    
+                                       slack                                  0.325    
 
 Slack (MET) :             0.339ns  (arrival time - required time)
   Source:                 aes7_i/pwm_0/U0/count_reg[3]/C
@@ -2487,109 +2437,7 @@ Slack (MET) :             0.347ns  (arrival time - required time)
   ---------------------------------------------------------------------------------
                                        slack                                  0.347    
 
-Slack (MET) :             0.349ns  (arrival time - required time)
-  Source:                 aes7_i/pwm_0/U0/count_reg[9]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
-  Destination:            aes7_i/pwm_0/U0/count_reg[9]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.454ns  (logic 0.251ns (55.275%)  route 0.203ns (44.725%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.438ns
-    Source Clock Delay      (SCD):    1.112ns
-    Clock Pessimism Removal (CPR):    0.326ns
-
-    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  ---------------------------------------------------------------------------------    -------------------
-                                       (clock sys_clk_pin rise edge)
-                                                                    0.000     0.000 r  
-                  K17                                               0.000     0.000 r  pwmfreq (IN)
-                                       net (fo=0)                   0.000     0.000    pwmfreq
-                  K17                                                               r  pwmfreq_IBUF_inst/I
-                  K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  pwmfreq_IBUF_inst/O
-                                       net (fo=15, routed)          0.853     1.112    aes7_i/pwm_0/U0/clk
-                  SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[9]/C
-  ---------------------------------------------------------------------------------    -------------------
-    Routing       SLICE_X40Y38         FDRE (Prop_fdre_C_Q)         0.141     1.253 r  aes7_i/pwm_0/U0/count_reg[9]/Q
-                                       net (fo=3, routed)           0.203     1.457    aes7_i/pwm_0/U0/count_reg[9]
-    Routing       SLICE_X40Y38                                                      r  aes7_i/pwm_0/U0/count_reg[8]_i_1/S[1]
-    Routing       SLICE_X40Y38         CARRY4 (Prop_carry4_S[1]_O[1])
-                                                                    0.110     1.567 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[1]
-                                       net (fo=1, routed)           0.000     1.567    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_6
-    Routing       SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[9]/D
-  ---------------------------------------------------------------------------------    -------------------
-
-                                       (clock sys_clk_pin rise edge)
-                                                                    0.000     0.000 r  
-                  K17                                               0.000     0.000 r  pwmfreq (IN)
-                                       net (fo=0)                   0.000     0.000    pwmfreq
-                  K17                                                               r  pwmfreq_IBUF_inst/I
-                  K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  pwmfreq_IBUF_inst/O
-                                       net (fo=15, routed)          0.991     1.438    aes7_i/pwm_0/U0/clk
-                  SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[9]/C
-                                       clock pessimism             -0.326     1.112    
-                  SLICE_X40Y38         FDRE (Hold_fdre_C_D)         0.105     1.217    aes7_i/pwm_0/U0/count_reg[9]
-  ---------------------------------------------------------------------------------
-                                       required time                         -1.217    
-                                       arrival time                           1.567    
-  ---------------------------------------------------------------------------------
-                                       slack                                  0.349    
-
-Slack (MET) :             0.350ns  (arrival time - required time)
-  Source:                 aes7_i/pwm_0/U0/count_reg[4]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
-  Destination:            aes7_i/pwm_0/U0/count_reg[4]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.455ns  (logic 0.256ns (56.205%)  route 0.199ns (43.795%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.522ns
-    Source Clock Delay      (SCD):    1.186ns
-    Clock Pessimism Removal (CPR):    0.336ns
-
-    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  ---------------------------------------------------------------------------------    -------------------
-                                       (clock sys_clk_pin rise edge)
-                                                                    0.000     0.000 r  
-                  K17                                               0.000     0.000 r  pwmfreq (IN)
-                                       net (fo=0)                   0.000     0.000    pwmfreq
-                  K17                                                               r  pwmfreq_IBUF_inst/I
-                  K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  pwmfreq_IBUF_inst/O
-                                       net (fo=15, routed)          0.926     1.186    aes7_i/pwm_0/U0/clk
-                  SLICE_X40Y37         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[4]/C
-  ---------------------------------------------------------------------------------    -------------------
-    Routing       SLICE_X40Y37         FDRE (Prop_fdre_C_Q)         0.141     1.327 r  aes7_i/pwm_0/U0/count_reg[4]/Q
-                                       net (fo=3, routed)           0.199     1.526    aes7_i/pwm_0/U0/count_reg[4]
-    Routing       SLICE_X40Y37                                                      r  aes7_i/pwm_0/U0/count_reg[4]_i_1/S[0]
-    Routing       SLICE_X40Y37         CARRY4 (Prop_carry4_S[0]_O[0])
-                                                                    0.115     1.641 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/O[0]
-                                       net (fo=1, routed)           0.000     1.641    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_7
-    Routing       SLICE_X40Y37         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[4]/D
-  ---------------------------------------------------------------------------------    -------------------
-
-                                       (clock sys_clk_pin rise edge)
-                                                                    0.000     0.000 r  
-                  K17                                               0.000     0.000 r  pwmfreq (IN)
-                                       net (fo=0)                   0.000     0.000    pwmfreq
-                  K17                                                               r  pwmfreq_IBUF_inst/I
-                  K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  pwmfreq_IBUF_inst/O
-                                       net (fo=15, routed)          1.074     1.522    aes7_i/pwm_0/U0/clk
-                  SLICE_X40Y37         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[4]/C
-                                       clock pessimism             -0.336     1.186    
-                  SLICE_X40Y37         FDRE (Hold_fdre_C_D)         0.105     1.291    aes7_i/pwm_0/U0/count_reg[4]
-  ---------------------------------------------------------------------------------
-                                       required time                         -1.291    
-                                       arrival time                           1.641    
-  ---------------------------------------------------------------------------------
-                                       slack                                  0.350    
-
-Slack (MET) :             0.350ns  (arrival time - required time)
+Slack (MET) :             0.347ns  (arrival time - required time)
   Source:                 aes7_i/pwm_0/U0/count_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
   Destination:            aes7_i/pwm_0/U0/count_reg[8]/D
@@ -2597,7 +2445,7 @@ Slack (MET) :             0.350ns  (arrival time - required time)
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.455ns  (logic 0.256ns (56.205%)  route 0.199ns (43.795%))
+  Data Path Delay:        0.452ns  (logic 0.256ns (56.590%)  route 0.196ns (43.410%))
   Logic Levels:           1  (CARRY4=1)
   Clock Path Skew:        0.000ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    1.438ns
@@ -2616,11 +2464,11 @@ Slack (MET) :             0.350ns  (arrival time - required time)
                   SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[8]/C
   ---------------------------------------------------------------------------------    -------------------
     Routing       SLICE_X40Y38         FDRE (Prop_fdre_C_Q)         0.141     1.253 r  aes7_i/pwm_0/U0/count_reg[8]/Q
-                                       net (fo=3, routed)           0.199     1.453    aes7_i/pwm_0/U0/count_reg[8]
+                                       net (fo=3, routed)           0.196     1.450    aes7_i/pwm_0/U0/count_reg[8]
     Routing       SLICE_X40Y38                                                      r  aes7_i/pwm_0/U0/count_reg[8]_i_1/S[0]
     Routing       SLICE_X40Y38         CARRY4 (Prop_carry4_S[0]_O[0])
-                                                                    0.115     1.568 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[0]
-                                       net (fo=1, routed)           0.000     1.568    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_7
+                                                                    0.115     1.565 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[0]
+                                       net (fo=1, routed)           0.000     1.565    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_7
     Routing       SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[8]/D
   ---------------------------------------------------------------------------------    -------------------
 
@@ -2636,9 +2484,165 @@ Slack (MET) :             0.350ns  (arrival time - required time)
                   SLICE_X40Y38         FDRE (Hold_fdre_C_D)         0.105     1.217    aes7_i/pwm_0/U0/count_reg[8]
   ---------------------------------------------------------------------------------
                                        required time                         -1.217    
-                                       arrival time                           1.568    
+                                       arrival time                           1.565    
   ---------------------------------------------------------------------------------
-                                       slack                                  0.350    
+                                       slack                                  0.347    
+
+Slack (MET) :             0.348ns  (arrival time - required time)
+  Source:                 aes7_i/pwm_0/U0/count_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
+  Destination:            aes7_i/pwm_0/U0/count_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.453ns  (logic 0.251ns (55.401%)  route 0.202ns (44.599%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.438ns
+    Source Clock Delay      (SCD):    1.112ns
+    Clock Pessimism Removal (CPR):    0.326ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock sys_clk_pin rise edge)
+                                                                    0.000     0.000 r  
+                  K17                                               0.000     0.000 r  pwmfreq (IN)
+                                       net (fo=0)                   0.000     0.000    pwmfreq
+                  K17                                                               r  pwmfreq_IBUF_inst/I
+                  K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  pwmfreq_IBUF_inst/O
+                                       net (fo=15, routed)          0.853     1.112    aes7_i/pwm_0/U0/clk
+                  SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[9]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X40Y38         FDRE (Prop_fdre_C_Q)         0.141     1.253 r  aes7_i/pwm_0/U0/count_reg[9]/Q
+                                       net (fo=3, routed)           0.202     1.456    aes7_i/pwm_0/U0/count_reg[9]
+    Routing       SLICE_X40Y38                                                      r  aes7_i/pwm_0/U0/count_reg[8]_i_1/S[1]
+    Routing       SLICE_X40Y38         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                                    0.110     1.566 r  aes7_i/pwm_0/U0/count_reg[8]_i_1/O[1]
+                                       net (fo=1, routed)           0.000     1.566    aes7_i/pwm_0/U0/count_reg[8]_i_1_n_6
+    Routing       SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[9]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock sys_clk_pin rise edge)
+                                                                    0.000     0.000 r  
+                  K17                                               0.000     0.000 r  pwmfreq (IN)
+                                       net (fo=0)                   0.000     0.000    pwmfreq
+                  K17                                                               r  pwmfreq_IBUF_inst/I
+                  K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  pwmfreq_IBUF_inst/O
+                                       net (fo=15, routed)          0.991     1.438    aes7_i/pwm_0/U0/clk
+                  SLICE_X40Y38         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[9]/C
+                                       clock pessimism             -0.326     1.112    
+                  SLICE_X40Y38         FDRE (Hold_fdre_C_D)         0.105     1.217    aes7_i/pwm_0/U0/count_reg[9]
+  ---------------------------------------------------------------------------------
+                                       required time                         -1.217    
+                                       arrival time                           1.566    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.348    
+
+Slack (MET) :             0.348ns  (arrival time - required time)
+  Source:                 aes7_i/pwm_0/U0/count_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
+  Destination:            aes7_i/pwm_0/U0/count_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.453ns  (logic 0.256ns (56.485%)  route 0.197ns (43.515%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.522ns
+    Source Clock Delay      (SCD):    1.186ns
+    Clock Pessimism Removal (CPR):    0.336ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock sys_clk_pin rise edge)
+                                                                    0.000     0.000 r  
+                  K17                                               0.000     0.000 r  pwmfreq (IN)
+                                       net (fo=0)                   0.000     0.000    pwmfreq
+                  K17                                                               r  pwmfreq_IBUF_inst/I
+                  K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  pwmfreq_IBUF_inst/O
+                                       net (fo=15, routed)          0.926     1.186    aes7_i/pwm_0/U0/clk
+                  SLICE_X40Y37         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[4]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X40Y37         FDRE (Prop_fdre_C_Q)         0.141     1.327 r  aes7_i/pwm_0/U0/count_reg[4]/Q
+                                       net (fo=3, routed)           0.197     1.524    aes7_i/pwm_0/U0/count_reg[4]
+    Routing       SLICE_X40Y37                                                      r  aes7_i/pwm_0/U0/count_reg[4]_i_1/S[0]
+    Routing       SLICE_X40Y37         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                                    0.115     1.639 r  aes7_i/pwm_0/U0/count_reg[4]_i_1/O[0]
+                                       net (fo=1, routed)           0.000     1.639    aes7_i/pwm_0/U0/count_reg[4]_i_1_n_7
+    Routing       SLICE_X40Y37         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[4]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock sys_clk_pin rise edge)
+                                                                    0.000     0.000 r  
+                  K17                                               0.000     0.000 r  pwmfreq (IN)
+                                       net (fo=0)                   0.000     0.000    pwmfreq
+                  K17                                                               r  pwmfreq_IBUF_inst/I
+                  K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  pwmfreq_IBUF_inst/O
+                                       net (fo=15, routed)          1.074     1.522    aes7_i/pwm_0/U0/clk
+                  SLICE_X40Y37         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[4]/C
+                                       clock pessimism             -0.336     1.186    
+                  SLICE_X40Y37         FDRE (Hold_fdre_C_D)         0.105     1.291    aes7_i/pwm_0/U0/count_reg[4]
+  ---------------------------------------------------------------------------------
+                                       required time                         -1.291    
+                                       arrival time                           1.639    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.348    
+
+Slack (MET) :             0.383ns  (arrival time - required time)
+  Source:                 aes7_i/pwm_0/U0/count_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
+  Destination:            aes7_i/pwm_0/U0/count_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5000.000ns period=10000.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.488ns  (logic 0.292ns (59.856%)  route 0.196ns (40.144%))
+  Logic Levels:           2  (CARRY4=1 LUT1=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.509ns
+    Source Clock Delay      (SCD):    1.173ns
+    Clock Pessimism Removal (CPR):    0.336ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock sys_clk_pin rise edge)
+                                                                    0.000     0.000 r  
+                  K17                                               0.000     0.000 r  pwmfreq (IN)
+                                       net (fo=0)                   0.000     0.000    pwmfreq
+                  K17                                                               r  pwmfreq_IBUF_inst/I
+                  K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  pwmfreq_IBUF_inst/O
+                                       net (fo=15, routed)          0.913     1.173    aes7_i/pwm_0/U0/clk
+                  SLICE_X40Y36         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[0]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X40Y36         FDRE (Prop_fdre_C_Q)         0.141     1.314 f  aes7_i/pwm_0/U0/count_reg[0]/Q
+                                       net (fo=3, routed)           0.196     1.509    aes7_i/pwm_0/U0/count_reg[0]
+    Routing       SLICE_X40Y36                                                      f  aes7_i/pwm_0/U0/count[0]_i_2/I0
+    Routing       SLICE_X40Y36         LUT1 (Prop_lut1_I0_O)        0.045     1.554 r  aes7_i/pwm_0/U0/count[0]_i_2/O
+                                       net (fo=1, routed)           0.000     1.554    aes7_i/pwm_0/U0/count[0]_i_2_n_0
+    Routing       SLICE_X40Y36                                                      r  aes7_i/pwm_0/U0/count_reg[0]_i_1/S[0]
+    Routing       SLICE_X40Y36         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                                    0.106     1.660 r  aes7_i/pwm_0/U0/count_reg[0]_i_1/O[1]
+                                       net (fo=1, routed)           0.000     1.660    aes7_i/pwm_0/U0/count_reg[0]_i_1_n_6
+    Routing       SLICE_X40Y36         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[1]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock sys_clk_pin rise edge)
+                                                                    0.000     0.000 r  
+                  K17                                               0.000     0.000 r  pwmfreq (IN)
+                                       net (fo=0)                   0.000     0.000    pwmfreq
+                  K17                                                               r  pwmfreq_IBUF_inst/I
+                  K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  pwmfreq_IBUF_inst/O
+                                       net (fo=15, routed)          1.061     1.509    aes7_i/pwm_0/U0/clk
+                  SLICE_X40Y36         FDRE                                         r  aes7_i/pwm_0/U0/count_reg[1]/C
+                                       clock pessimism             -0.336     1.173    
+                  SLICE_X40Y36         FDRE (Hold_fdre_C_D)         0.105     1.278    aes7_i/pwm_0/U0/count_reg[1]
+  ---------------------------------------------------------------------------------
+                                       required time                         -1.278    
+                                       arrival time                           1.660    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.383    
 
 
 
@@ -2652,36 +2656,36 @@ Period(ns):         10000.000
 Sources:            { pwmfreq }
 
 Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
-Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[5]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[6]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[7]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[8]/C
 Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[9]/C
 Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X41Y37  aes7_i/pwm_0/U0/en_reg/C
 Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X43Y35  aes7_i/pwm_0/U0/l_reg/C
 Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X43Y35  aes7_i/pwm_0/U0/r_reg/C
 Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X40Y36  aes7_i/pwm_0/U0/count_reg[0]/C
 Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[10]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[11]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X40Y36  aes7_i/pwm_0/U0/count_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X40Y36  aes7_i/pwm_0/U0/count_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10000.000   9999.000   SLICE_X40Y36  aes7_i/pwm_0/U0/count_reg[3]/C
 Low Pulse Width   Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y36  aes7_i/pwm_0/U0/count_reg[0]/C
 Low Pulse Width   Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y36  aes7_i/pwm_0/U0/count_reg[1]/C
 Low Pulse Width   Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y36  aes7_i/pwm_0/U0/count_reg[2]/C
 Low Pulse Width   Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y36  aes7_i/pwm_0/U0/count_reg[3]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[5]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[6]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[7]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[8]/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[8]/C
 Low Pulse Width   Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[9]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[9]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X41Y37  aes7_i/pwm_0/U0/en_reg/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X43Y35  aes7_i/pwm_0/U0/l_reg/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X43Y35  aes7_i/pwm_0/U0/r_reg/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y36  aes7_i/pwm_0/U0/count_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X41Y37  aes7_i/pwm_0/U0/en_reg/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[4]/C
 High Pulse Width  Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[5]/C
 High Pulse Width  Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[6]/C
 High Pulse Width  Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[7]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X41Y37  aes7_i/pwm_0/U0/en_reg/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[4]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[5]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[6]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y37  aes7_i/pwm_0/U0/count_reg[7]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[8]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[8]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[9]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X40Y38  aes7_i/pwm_0/U0/count_reg[9]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X41Y37  aes7_i/pwm_0/U0/en_reg/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X43Y35  aes7_i/pwm_0/U0/l_reg/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5000.000    4999.500   SLICE_X43Y35  aes7_i/pwm_0/U0/l_reg/C
 
 
 

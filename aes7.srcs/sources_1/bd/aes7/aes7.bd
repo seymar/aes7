@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF890AC1B41CFE6D3",
+      "boundary_crc": "0xAE2756590D56F43B",
       "device": "xc7z010clg400-1",
       "name": "aes7",
       "synth_flow_mode": "Hierarchical",
@@ -154,6 +154,19 @@
           "PHASE": {
             "value": "0.000",
             "value_src": "default"
+          }
+        }
+      },
+      "btn0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
           }
         }
       }
@@ -1352,16 +1365,16 @@
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -1537,22 +1550,23 @@
           "boundary_crc": "0x0"
         },
         "ports": {
-          "RESET": {
+          "reset": {
             "type": "rst",
             "direction": "I",
             "parameters": {
               "POLARITY": {
-                "value": "ACTIVE_HIGH"
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
               }
             }
           },
-          "A": {
+          "a": {
             "direction": "I"
           },
-          "B": {
+          "b": {
             "direction": "I"
           },
-          "AV": {
+          "av": {
             "direction": "O",
             "left": "12",
             "right": "0"
@@ -1623,26 +1637,20 @@
         "ports": [
           "A",
           "ledr",
-          "quaddecoder_0/A"
+          "quaddecoder_0/a"
         ]
       },
       "B_0_1": {
         "ports": [
           "B",
           "ledg",
-          "quaddecoder_0/B"
+          "quaddecoder_0/b"
         ]
       },
       "axi_gpio_0_gpio_io_o": {
         "ports": [
           "axi_gpio_0/gpio_io_o",
           "pscommunicator_0/data"
-        ]
-      },
-      "pscommunicator_0_RST": {
-        "ports": [
-          "pscommunicator_0/RST",
-          "quaddecoder_0/RESET"
         ]
       },
       "quaddecoder_0_leds": {
@@ -1677,8 +1685,14 @@
       },
       "quaddecoder_0_AV": {
         "ports": [
-          "quaddecoder_0/AV",
+          "quaddecoder_0/av",
           "pwm_0/cv"
+        ]
+      },
+      "RESET_0_1": {
+        "ports": [
+          "btn0",
+          "quaddecoder_0/reset"
         ]
       }
     },

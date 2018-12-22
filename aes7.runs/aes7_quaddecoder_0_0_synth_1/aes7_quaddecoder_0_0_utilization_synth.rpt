@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Dec 22 17:24:59 2018
+| Date         : Sat Dec 22 18:16:42 2018
 | Host         : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_utilization -file aes7_quaddecoder_0_0_utilization_synth.rpt -pb aes7_quaddecoder_0_0_utilization_synth.pb
 | Design       : aes7_quaddecoder_0_0
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   87 |     0 |     17600 |  0.49 |
-|   LUT as Logic          |   87 |     0 |     17600 |  0.49 |
+| Slice LUTs*             |   92 |     0 |     17600 |  0.52 |
+|   LUT as Logic          |   92 |     0 |     17600 |  0.52 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
 | Slice Registers         |   52 |     0 |     35200 |  0.15 |
 |   Register as Flip Flop |   52 |     0 |     35200 |  0.15 |
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
+| 52    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 52    |          Yes |       Reset |            - |
+| 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,8 +146,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   52 |        Flop & Latch |
-| LUT2     |   48 |                 LUT |
+| LUT2     |   61 |                 LUT |
+| FDCE     |   52 |        Flop & Latch |
 | LUT1     |   26 |                 LUT |
 | CARRY4   |   20 |          CarryLogic |
 | LUT6     |   11 |                 LUT |

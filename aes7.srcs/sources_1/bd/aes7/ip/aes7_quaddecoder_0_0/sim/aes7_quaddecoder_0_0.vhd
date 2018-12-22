@@ -55,10 +55,10 @@ USE ieee.numeric_std.ALL;
 
 ENTITY aes7_quaddecoder_0_0 IS
   PORT (
-    A : IN STD_LOGIC;
-    B : IN STD_LOGIC;
-    RESET : IN STD_LOGIC;
-    AV : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
+    a : IN STD_LOGIC;
+    b : IN STD_LOGIC;
+    reset : IN STD_LOGIC;
+    av : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
     leds : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END aes7_quaddecoder_0_0;
@@ -68,10 +68,10 @@ ARCHITECTURE aes7_quaddecoder_0_0_arch OF aes7_quaddecoder_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF aes7_quaddecoder_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT quaddecoder IS
     PORT (
-      A : IN STD_LOGIC;
-      B : IN STD_LOGIC;
-      RESET : IN STD_LOGIC;
-      AV : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
+      a : IN STD_LOGIC;
+      b : IN STD_LOGIC;
+      reset : IN STD_LOGIC;
+      av : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
       leds : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
   END COMPONENT quaddecoder;
@@ -79,15 +79,15 @@ ARCHITECTURE aes7_quaddecoder_0_0_arch OF aes7_quaddecoder_0_0 IS
   ATTRIBUTE IP_DEFINITION_SOURCE OF aes7_quaddecoder_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF RESET: SIGNAL IS "XIL_INTERFACENAME RESET, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF RESET: SIGNAL IS "xilinx.com:signal:reset:1.0 RESET RST";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF reset: SIGNAL IS "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF reset: SIGNAL IS "xilinx.com:signal:reset:1.0 reset RST";
 BEGIN
   U0 : quaddecoder
     PORT MAP (
-      A => A,
-      B => B,
-      RESET => RESET,
-      AV => AV,
+      a => a,
+      b => b,
+      reset => reset,
+      av => av,
       leds => leds
     );
 END aes7_quaddecoder_0_0_arch;

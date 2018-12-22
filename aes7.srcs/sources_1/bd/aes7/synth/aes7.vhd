@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
---Date        : Sat Dec 22 17:29:15 2018
+--Date        : Sat Dec 22 18:16:05 2018
 --Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
 --Command     : generate_target aes7.bd
 --Design      : aes7
@@ -603,6 +603,7 @@ entity aes7 is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     L : out STD_LOGIC;
     R : out STD_LOGIC;
+    btn0 : in STD_LOGIC;
     led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     ledb : out STD_LOGIC;
     ledg : out STD_LOGIC;
@@ -748,15 +749,16 @@ architecture STRUCTURE of aes7 is
   end component aes7_pwm_0_0;
   component aes7_quaddecoder_0_0 is
   port (
-    A : in STD_LOGIC;
-    B : in STD_LOGIC;
-    RESET : in STD_LOGIC;
-    AV : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    a : in STD_LOGIC;
+    b : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    av : out STD_LOGIC_VECTOR ( 12 downto 0 );
     leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component aes7_quaddecoder_0_0;
   signal A_0_1 : STD_LOGIC;
   signal B_0_1 : STD_LOGIC;
+  signal RESET_0_1 : STD_LOGIC;
   signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal clk_0_1 : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
@@ -837,7 +839,6 @@ architecture STRUCTURE of aes7 is
   signal ps7_0_axi_periph_M00_AXI_WREADY : STD_LOGIC;
   signal ps7_0_axi_periph_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M00_AXI_WVALID : STD_LOGIC;
-  signal pscommunicator_0_RST : STD_LOGIC;
   signal pwm_0_L : STD_LOGIC;
   signal pwm_0_R : STD_LOGIC;
   signal pwm_0_en : STD_LOGIC;
@@ -847,6 +848,7 @@ architecture STRUCTURE of aes7 is
   signal NLW_processing_system7_0_FCLK_CLK1_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_PORT_INDCTL_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal NLW_pscommunicator_0_RST_UNCONNECTED : STD_LOGIC;
   signal NLW_pscommunicator_0_D_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_pscommunicator_0_I_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_pscommunicator_0_P_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -878,6 +880,8 @@ architecture STRUCTURE of aes7 is
   attribute X_INTERFACE_INFO of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
+  attribute X_INTERFACE_INFO of btn0 : signal is "xilinx.com:signal:reset:1.0 RST.BTN0 RST";
+  attribute X_INTERFACE_PARAMETER of btn0 : signal is "XIL_INTERFACENAME RST.BTN0, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
   attribute X_INTERFACE_INFO of ledb : signal is "xilinx.com:signal:data:1.0 DATA.LEDB DATA";
   attribute X_INTERFACE_PARAMETER of ledb : signal is "XIL_INTERFACENAME DATA.LEDB, LAYERED_METADATA undef";
   attribute X_INTERFACE_INFO of ledg : signal is "xilinx.com:signal:data:1.0 DATA.LEDG DATA";
@@ -899,6 +903,7 @@ begin
   B_0_1 <= B;
   L <= pwm_0_L;
   R <= pwm_0_R;
+  RESET_0_1 <= btn0;
   clk_0_1 <= pwmfreq;
   led(3 downto 0) <= quaddecoder_0_leds(3 downto 0);
   ledb <= pwm_0_en;
@@ -1066,7 +1071,7 @@ pscommunicator_0: component aes7_pscommunicator_0_0
       I(7 downto 0) => NLW_pscommunicator_0_I_UNCONNECTED(7 downto 0),
       P(7 downto 0) => NLW_pscommunicator_0_P_UNCONNECTED(7 downto 0),
       PID(12 downto 0) => NLW_pscommunicator_0_PID_UNCONNECTED(12 downto 0),
-      RST => pscommunicator_0_RST,
+      RST => NLW_pscommunicator_0_RST_UNCONNECTED,
       SP(10 downto 0) => NLW_pscommunicator_0_SP_UNCONNECTED(10 downto 0),
       clk => processing_system7_0_FCLK_CLK0,
       data(31 downto 0) => axi_gpio_0_gpio_io_o(31 downto 0)
@@ -1082,11 +1087,11 @@ pwm_0: component aes7_pwm_0_0
     );
 quaddecoder_0: component aes7_quaddecoder_0_0
      port map (
-      A => A_0_1,
-      AV(12 downto 0) => quaddecoder_0_AV(12 downto 0),
-      B => B_0_1,
-      RESET => pscommunicator_0_RST,
-      leds(3 downto 0) => quaddecoder_0_leds(3 downto 0)
+      a => A_0_1,
+      av(12 downto 0) => quaddecoder_0_AV(12 downto 0),
+      b => B_0_1,
+      leds(3 downto 0) => quaddecoder_0_leds(3 downto 0),
+      reset => RESET_0_1
     );
 rst_ps7_0_50M: component aes7_rst_ps7_0_50M_2
      port map (
