@@ -20,10 +20,10 @@ entity PID_CONTROLLER is
         CLK : in STD_LOGIC;
         RESET : in STD_LOGIC;
         AV: in signed (12 downto 0);
-        SP: in signed (12 downto 0);
-        KP_IN : in signed (7 downto 0);
-        KI_IN : in STD_LOGIC_VECTOR (7 downto 0);
-        KD_IN : in signed (7 downto 0);
+        SP: in unsigned (12 downto 0);
+        KP_IN : in unsigned (7 downto 0);
+        KI_IN : in unsigned (7 downto 0);
+        KD_IN : in unsigned (7 downto 0);
         I_LIMIT : in unsigned (10 downto 0);
         
         -- OUTPUTS
@@ -38,10 +38,10 @@ architecture Behavioral of PID_CONTROLLER is
   signal term_i : signed(20 downto 0);
   signal term_d : signed(20 downto 0);
 begin
-  error <=   "0010111011100" - AV;
+  error <=   signed(SP) - AV;
 
   -- P term
-  term_p <= error * KP_IN;
+  term_p <= error * signed(KP_IN);
 
   -- I term   SP(12 downto 0)
   
@@ -54,7 +54,7 @@ begin
     if rising_edge(CLK) then
       error_dif := error - error_lst; -- Speed
       
-      term_d <= error_dif * KD_IN ;
+      term_d <= error_dif * signed(KD_IN) ;
       
       error_lst := error;
     end if;

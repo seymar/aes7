@@ -30,11 +30,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==aes7_pwm_0_0 ||
 # IP: bd/aes7/ip/aes7_PID_CONTROLLER_0_0/aes7_PID_CONTROLLER_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==aes7_PID_CONTROLLER_0_0 || ORIG_REF_NAME==aes7_PID_CONTROLLER_0_0} -quiet] -quiet
 
-# IP: bd/aes7/ip/aes7_xlconstant_0_0/aes7_xlconstant_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==aes7_xlconstant_0_0 || ORIG_REF_NAME==aes7_xlconstant_0_0} -quiet] -quiet
-
-# IP: bd/aes7/ip/aes7_xlconstant_1_0/aes7_xlconstant_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==aes7_xlconstant_1_0 || ORIG_REF_NAME==aes7_xlconstant_1_0} -quiet] -quiet
+# IP: bd/aes7/ip/aes7_clk_dev_0_0/aes7_clk_dev_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==aes7_clk_dev_0_0 || ORIG_REF_NAME==aes7_clk_dev_0_0} -quiet] -quiet
 
 # IP: bd/aes7/ip/aes7_auto_pc_0/aes7_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==aes7_auto_pc_0 || ORIG_REF_NAME==aes7_auto_pc_0} -quiet] -quiet

@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Tue Jan  8 11:42:00 2019
+--Date        : Tue Jan  8 13:00:36 2019
 --Host        : LAPTOP-TQUFNLMN running 64-bit major release  (build 9200)
 --Command     : generate_target aes7.bd
 --Design      : aes7
@@ -608,10 +608,14 @@ entity aes7 is
     ledb : out STD_LOGIC;
     ledg : out STD_LOGIC;
     ledr : out STD_LOGIC;
-    pwmfreq : in STD_LOGIC
+    pwmfreq : in STD_LOGIC;
+    reset_rtl : in STD_LOGIC;
+    reset_rtl_0 : in STD_LOGIC;
+    reset_rtl_0_1 : in STD_LOGIC;
+    sys_clock : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of aes7 : entity is "aes7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=aes7,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=12,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=1,da_bram_cntlr_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of aes7 : entity is "aes7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=aes7,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=11,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=5,da_bram_cntlr_cnt=1,da_clkrst_cnt=8,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of aes7 : entity is "aes7.hwdef";
 end aes7;
@@ -744,28 +748,12 @@ architecture STRUCTURE of aes7 is
     r : out STD_LOGIC
   );
   end component aes7_pwm_0_0;
-  component aes7_xlconstant_0_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component aes7_xlconstant_0_0;
-  component aes7_xlconstant_1_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component aes7_xlconstant_1_0;
-  component aes7_pscommunicator_0_0 is
+  component aes7_clk_dev_0_0 is
   port (
     clk : in STD_LOGIC;
-    data : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SP : out STD_LOGIC_VECTOR ( 12 downto 0 );
-    P : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    I : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    D : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    RST : out STD_LOGIC;
-    PID : out STD_LOGIC_VECTOR ( 12 downto 0 )
+    clk_out : out STD_LOGIC
   );
-  end component aes7_pscommunicator_0_0;
+  end component aes7_clk_dev_0_0;
   component aes7_PID_CONTROLLER_0_0 is
   port (
     CLK : in STD_LOGIC;
@@ -779,14 +767,25 @@ architecture STRUCTURE of aes7 is
     PID_OUT : out STD_LOGIC_VECTOR ( 20 downto 0 )
   );
   end component aes7_PID_CONTROLLER_0_0;
+  component aes7_pscommunicator_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    data : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SP : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    P : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    I : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    RST : out STD_LOGIC;
+    PID : out STD_LOGIC_VECTOR ( 12 downto 0 )
+  );
+  end component aes7_pscommunicator_0_0;
   signal A_0_1 : STD_LOGIC;
   signal B_0_1 : STD_LOGIC;
   signal PID_CONTROLLER_0_PID_OUT : STD_LOGIC_VECTOR ( 20 downto 0 );
   signal RESET_0_1 : STD_LOGIC;
   signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal clk_0_1 : STD_LOGIC;
-  signal kd_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal kp_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal clk_dev_0_clk_out : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -865,6 +864,9 @@ architecture STRUCTURE of aes7 is
   signal ps7_0_axi_periph_M00_AXI_WREADY : STD_LOGIC;
   signal ps7_0_axi_periph_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M00_AXI_WVALID : STD_LOGIC;
+  signal pscommunicator_0_D : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal pscommunicator_0_I : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal pscommunicator_0_P : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal pscommunicator_0_SP : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal pwm_0_L : STD_LOGIC;
   signal pwm_0_R : STD_LOGIC;
@@ -876,9 +878,6 @@ architecture STRUCTURE of aes7 is
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_PORT_INDCTL_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_pscommunicator_0_RST_UNCONNECTED : STD_LOGIC;
-  signal NLW_pscommunicator_0_D_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal NLW_pscommunicator_0_I_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal NLW_pscommunicator_0_P_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_pscommunicator_0_PID_UNCONNECTED : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal NLW_pwm_0_dir_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_50M_mb_reset_UNCONNECTED : STD_LOGIC;
@@ -916,6 +915,14 @@ architecture STRUCTURE of aes7 is
   attribute X_INTERFACE_PARAMETER of ledr : signal is "XIL_INTERFACENAME DATA.LEDR, LAYERED_METADATA undef";
   attribute X_INTERFACE_INFO of pwmfreq : signal is "xilinx.com:signal:clock:1.0 CLK.PWMFREQ CLK";
   attribute X_INTERFACE_PARAMETER of pwmfreq : signal is "XIL_INTERFACENAME CLK.PWMFREQ, CLK_DOMAIN aes7_clk_0, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000";
+  attribute X_INTERFACE_INFO of reset_rtl : signal is "xilinx.com:signal:reset:1.0 RST.RESET_RTL RST";
+  attribute X_INTERFACE_PARAMETER of reset_rtl : signal is "XIL_INTERFACENAME RST.RESET_RTL, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
+  attribute X_INTERFACE_INFO of reset_rtl_0 : signal is "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST";
+  attribute X_INTERFACE_PARAMETER of reset_rtl_0 : signal is "XIL_INTERFACENAME RST.RESET_RTL_0, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
+  attribute X_INTERFACE_INFO of reset_rtl_0_1 : signal is "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0_1 RST";
+  attribute X_INTERFACE_PARAMETER of reset_rtl_0_1 : signal is "XIL_INTERFACENAME RST.RESET_RTL_0_1, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
+  attribute X_INTERFACE_INFO of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
+  attribute X_INTERFACE_PARAMETER of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN aes7_sys_clock, FREQ_HZ 125000000, INSERT_VIP 0, PHASE 0.000";
   attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
   attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
   attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
@@ -938,13 +945,13 @@ begin
 PID_CONTROLLER_0: component aes7_PID_CONTROLLER_0_0
      port map (
       AV(12 downto 0) => quaddecoder_0_av(12 downto 0),
-      CLK => processing_system7_0_FCLK_CLK0,
+      CLK => clk_dev_0_clk_out,
       I_LIMIT(10 downto 0) => B"00000000000",
-      KD_IN(7 downto 0) => kd_dout(7 downto 0),
-      KI_IN(7 downto 0) => B"00000000",
-      KP_IN(7 downto 0) => kp_dout(7 downto 0),
+      KD_IN(7 downto 0) => pscommunicator_0_D(7 downto 0),
+      KI_IN(7 downto 0) => pscommunicator_0_I(7 downto 0),
+      KP_IN(7 downto 0) => pscommunicator_0_P(7 downto 0),
       PID_OUT(20 downto 0) => PID_CONTROLLER_0_PID_OUT(20 downto 0),
-      RESET => '0',
+      RESET => RESET_0_1,
       SP(12 downto 0) => pscommunicator_0_SP(12 downto 0)
     );
 axi_gpio_0: component aes7_axi_gpio_0_0
@@ -970,13 +977,10 @@ axi_gpio_0: component aes7_axi_gpio_0_0
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_M00_AXI_WVALID
     );
-kd: component aes7_xlconstant_1_0
+clk_dev_0: component aes7_clk_dev_0_0
      port map (
-      dout(7 downto 0) => kd_dout(7 downto 0)
-    );
-kp: component aes7_xlconstant_0_0
-     port map (
-      dout(7 downto 0) => kp_dout(7 downto 0)
+      clk => processing_system7_0_FCLK_CLK0,
+      clk_out => clk_dev_0_clk_out
     );
 processing_system7_0: component aes7_processing_system7_0_0
      port map (
@@ -1113,9 +1117,9 @@ ps7_0_axi_periph: entity work.aes7_ps7_0_axi_periph_1
     );
 pscommunicator_0: component aes7_pscommunicator_0_0
      port map (
-      D(7 downto 0) => NLW_pscommunicator_0_D_UNCONNECTED(7 downto 0),
-      I(7 downto 0) => NLW_pscommunicator_0_I_UNCONNECTED(7 downto 0),
-      P(7 downto 0) => NLW_pscommunicator_0_P_UNCONNECTED(7 downto 0),
+      D(7 downto 0) => pscommunicator_0_D(7 downto 0),
+      I(7 downto 0) => pscommunicator_0_I(7 downto 0),
+      P(7 downto 0) => pscommunicator_0_P(7 downto 0),
       PID(12 downto 0) => NLW_pscommunicator_0_PID_UNCONNECTED(12 downto 0),
       RST => NLW_pscommunicator_0_RST_UNCONNECTED,
       SP(12 downto 0) => pscommunicator_0_SP(12 downto 0),

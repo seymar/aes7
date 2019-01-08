@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jan  8 11:45:01 2019
+| Date         : Tue Jan  8 13:02:41 2019
 | Host         : LAPTOP-TQUFNLMN running 64-bit major release  (build 9200)
 | Command      : report_incremental_reuse -file aes7_wrapper_incremental_reuse_pre_placed.rpt
 | Design       : aes7_wrapper
@@ -24,9 +24,9 @@ Table of Contents
 +-------+----------------------+--------------------+--------------------+-------+
 |  Type | Matched % (of Total) | Reuse % (of Total) | Fixed % (of Total) | Total |
 +-------+----------------------+--------------------+--------------------+-------+
-| Cells |                97.79 |              97.07 |               7.93 |  1815 |
-| Nets  |                98.44 |              95.00 |               0.00 |  1461 |
-| Pins  |                    - |              95.52 |                  - |  6036 |
+| Cells |                97.02 |              96.21 |               7.78 |  1849 |
+| Nets  |                97.99 |              90.82 |               0.00 |  1493 |
+| Pins  |                    - |              92.05 |                  - |  6191 |
 | Ports |               100.00 |             100.00 |             100.00 |   143 |
 +-------+----------------------+--------------------+--------------------+-------+
 
@@ -44,8 +44,8 @@ Table of Contents
 +--------------------------------+----------------------------+
 | Vivado Version                 |                    v2018.3 |
 | DCP State                      |                 POST_ROUTE |
-| Recorded WNS                   |                      3.015 |
-| Recorded WHS                   |                      0.045 |
+| Recorded WNS                   |                     14.982 |
+| Recorded WHS                   |                      0.418 |
 | Reference Speed File Version   | PRODUCTION 1.11 2014-09-11 |
 | Incremental Speed File Version | PRODUCTION 1.11 2014-09-11 |
 +--------------------------------+----------------------------+
@@ -72,11 +72,12 @@ Table of Contents
 +------------------------------------------------------+------+
 |                         Type                         |   %  |
 +------------------------------------------------------+------+
-| Non-Reused Cells                                     | 2.92 |
-|   New                                                | 2.20 |
-|   Discarded illegal placement due to netlist changes | 0.71 |
-| Partially reused nets                                | 0.06 |
-| Non-Reused nets                                      | 4.92 |
+| Non-Reused Cells                                     | 3.78 |
+|   New                                                | 2.97 |
+|   Discarded illegal placement due to netlist changes | 0.70 |
+|   Discarded to improve timing                        | 0.10 |
+| Partially reused nets                                | 1.74 |
+| Non-Reused nets                                      | 7.43 |
 | Non-Reused Ports                                     | 0.00 |
 +------------------------------------------------------+------+
 

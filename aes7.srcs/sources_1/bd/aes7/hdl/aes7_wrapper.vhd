@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
---Date        : Tue Jan  8 11:42:00 2019
+--Date        : Tue Jan  8 13:00:36 2019
 --Host        : LAPTOP-TQUFNLMN running 64-bit major release  (build 9200)
 --Command     : generate_target aes7_wrapper.bd
 --Design      : aes7_wrapper
@@ -43,7 +43,11 @@ entity aes7_wrapper is
     ledb : out STD_LOGIC;
     ledg : out STD_LOGIC;
     ledr : out STD_LOGIC;
-    pwmfreq : in STD_LOGIC
+    pwmfreq : in STD_LOGIC;
+    reset_rtl : in STD_LOGIC;
+    reset_rtl_0 : in STD_LOGIC;
+    reset_rtl_0_1 : in STD_LOGIC;
+    sys_clock : in STD_LOGIC
   );
 end aes7_wrapper;
 
@@ -80,7 +84,11 @@ architecture STRUCTURE of aes7_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC;
+    reset_rtl : in STD_LOGIC;
+    sys_clock : in STD_LOGIC;
+    reset_rtl_0 : in STD_LOGIC;
+    reset_rtl_0_1 : in STD_LOGIC
   );
   end component aes7;
 begin
@@ -116,6 +124,10 @@ aes7_i: component aes7
       ledb => ledb,
       ledg => ledg,
       ledr => ledr,
-      pwmfreq => pwmfreq
+      pwmfreq => pwmfreq,
+      reset_rtl => reset_rtl,
+      reset_rtl_0 => reset_rtl_0,
+      reset_rtl_0_1 => reset_rtl_0_1,
+      sys_clock => sys_clock
     );
 end STRUCTURE;

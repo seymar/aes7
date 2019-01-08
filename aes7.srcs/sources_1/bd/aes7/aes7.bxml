@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="aes7" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1546944121"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1546944121"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1546944121"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1546944121"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1546948837"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1546948837"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1546948837"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1546948837"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\aes7_processing_system7_0_0\aes7_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
@@ -81,16 +81,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\aes7_xlconstant_0_0\aes7_xlconstant_0_0.xci" Type="IP">
-        <Instance HierarchyPath="kp"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\aes7_xlconstant_1_0\aes7_xlconstant_1_0.xci" Type="IP">
-        <Instance HierarchyPath="kd"/>
+      <File Name="ip\aes7_clk_dev_0_0\aes7_clk_dev_0_0.xci" Type="IP">
+        <Instance HierarchyPath="clk_dev_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

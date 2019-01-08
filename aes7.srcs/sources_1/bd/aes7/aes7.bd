@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xAE2756590D56F43B",
+      "boundary_crc": "0x4E5778E85B03B65D",
       "device": "xc7z010clg400-1",
       "name": "aes7",
       "synth_flow_mode": "Hierarchical",
@@ -19,10 +19,9 @@
       },
       "quaddecoder_0": "",
       "pwm_0": "",
-      "kp": "",
-      "kd": "",
-      "pscommunicator_0": "",
-      "PID_CONTROLLER_0": ""
+      "clk_dev_0": "",
+      "PID_CONTROLLER_0": "",
+      "pscommunicator_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -161,6 +160,65 @@
         }
       },
       "btn0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "reset_rtl": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "aes7_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000"
+          }
+        }
+      },
+      "reset_rtl_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "reset_rtl_0_1": {
         "type": "rst",
         "direction": "I",
         "parameters": {
@@ -1223,7 +1281,7 @@
             "value": "1"
           },
           "C_DOUT_DEFAULT": {
-            "value": "0x00000000"
+            "value": "0x028507D0"
           },
           "C_GPIO_WIDTH": {
             "value": "32"
@@ -1368,16 +1426,16 @@
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -1398,16 +1456,16 @@
           }
         },
         "interface_nets": {
-          "s00_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "s00_couplers/M_AXI"
-            ]
-          },
           "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
               "s00_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "s00_couplers/M_AXI"
             ]
           }
         },
@@ -1513,27 +1571,97 @@
           }
         }
       },
-      "kp": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "aes7_xlconstant_0_0",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "30"
+      "clk_dev_0": {
+        "vlnv": "xilinx.com:module_ref:clk_dev:1.0",
+        "xci_name": "aes7_clk_dev_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clk_dev",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "aes7_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
           },
-          "CONST_WIDTH": {
-            "value": "8"
+          "clk_out": {
+            "direction": "O"
           }
         }
       },
-      "kd": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "aes7_xlconstant_1_0",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "10"
+      "PID_CONTROLLER_0": {
+        "vlnv": "xilinx.com:module_ref:PID_CONTROLLER:1.0",
+        "xci_name": "aes7_PID_CONTROLLER_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PID_CONTROLLER",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RESET",
+                "value_src": "constant"
+              }
+            }
           },
-          "CONST_WIDTH": {
-            "value": "8"
+          "RESET": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "AV": {
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "SP": {
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "KP_IN": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "KI_IN": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "KD_IN": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "I_LIMIT": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "PID_OUT": {
+            "direction": "O",
+            "left": "20",
+            "right": "0"
           }
         }
       },
@@ -1599,74 +1727,6 @@
             "right": "0"
           }
         }
-      },
-      "PID_CONTROLLER_0": {
-        "vlnv": "xilinx.com:module_ref:PID_CONTROLLER:1.0",
-        "xci_name": "aes7_PID_CONTROLLER_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "PID_CONTROLLER",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "CLK": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "RESET",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "aes7_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "RESET": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "AV": {
-            "direction": "I",
-            "left": "12",
-            "right": "0"
-          },
-          "SP": {
-            "direction": "I",
-            "left": "12",
-            "right": "0"
-          },
-          "KP_IN": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "KI_IN": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "KD_IN": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "I_LIMIT": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "PID_OUT": {
-            "direction": "O",
-            "left": "20",
-            "right": "0"
-          }
-        }
       }
     },
     "interface_nets": {
@@ -1696,19 +1756,6 @@
       }
     },
     "nets": {
-      "processing_system7_0_FCLK_CLK0": {
-        "ports": [
-          "processing_system7_0/FCLK_CLK0",
-          "processing_system7_0/M_AXI_GP0_ACLK",
-          "rst_ps7_0_50M/slowest_sync_clk",
-          "ps7_0_axi_periph/S00_ACLK",
-          "axi_gpio_0/s_axi_aclk",
-          "ps7_0_axi_periph/M00_ACLK",
-          "ps7_0_axi_periph/ACLK",
-          "pscommunicator_0/clk",
-          "PID_CONTROLLER_0/CLK"
-        ]
-      },
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
@@ -1777,7 +1824,8 @@
       "RESET_0_1": {
         "ports": [
           "btn0",
-          "quaddecoder_0/reset"
+          "quaddecoder_0/reset",
+          "PID_CONTROLLER_0/RESET"
         ]
       },
       "pscommunicator_0_SP": {
@@ -1798,16 +1846,41 @@
           "pwm_0/cv"
         ]
       },
-      "kp_dout": {
+      "processing_system7_0_FCLK_CLK0": {
         "ports": [
-          "kp/dout",
+          "processing_system7_0/FCLK_CLK0",
+          "processing_system7_0/M_AXI_GP0_ACLK",
+          "ps7_0_axi_periph/S00_ACLK",
+          "rst_ps7_0_50M/slowest_sync_clk",
+          "axi_gpio_0/s_axi_aclk",
+          "ps7_0_axi_periph/M00_ACLK",
+          "ps7_0_axi_periph/ACLK",
+          "clk_dev_0/clk",
+          "pscommunicator_0/clk"
+        ]
+      },
+      "clk_dev_0_clk_out": {
+        "ports": [
+          "clk_dev_0/clk_out",
+          "PID_CONTROLLER_0/CLK"
+        ]
+      },
+      "pscommunicator_0_P": {
+        "ports": [
+          "pscommunicator_0/P",
           "PID_CONTROLLER_0/KP_IN"
         ]
       },
-      "kd_dout": {
+      "pscommunicator_0_D": {
         "ports": [
-          "kd/dout",
+          "pscommunicator_0/D",
           "PID_CONTROLLER_0/KD_IN"
+        ]
+      },
+      "pscommunicator_0_I": {
+        "ports": [
+          "pscommunicator_0/I",
+          "PID_CONTROLLER_0/KI_IN"
         ]
       }
     },

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan  8 11:42:01 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan  8 13:00:37 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.0" DEVICE="7z010" NAME="aes7" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -54,6 +54,7 @@
     <PORT DIR="I" NAME="btn0" SIGIS="rst" SIGNAME="External_Ports_btn0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="quaddecoder_0" PORT="reset"/>
+        <CONNECTION INSTANCE="PID_CONTROLLER_0" PORT="RESET"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -161,6 +162,10 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" NAME="reset_rtl" SIGIS="rst"/>
+    <PORT CLKFREQUENCY="125000000" DIR="I" NAME="sys_clock" SIGIS="clk"/>
+    <PORT DIR="I" NAME="reset_rtl_0" SIGIS="rst"/>
+    <PORT DIR="I" NAME="reset_rtl_0_1" SIGIS="rst"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -218,12 +223,16 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="clk_dev_0_clk_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+            <CONNECTION INSTANCE="clk_dev_0" PORT="clk_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="RESET" SIGIS="rst"/>
+        <PORT DIR="I" NAME="RESET" SIGIS="rst" SIGNAME="External_Ports_btn0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn0"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="12" NAME="AV" RIGHT="0" SIGIS="undef" SIGNAME="quaddecoder_0_av">
           <CONNECTIONS>
             <CONNECTION INSTANCE="quaddecoder_0" PORT="av"/>
@@ -234,15 +243,19 @@
             <CONNECTION INSTANCE="pscommunicator_0" PORT="SP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="KP_IN" RIGHT="0" SIGIS="undef" SIGNAME="kp_dout">
+        <PORT DIR="I" LEFT="7" NAME="KP_IN" RIGHT="0" SIGIS="undef" SIGNAME="pscommunicator_0_P">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="kp" PORT="dout"/>
+            <CONNECTION INSTANCE="pscommunicator_0" PORT="P"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="KI_IN" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="7" NAME="KD_IN" RIGHT="0" SIGIS="undef" SIGNAME="kd_dout">
+        <PORT DIR="I" LEFT="7" NAME="KI_IN" RIGHT="0" SIGIS="undef" SIGNAME="pscommunicator_0_I">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="kd" PORT="dout"/>
+            <CONNECTION INSTANCE="pscommunicator_0" PORT="I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="KD_IN" RIGHT="0" SIGIS="undef" SIGNAME="pscommunicator_0_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pscommunicator_0" PORT="D"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="10" NAME="I_LIMIT" RIGHT="0" SIGIS="undef"/>
@@ -435,7 +448,7 @@
         <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="1"/>
         <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="0"/>
         <PARAMETER NAME="C_INTERRUPT_PRESENT" VALUE="0"/>
-        <PARAMETER NAME="C_DOUT_DEFAULT" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_DOUT_DEFAULT" VALUE="0x028507D0"/>
         <PARAMETER NAME="C_TRI_DEFAULT" VALUE="0xFFFFFFFF"/>
         <PARAMETER NAME="C_IS_DUAL" VALUE="0"/>
         <PARAMETER NAME="C_DOUT_DEFAULT_2" VALUE="0x00000000"/>
@@ -610,35 +623,21 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="5" FULLNAME="/kd" HWVERSION="1.1" INSTANCE="kd" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+    <MODULE COREREVISION="1" FULLNAME="/clk_dev_0" HWVERSION="1.0" INSTANCE="clk_dev_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_dev" VLNV="xilinx.com:module_ref:clk_dev:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x0A"/>
-        <PARAMETER NAME="Component_Name" VALUE="aes7_xlconstant_1_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="aes7_clk_dev_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="7" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="kd_dout">
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="PID_CONTROLLER_0" PORT="KD_IN"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="5" FULLNAME="/kp" HWVERSION="1.1" INSTANCE="kp" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x1E"/>
-        <PARAMETER NAME="Component_Name" VALUE="aes7_xlconstant_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="7" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="kp_dout">
+        <PORT DIR="O" NAME="clk_out" SIGIS="undef" SIGNAME="clk_dev_0_clk_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="PID_CONTROLLER_0" PORT="KP_IN"/>
+            <CONNECTION INSTANCE="PID_CONTROLLER_0" PORT="CLK"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1787,13 +1786,13 @@
         <PORT CLKFREQUENCY="50000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
-            <CONNECTION INSTANCE="rst_ps7_0_50M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
+            <CONNECTION INSTANCE="rst_ps7_0_50M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
+            <CONNECTION INSTANCE="clk_dev_0" PORT="clk"/>
             <CONNECTION INSTANCE="pscommunicator_0" PORT="clk"/>
-            <CONNECTION INSTANCE="PID_CONTROLLER_0" PORT="CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="251952" DIR="O" NAME="FCLK_CLK1" SIGIS="clk"/>
@@ -2762,9 +2761,21 @@
             <CONNECTION INSTANCE="PID_CONTROLLER_0" PORT="SP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="P" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="7" NAME="I" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="7" NAME="D" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="P" RIGHT="0" SIGIS="undef" SIGNAME="pscommunicator_0_P">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PID_CONTROLLER_0" PORT="KP_IN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="I" RIGHT="0" SIGIS="undef" SIGNAME="pscommunicator_0_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PID_CONTROLLER_0" PORT="KI_IN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="D" RIGHT="0" SIGIS="undef" SIGNAME="pscommunicator_0_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PID_CONTROLLER_0" PORT="KD_IN"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="RST" SIGIS="rst"/>
         <PORT DIR="O" LEFT="12" NAME="PID" RIGHT="0" SIGIS="undef"/>
       </PORTS>

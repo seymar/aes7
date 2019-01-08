@@ -12,61 +12,53 @@ source aes7_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
-add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 295.391 ; gain = 41.031
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 296.215 ; gain = 41.578
 Command: synth_design -top aes7_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14396 
+INFO: Helper process launched with PID 10620 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 407.563 ; gain = 104.719
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 408.445 ; gain = 104.730
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'aes7_wrapper' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/hdl/aes7_wrapper.vhd:50]
-INFO: [Synth 8-3491] module 'aes7' declared at 'D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:579' bound to instance 'aes7_i' of component 'aes7' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/hdl/aes7_wrapper.vhd:87]
-INFO: [Synth 8-638] synthesizing module 'aes7' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:619]
-INFO: [Synth 8-3491] module 'aes7_PID_CONTROLLER_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_PID_CONTROLLER_0_0_stub.vhdl:5' bound to instance 'PID_CONTROLLER_0' of component 'aes7_PID_CONTROLLER_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:938]
-INFO: [Synth 8-638] synthesizing module 'aes7_PID_CONTROLLER_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_PID_CONTROLLER_0_0_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'aes7_axi_gpio_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'aes7_axi_gpio_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:950]
-INFO: [Synth 8-638] synthesizing module 'aes7_axi_gpio_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_axi_gpio_0_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'aes7_xlconstant_1_0' declared at 'd:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_xlconstant_1_0/synth/aes7_xlconstant_1_0.v:57' bound to instance 'kd' of component 'aes7_xlconstant_1_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:973]
-INFO: [Synth 8-6157] synthesizing module 'aes7_xlconstant_1_0' [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_xlconstant_1_0/synth/aes7_xlconstant_1_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant' [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
-	Parameter CONST_VAL bound to: 10 - type: integer 
-	Parameter CONST_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant' (1#1) [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'aes7_xlconstant_1_0' (2#1) [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_xlconstant_1_0/synth/aes7_xlconstant_1_0.v:57]
-INFO: [Synth 8-3491] module 'aes7_xlconstant_0_0' declared at 'd:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_xlconstant_0_0/synth/aes7_xlconstant_0_0.v:57' bound to instance 'kp' of component 'aes7_xlconstant_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:977]
-INFO: [Synth 8-6157] synthesizing module 'aes7_xlconstant_0_0' [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_xlconstant_0_0/synth/aes7_xlconstant_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant__parameterized0' [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
-	Parameter CONST_VAL bound to: 30 - type: integer 
-	Parameter CONST_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant__parameterized0' (2#1) [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'aes7_xlconstant_0_0' (3#1) [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_xlconstant_0_0/synth/aes7_xlconstant_0_0.v:57]
-INFO: [Synth 8-3491] module 'aes7_processing_system7_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'aes7_processing_system7_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:981]
-INFO: [Synth 8-638] synthesizing module 'aes7_processing_system7_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_processing_system7_0_0_stub.vhdl:77]
+INFO: [Synth 8-638] synthesizing module 'aes7_wrapper' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/hdl/aes7_wrapper.vhd:54]
+INFO: [Synth 8-3491] module 'aes7' declared at 'D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:579' bound to instance 'aes7_i' of component 'aes7' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/hdl/aes7_wrapper.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'aes7' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:623]
+INFO: [Synth 8-3491] module 'aes7_PID_CONTROLLER_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_PID_CONTROLLER_0_0_stub.vhdl:5' bound to instance 'PID_CONTROLLER_0' of component 'aes7_PID_CONTROLLER_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:945]
+INFO: [Synth 8-638] synthesizing module 'aes7_PID_CONTROLLER_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_PID_CONTROLLER_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'aes7_axi_gpio_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'aes7_axi_gpio_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:957]
+INFO: [Synth 8-638] synthesizing module 'aes7_axi_gpio_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_axi_gpio_0_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'aes7_clk_dev_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_clk_dev_0_0_stub.vhdl:5' bound to instance 'clk_dev_0' of component 'aes7_clk_dev_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:980]
+INFO: [Synth 8-638] synthesizing module 'aes7_clk_dev_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_clk_dev_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'aes7_processing_system7_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'aes7_processing_system7_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:985]
+INFO: [Synth 8-638] synthesizing module 'aes7_processing_system7_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_processing_system7_0_0_stub.vhdl:77]
 INFO: [Synth 8-638] synthesizing module 'aes7_ps7_0_axi_periph_1' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:392]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_SDC4W3' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:78]
-INFO: [Synth 8-3491] module 'aes7_auto_pc_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'aes7_auto_pc_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:259]
-INFO: [Synth 8-638] synthesizing module 'aes7_auto_pc_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_auto_pc_0_stub.vhdl:70]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_SDC4W3' (4#1) [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:78]
-INFO: [Synth 8-256] done synthesizing module 'aes7_ps7_0_axi_periph_1' (5#1) [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:392]
-INFO: [Synth 8-3491] module 'aes7_pscommunicator_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_pscommunicator_0_0_stub.vhdl:5' bound to instance 'pscommunicator_0' of component 'aes7_pscommunicator_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:1114]
-INFO: [Synth 8-638] synthesizing module 'aes7_pscommunicator_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_pscommunicator_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'aes7_pwm_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_pwm_0_0_stub.vhdl:5' bound to instance 'pwm_0' of component 'aes7_pwm_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:1125]
-INFO: [Synth 8-638] synthesizing module 'aes7_pwm_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_pwm_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'aes7_quaddecoder_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_quaddecoder_0_0_stub.vhdl:5' bound to instance 'quaddecoder_0' of component 'aes7_quaddecoder_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:1134]
-INFO: [Synth 8-638] synthesizing module 'aes7_quaddecoder_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_quaddecoder_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'aes7_rst_ps7_0_50M_2' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_rst_ps7_0_50M_2_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'aes7_rst_ps7_0_50M_2' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:1142]
-INFO: [Synth 8-638] synthesizing module 'aes7_rst_ps7_0_50M_2' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-16228-LAPTOP-TQUFNLMN/realtime/aes7_rst_ps7_0_50M_2_stub.vhdl:21]
-INFO: [Synth 8-256] done synthesizing module 'aes7' (6#1) [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:619]
-INFO: [Synth 8-256] done synthesizing module 'aes7_wrapper' (7#1) [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/hdl/aes7_wrapper.vhd:50]
+INFO: [Synth 8-3491] module 'aes7_auto_pc_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'aes7_auto_pc_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'aes7_auto_pc_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_SDC4W3' (1#1) [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'aes7_ps7_0_axi_periph_1' (2#1) [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:392]
+INFO: [Synth 8-3491] module 'aes7_pscommunicator_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_pscommunicator_0_0_stub.vhdl:5' bound to instance 'pscommunicator_0' of component 'aes7_pscommunicator_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:1118]
+INFO: [Synth 8-638] synthesizing module 'aes7_pscommunicator_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_pscommunicator_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'aes7_pwm_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_pwm_0_0_stub.vhdl:5' bound to instance 'pwm_0' of component 'aes7_pwm_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:1129]
+INFO: [Synth 8-638] synthesizing module 'aes7_pwm_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_pwm_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'aes7_quaddecoder_0_0' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_quaddecoder_0_0_stub.vhdl:5' bound to instance 'quaddecoder_0' of component 'aes7_quaddecoder_0_0' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:1138]
+INFO: [Synth 8-638] synthesizing module 'aes7_quaddecoder_0_0' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_quaddecoder_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'aes7_rst_ps7_0_50M_2' declared at 'D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_rst_ps7_0_50M_2_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'aes7_rst_ps7_0_50M_2' [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:1146]
+INFO: [Synth 8-638] synthesizing module 'aes7_rst_ps7_0_50M_2' [D:/school/AES/aes7-master/aes7.runs/synth_1/.Xil/Vivado-9712-LAPTOP-TQUFNLMN/realtime/aes7_rst_ps7_0_50M_2_stub.vhdl:21]
+INFO: [Synth 8-256] done synthesizing module 'aes7' (3#1) [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/synth/aes7.vhd:623]
+INFO: [Synth 8-256] done synthesizing module 'aes7_wrapper' (4#1) [D:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/hdl/aes7_wrapper.vhd:54]
 WARNING: [Synth 8-3331] design s00_couplers_imp_SDC4W3 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_SDC4W3 has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design aes7_ps7_0_axi_periph_1 has unconnected port ACLK
 WARNING: [Synth 8-3331] design aes7_ps7_0_axi_periph_1 has unconnected port ARESETN
+WARNING: [Synth 8-3331] design aes7 has unconnected port reset_rtl
+WARNING: [Synth 8-3331] design aes7 has unconnected port reset_rtl_0
+WARNING: [Synth 8-3331] design aes7 has unconnected port reset_rtl_0_1
+WARNING: [Synth 8-3331] design aes7 has unconnected port sys_clock
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 465.379 ; gain = 162.535
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 466.621 ; gain = 162.906
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -79,10 +71,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 465.379 ; gain = 162.535
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 466.621 ; gain = 162.906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 465.379 ; gain = 162.535
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 466.621 ; gain = 162.906
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -103,6 +95,8 @@ Parsing XDC File [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_
 Finished Parsing XDC File [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_pwm_0_0/aes7_pwm_0_0/aes7_pwm_0_0_in_context.xdc] for cell 'aes7_i/pwm_0'
 Parsing XDC File [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_PID_CONTROLLER_0_0/aes7_PID_CONTROLLER_0_0/aes7_PID_CONTROLLER_0_0_in_context.xdc] for cell 'aes7_i/PID_CONTROLLER_0'
 Finished Parsing XDC File [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_PID_CONTROLLER_0_0/aes7_PID_CONTROLLER_0_0/aes7_PID_CONTROLLER_0_0_in_context.xdc] for cell 'aes7_i/PID_CONTROLLER_0'
+Parsing XDC File [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_clk_dev_0_0/aes7_clk_dev_0_0/aes7_clk_dev_0_0_in_context.xdc] for cell 'aes7_i/clk_dev_0'
+Finished Parsing XDC File [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_clk_dev_0_0/aes7_clk_dev_0_0/aes7_clk_dev_0_0_in_context.xdc] for cell 'aes7_i/clk_dev_0'
 Parsing XDC File [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_auto_pc_0/aes7_auto_pc_0/aes7_auto_pc_0_in_context.xdc] for cell 'aes7_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [d:/school/AES/aes7-master/aes7.srcs/sources_1/bd/aes7/ip/aes7_auto_pc_0/aes7_auto_pc_0/aes7_auto_pc_0_in_context.xdc] for cell 'aes7_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [D:/school/AES/aes7-master/aes7.srcs/constrs_1/imports/digilent-xdc/Zybo-Z7-Master.xdc]
@@ -111,24 +105,24 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/aes7_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [D:/school/AES/aes7-master/aes7.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/school/AES/aes7-master/aes7.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 743.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 744.297 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 743.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 744.297 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 743.000 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 743.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 744.297 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 744.297 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 743.000 ; gain = 440.156
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 744.297 ; gain = 440.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 743.000 ; gain = 440.156
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 744.297 ; gain = 440.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -402,14 +396,13 @@ Applied set_property DONT_TOUCH = true for aes7_i/quaddecoder_0. (constraint fil
 Applied set_property DONT_TOUCH = true for aes7_i/pscommunicator_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for aes7_i/pwm_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for aes7_i/PID_CONTROLLER_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for aes7_i/kp. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for aes7_i/kd. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for aes7_i/clk_dev_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for aes7_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 743.000 ; gain = 440.156
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 744.297 ; gain = 440.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 743.000 ; gain = 440.156
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 744.297 ; gain = 440.582
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -448,8 +441,12 @@ WARNING: [Synth 8-3331] design aes7_ps7_0_axi_periph_1 has unconnected port ACLK
 WARNING: [Synth 8-3331] design aes7_ps7_0_axi_periph_1 has unconnected port ARESETN
 WARNING: [Synth 8-3331] design aes7_ps7_0_axi_periph_1 has unconnected port M00_ACLK
 WARNING: [Synth 8-3331] design aes7_ps7_0_axi_periph_1 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design aes7 has unconnected port reset_rtl
+WARNING: [Synth 8-3331] design aes7 has unconnected port reset_rtl_0
+WARNING: [Synth 8-3331] design aes7 has unconnected port reset_rtl_0_1
+WARNING: [Synth 8-3331] design aes7 has unconnected port sys_clock
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 743.000 ; gain = 440.156
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 744.297 ; gain = 440.582
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -464,13 +461,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'aes7_i/processing_system7
 INFO: [Synth 8-5578] Moved timing constraint from pin 'aes7_i/processing_system7_0/FCLK_CLK1' to pin 'aes7_i/processing_system7_0/bbstub_FCLK_CLK1/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 774.121 ; gain = 471.277
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 771.465 ; gain = 467.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 774.270 ; gain = 471.426
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 771.613 ; gain = 467.898
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -482,7 +479,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 783.848 ; gain = 481.004
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 781.207 ; gain = 477.492
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -506,7 +503,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 783.848 ; gain = 481.004
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 781.207 ; gain = 477.492
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -519,7 +516,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 783.848 ; gain = 481.004
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 781.207 ; gain = 477.492
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -531,25 +528,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 783.848 ; gain = 481.004
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 781.207 ; gain = 477.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 783.848 ; gain = 481.004
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 781.207 ; gain = 477.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 783.848 ; gain = 481.004
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 781.207 ; gain = 477.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 783.848 ; gain = 481.004
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 781.207 ; gain = 477.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -562,11 +559,12 @@ Report BlackBoxes:
 |1     |aes7_auto_pc_0              |         1|
 |2     |aes7_PID_CONTROLLER_0_0     |         1|
 |3     |aes7_axi_gpio_0_0           |         1|
-|4     |aes7_processing_system7_0_0 |         1|
-|5     |aes7_pscommunicator_0_0     |         1|
-|6     |aes7_pwm_0_0                |         1|
-|7     |aes7_quaddecoder_0_0        |         1|
-|8     |aes7_rst_ps7_0_50M_2        |         1|
+|4     |aes7_clk_dev_0_0            |         1|
+|5     |aes7_processing_system7_0_0 |         1|
+|6     |aes7_pscommunicator_0_0     |         1|
+|7     |aes7_pwm_0_0                |         1|
+|8     |aes7_quaddecoder_0_0        |         1|
+|9     |aes7_rst_ps7_0_50M_2        |         1|
 +------+----------------------------+----------+
 
 Report Cell Usage: 
@@ -574,48 +572,47 @@ Report Cell Usage:
 |      |Cell                               |Count |
 +------+-----------------------------------+------+
 |1     |aes7_PID_CONTROLLER_0_0_bbox_0     |     1|
-|2     |aes7_auto_pc_0_bbox_3              |     1|
+|2     |aes7_auto_pc_0_bbox_4              |     1|
 |3     |aes7_axi_gpio_0_0_bbox_1           |     1|
-|4     |aes7_processing_system7_0_0_bbox_2 |     1|
-|5     |aes7_pscommunicator_0_0_bbox_4     |     1|
-|6     |aes7_pwm_0_0_bbox_5                |     1|
-|7     |aes7_quaddecoder_0_0_bbox_6        |     1|
-|8     |aes7_rst_ps7_0_50M_2_bbox_7        |     1|
-|9     |IBUF                               |     4|
-|10    |OBUF                               |     9|
+|4     |aes7_clk_dev_0_0_bbox_2            |     1|
+|5     |aes7_processing_system7_0_0_bbox_3 |     1|
+|6     |aes7_pscommunicator_0_0_bbox_5     |     1|
+|7     |aes7_pwm_0_0_bbox_6                |     1|
+|8     |aes7_quaddecoder_0_0_bbox_7        |     1|
+|9     |aes7_rst_ps7_0_50M_2_bbox_8        |     1|
+|10    |IBUF                               |     4|
+|11    |OBUF                               |     9|
 +------+-----------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+------------------------+------+
 |      |Instance             |Module                  |Cells |
 +------+---------------------+------------------------+------+
-|1     |top                  |                        |   553|
-|2     |  aes7_i             |aes7                    |   540|
-|3     |    kd               |aes7_xlconstant_1_0     |     0|
-|4     |    kp               |aes7_xlconstant_0_0     |     0|
-|5     |    ps7_0_axi_periph |aes7_ps7_0_axi_periph_1 |   177|
-|6     |      s00_couplers   |s00_couplers_imp_SDC4W3 |   177|
+|1     |top                  |                        |   554|
+|2     |  aes7_i             |aes7                    |   541|
+|3     |    ps7_0_axi_periph |aes7_ps7_0_axi_periph_1 |   177|
+|4     |      s00_couplers   |s00_couplers_imp_SDC4W3 |   177|
 +------+---------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 783.848 ; gain = 481.004
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 781.207 ; gain = 477.492
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 783.848 ; gain = 203.383
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 783.848 ; gain = 481.004
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 781.207 ; gain = 199.816
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 781.207 ; gain = 477.492
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 798.145 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 789.895 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 798.145 ; gain = 502.754
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 798.145 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 790.059 ; gain = 493.844
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 790.059 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/school/AES/aes7-master/aes7.runs/synth_1/aes7_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file aes7_wrapper_utilization_synth.rpt -pb aes7_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan  8 11:43:48 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Jan  8 13:01:54 2019...
