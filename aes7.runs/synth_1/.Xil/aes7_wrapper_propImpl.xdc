@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/parallels/vivado/aes7/aes7.srcs/constrs_1/imports/digilent-xdc/Zybo-Z7-Master.xdc rfile:../../../aes7.srcs/constrs_1/imports/digilent-xdc/Zybo-Z7-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/school/AES/aes7-master/aes7.srcs/constrs_1/imports/digilent-xdc/Zybo-Z7-Master.xdc rfile:../../../aes7.srcs/constrs_1/imports/digilent-xdc/Zybo-Z7-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { pwmfreq }]; #IO_L12P_T1_MRCC_35 Sch=sysclk
 set_property src_info {type:XDC file:1 line:23 export:INPUT save:INPUT read:READ} [current_design]

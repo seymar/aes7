@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2019 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -56,7 +56,7 @@ USE ieee.numeric_std.ALL;
 ENTITY aes7_pwm_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
-    cv : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+    cv : IN STD_LOGIC_VECTOR(20 DOWNTO 0);
     en : OUT STD_LOGIC;
     dir : OUT STD_LOGIC;
     l : OUT STD_LOGIC;
@@ -70,7 +70,7 @@ ARCHITECTURE aes7_pwm_0_0_arch OF aes7_pwm_0_0 IS
   COMPONENT pwm IS
     PORT (
       clk : IN STD_LOGIC;
-      cv : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+      cv : IN STD_LOGIC_VECTOR(20 DOWNTO 0);
       en : OUT STD_LOGIC;
       dir : OUT STD_LOGIC;
       l : OUT STD_LOGIC;

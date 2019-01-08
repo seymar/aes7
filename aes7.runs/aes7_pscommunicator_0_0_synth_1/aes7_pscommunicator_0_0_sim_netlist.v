@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Fri Dec 21 22:59:00 2018
-// Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
+// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+// Date        : Mon Jan  7 23:21:36 2019
+// Host        : LAPTOP-TQUFNLMN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ aes7_pscommunicator_0_0_sim_netlist.v
 // Design      : aes7_pscommunicator_0_0
@@ -26,7 +26,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     PID);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET RST, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN aes7_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
   input [31:0]data;
-  output [10:0]SP;
+  output [12:0]SP;
   output [7:0]P;
   output [7:0]I;
   output [7:0]D;
@@ -37,7 +37,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire \<const1> ;
   wire [31:0]data;
 
-  assign D[7:0] = data[26:19];
+  assign D[7:0] = data[28:21];
   assign I[7] = \<const0> ;
   assign I[6] = \<const0> ;
   assign I[5] = \<const0> ;
@@ -46,7 +46,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   assign I[2] = \<const0> ;
   assign I[1] = \<const0> ;
   assign I[0] = \<const0> ;
-  assign P[7:0] = data[18:11];
+  assign P[7:0] = data[20:13];
   assign PID[12] = \<const0> ;
   assign PID[11] = \<const0> ;
   assign PID[10] = \<const1> ;
@@ -60,8 +60,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   assign PID[2] = \<const1> ;
   assign PID[1] = \<const1> ;
   assign PID[0] = \<const1> ;
-  assign RST = data[27];
-  assign SP[10:0] = data[10:0];
+  assign RST = data[29];
+  assign SP[12:0] = data[12:0];
   GND GND
        (.G(\<const0> ));
   VCC VCC

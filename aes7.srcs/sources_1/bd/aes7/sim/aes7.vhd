@@ -1,8 +1,8 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
---Date        : Sat Dec 22 18:16:05 2018
---Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
+--Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+--Date        : Tue Jan  8 11:42:00 2019
+--Host        : LAPTOP-TQUFNLMN running 64-bit major release  (build 9200)
 --Command     : generate_target aes7.bd
 --Design      : aes7
 --Purpose     : IP block netlist
@@ -611,7 +611,7 @@ entity aes7 is
     pwmfreq : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of aes7 : entity is "aes7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=aes7,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=9,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=1,da_bram_cntlr_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of aes7 : entity is "aes7,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=aes7,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=12,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=1,da_bram_cntlr_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of aes7 : entity is "aes7.hwdef";
 end aes7;
@@ -725,28 +725,6 @@ architecture STRUCTURE of aes7 is
     gpio_io_o : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component aes7_axi_gpio_0_0;
-  component aes7_pscommunicator_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    data : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SP : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    P : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    I : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    D : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    RST : out STD_LOGIC;
-    PID : out STD_LOGIC_VECTOR ( 12 downto 0 )
-  );
-  end component aes7_pscommunicator_0_0;
-  component aes7_pwm_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    cv : in STD_LOGIC_VECTOR ( 12 downto 0 );
-    en : out STD_LOGIC;
-    dir : out STD_LOGIC;
-    l : out STD_LOGIC;
-    r : out STD_LOGIC
-  );
-  end component aes7_pwm_0_0;
   component aes7_quaddecoder_0_0 is
   port (
     a : in STD_LOGIC;
@@ -756,11 +734,59 @@ architecture STRUCTURE of aes7 is
     leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component aes7_quaddecoder_0_0;
+  component aes7_pwm_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    cv : in STD_LOGIC_VECTOR ( 20 downto 0 );
+    en : out STD_LOGIC;
+    dir : out STD_LOGIC;
+    l : out STD_LOGIC;
+    r : out STD_LOGIC
+  );
+  end component aes7_pwm_0_0;
+  component aes7_xlconstant_0_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component aes7_xlconstant_0_0;
+  component aes7_xlconstant_1_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component aes7_xlconstant_1_0;
+  component aes7_pscommunicator_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    data : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SP : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    P : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    I : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    RST : out STD_LOGIC;
+    PID : out STD_LOGIC_VECTOR ( 12 downto 0 )
+  );
+  end component aes7_pscommunicator_0_0;
+  component aes7_PID_CONTROLLER_0_0 is
+  port (
+    CLK : in STD_LOGIC;
+    RESET : in STD_LOGIC;
+    AV : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    SP : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    KP_IN : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    KI_IN : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    KD_IN : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    I_LIMIT : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    PID_OUT : out STD_LOGIC_VECTOR ( 20 downto 0 )
+  );
+  end component aes7_PID_CONTROLLER_0_0;
   signal A_0_1 : STD_LOGIC;
   signal B_0_1 : STD_LOGIC;
+  signal PID_CONTROLLER_0_PID_OUT : STD_LOGIC_VECTOR ( 20 downto 0 );
   signal RESET_0_1 : STD_LOGIC;
   signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal clk_0_1 : STD_LOGIC;
+  signal kd_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal kp_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -839,10 +865,11 @@ architecture STRUCTURE of aes7 is
   signal ps7_0_axi_periph_M00_AXI_WREADY : STD_LOGIC;
   signal ps7_0_axi_periph_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M00_AXI_WVALID : STD_LOGIC;
+  signal pscommunicator_0_SP : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal pwm_0_L : STD_LOGIC;
   signal pwm_0_R : STD_LOGIC;
   signal pwm_0_en : STD_LOGIC;
-  signal quaddecoder_0_AV : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal quaddecoder_0_av : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal quaddecoder_0_leds : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal rst_ps7_0_50M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_processing_system7_0_FCLK_CLK1_UNCONNECTED : STD_LOGIC;
@@ -853,7 +880,6 @@ architecture STRUCTURE of aes7 is
   signal NLW_pscommunicator_0_I_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_pscommunicator_0_P_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_pscommunicator_0_PID_UNCONNECTED : STD_LOGIC_VECTOR ( 12 downto 0 );
-  signal NLW_pscommunicator_0_SP_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal NLW_pwm_0_dir_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_50M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_50M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -909,6 +935,18 @@ begin
   ledb <= pwm_0_en;
   ledg <= B_0_1;
   ledr <= A_0_1;
+PID_CONTROLLER_0: component aes7_PID_CONTROLLER_0_0
+     port map (
+      AV(12 downto 0) => quaddecoder_0_av(12 downto 0),
+      CLK => processing_system7_0_FCLK_CLK0,
+      I_LIMIT(10 downto 0) => B"00000000000",
+      KD_IN(7 downto 0) => kd_dout(7 downto 0),
+      KI_IN(7 downto 0) => B"00000000",
+      KP_IN(7 downto 0) => kp_dout(7 downto 0),
+      PID_OUT(20 downto 0) => PID_CONTROLLER_0_PID_OUT(20 downto 0),
+      RESET => '0',
+      SP(12 downto 0) => pscommunicator_0_SP(12 downto 0)
+    );
 axi_gpio_0: component aes7_axi_gpio_0_0
      port map (
       gpio_io_o(31 downto 0) => axi_gpio_0_gpio_io_o(31 downto 0),
@@ -931,6 +969,14 @@ axi_gpio_0: component aes7_axi_gpio_0_0
       s_axi_wready => ps7_0_axi_periph_M00_AXI_WREADY,
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_M00_AXI_WVALID
+    );
+kd: component aes7_xlconstant_1_0
+     port map (
+      dout(7 downto 0) => kd_dout(7 downto 0)
+    );
+kp: component aes7_xlconstant_0_0
+     port map (
+      dout(7 downto 0) => kp_dout(7 downto 0)
     );
 processing_system7_0: component aes7_processing_system7_0_0
      port map (
@@ -1072,14 +1118,14 @@ pscommunicator_0: component aes7_pscommunicator_0_0
       P(7 downto 0) => NLW_pscommunicator_0_P_UNCONNECTED(7 downto 0),
       PID(12 downto 0) => NLW_pscommunicator_0_PID_UNCONNECTED(12 downto 0),
       RST => NLW_pscommunicator_0_RST_UNCONNECTED,
-      SP(10 downto 0) => NLW_pscommunicator_0_SP_UNCONNECTED(10 downto 0),
+      SP(12 downto 0) => pscommunicator_0_SP(12 downto 0),
       clk => processing_system7_0_FCLK_CLK0,
       data(31 downto 0) => axi_gpio_0_gpio_io_o(31 downto 0)
     );
 pwm_0: component aes7_pwm_0_0
      port map (
       clk => clk_0_1,
-      cv(12 downto 0) => quaddecoder_0_AV(12 downto 0),
+      cv(20 downto 0) => PID_CONTROLLER_0_PID_OUT(20 downto 0),
       dir => NLW_pwm_0_dir_UNCONNECTED,
       en => pwm_0_en,
       l => pwm_0_L,
@@ -1088,7 +1134,7 @@ pwm_0: component aes7_pwm_0_0
 quaddecoder_0: component aes7_quaddecoder_0_0
      port map (
       a => A_0_1,
-      av(12 downto 0) => quaddecoder_0_AV(12 downto 0),
+      av(12 downto 0) => quaddecoder_0_av(12 downto 0),
       b => B_0_1,
       leds(3 downto 0) => quaddecoder_0_leds(3 downto 0),
       reset => RESET_0_1

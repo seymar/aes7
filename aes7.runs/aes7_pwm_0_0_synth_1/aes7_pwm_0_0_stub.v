@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Sat Dec 22 11:40:43 2018
-// Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
+// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+// Date        : Mon Jan  7 22:35:49 2019
+// Host        : LAPTOP-TQUFNLMN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ aes7_pwm_0_0_stub.v
 // Design      : aes7_pwm_0_0
@@ -15,9 +15,9 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "pwm,Vivado 2018.3" *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(clk, cv, en, dir, l, r)
-/* synthesis syn_black_box black_box_pad_pin="clk,cv[12:0],en,dir,l,r" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,cv[20:0],en,dir,l,r" */;
   input clk;
-  input [12:0]cv;
+  input [20:0]cv;
   output en;
   output dir;
   output l;

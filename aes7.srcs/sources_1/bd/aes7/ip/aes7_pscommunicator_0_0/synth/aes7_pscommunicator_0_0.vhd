@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2019 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -57,7 +57,7 @@ ENTITY aes7_pscommunicator_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
     data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SP : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
+    SP : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
     P : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     I : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     D : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -73,7 +73,7 @@ ARCHITECTURE aes7_pscommunicator_0_0_arch OF aes7_pscommunicator_0_0 IS
     PORT (
       clk : IN STD_LOGIC;
       data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      SP : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
+      SP : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
       P : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
       I : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
       D : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Dec 22 18:18:01 2018
-| Host         : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Jan  8 11:45:45 2019
+| Host         : LAPTOP-TQUFNLMN running 64-bit major release  (build 9200)
 | Command      : report_drc -file aes7_wrapper_drc_routed.rpt -pb aes7_wrapper_drc_routed.pb -rpx aes7_wrapper_drc_routed.rpx
 | Design       : aes7_wrapper
 | Device       : xc7z010clg400-1
@@ -24,12 +24,40 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 0
-+------+----------+-------------+------------+
-| Rule | Severity | Description | Violations |
-+------+----------+-------------+------------+
-+------+----------+-------------+------------+
+             Violations found: 5
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| DPIP-1 | Warning  | Input pipelining       | 2          |
+| DPOP-1 | Warning  | PREG Output pipelining | 1          |
+| DPOP-2 | Warning  | MREG Output pipelining | 2          |
++--------+----------+------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP aes7_i/PID_CONTROLLER_0/U0/term_d_reg input aes7_i/PID_CONTROLLER_0/U0/term_d_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP aes7_i/PID_CONTROLLER_0/U0/term_p input aes7_i/PID_CONTROLLER_0/U0/term_p/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP aes7_i/PID_CONTROLLER_0/U0/term_p output aes7_i/PID_CONTROLLER_0/U0/term_p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP aes7_i/PID_CONTROLLER_0/U0/term_d_reg multiplier stage aes7_i/PID_CONTROLLER_0/U0/term_d_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP aes7_i/PID_CONTROLLER_0/U0/term_p multiplier stage aes7_i/PID_CONTROLLER_0/U0/term_p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
 

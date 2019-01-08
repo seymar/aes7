@@ -23189,264 +23189,77 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-1
 
 !ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 05:18:59.746
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-1
+!SESSION 2019-01-08 11:37:02.803 -----------------------------------------------
+eclipse.buildId=2018.3
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:/school/AES/aes7-master/aes7.sdk
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:18.307
-!MESSAGE XSCT Command: [::hsi::utils::openhw /home/parallels/vivado/aes7/aes7.sdk/aes7_wrapper_hw_platform_0/system.hdf], Thread: main
+!ENTRY org.eclipse.core.resources 2 10035 2019-01-08 11:37:04.315
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:18.353
-!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/parallels/vivado/aes7/aes7.sdk/aes7_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+!ENTRY org.eclipse.ui 2 0 2019-01-08 11:37:04.890
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-01-08 11:37:04.890
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:18.354
-!MESSAGE XSCT Command: [hsi get_hw_files -of_object [openhw /home/parallels/vivado/aes7/aes7.sdk/aes7_wrapper_hw_platform_0/system.hdf ; hsi current_hw_design]], Thread: main
+!ENTRY org.eclipse.equinox.preferences 4 2 2019-01-08 11:37:05.392
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.equinox.preferences".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1262)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:766)
+	at org.eclipse.swt.widgets.Display.disposeExec(Display.java:1207)
+	at org.eclipse.jface.resource.ColorRegistry.hookDisplayDispose(ColorRegistry.java:256)
+	at org.eclipse.jface.resource.ColorRegistry.<init>(ColorRegistry.java:119)
+	at org.eclipse.jface.resource.ColorRegistry.<init>(ColorRegistry.java:102)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.init(WorkbenchThemeManager.java:135)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.getCurrentTheme(WorkbenchThemeManager.java:259)
+	at org.eclipse.cdt.ui.CUIPreferenceInitializer.setThemeBasedPreferences(CUIPreferenceInitializer.java:103)
+	at org.eclipse.cdt.ui.PreferenceConstants.initializeDefaultValues(PreferenceConstants.java:2326)
+	at org.eclipse.cdt.ui.CUIPreferenceInitializer.initializeDefaultPreferences(CUIPreferenceInitializer.java:46)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper$1.run(PreferenceServiceRegistryHelper.java:298)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.runInitializer(PreferenceServiceRegistryHelper.java:301)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.applyRuntimeDefaults(PreferenceServiceRegistryHelper.java:131)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyRuntimeDefaults(PreferencesService.java:370)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.applyRuntimeDefaults(DefaultPreferences.java:222)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.load(DefaultPreferences.java:276)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:370)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:623)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.AbstractScope.getNode(AbstractScope.java:38)
+	at org.eclipse.core.runtime.preferences.DefaultScope.getNode(DefaultScope.java:74)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getDefaultPreferences(ScopedPreferenceStore.java:237)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getPreferenceNodes(ScopedPreferenceStore.java:268)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.internalGet(ScopedPreferenceStore.java:418)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getInt(ScopedPreferenceStore.java:436)
+	at org.eclipse.cdt.internal.ui.preferences.BuildConsolePreferencePage.buildConsoleLines(BuildConsolePreferencePage.java:154)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.<init>(BuildConsolePartitioner.java:361)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.getProjectConsolePartioner(BuildConsoleManager.java:454)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.getProjectConsole(BuildConsoleManager.java:435)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.getConsole(BuildConsoleManager.java:420)
+	at org.eclipse.cdt.internal.ui.buildconsole.CBuildConsole.start(CBuildConsole.java:55)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:180)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:18.366
-!MESSAGE XSCT command with result: [hsi get_hw_files -of_object [openhw /home/parallels/vivado/aes7/aes7.sdk/aes7_wrapper_hw_platform_0/system.hdf ; hsi current_hw_design]], Result: [null, aes7.hwh aes7_bd.tcl ps7_init.c ps7_init.h ps7_init_gpl.c ps7_init_gpl.h ps7_init.html ps7_init.tcl aes7_wrapper.bit]. Thread: main
-
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:18.760
-!MESSAGE XSCT Command: [::hsi::utils::closehw /home/parallels/vivado/aes7/aes7.sdk/aes7_wrapper_hw_platform_0/system.hdf], Thread: main
-
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:19.141
-!MESSAGE XSCT command with result: [::hsi::utils::closehw /home/parallels/vivado/aes7/aes7.sdk/aes7_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
-
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:19.141
-!MESSAGE XSCT Command: [::hsi::utils::openhw /home/parallels/vivado/aes7/aes7.sdk/aes7_wrapper_hw_platform_0/system.hdf], Thread: main
-
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:20.795
-!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/parallels/vivado/aes7/aes7.sdk/aes7_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
-
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:20.798
-!MESSAGE XSCT Command: [::hsi::utils::openhw /tmp/system8243369794394141240.hdf], Thread: main
-
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:21.742
-!MESSAGE XSCT command with result: [::hsi::utils::openhw /tmp/system8243369794394141240.hdf], Result: [null, ]. Thread: main
-
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:21.754
-!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json /home/parallels/vivado/aes7/aes7.sdk/aes7_wrapper_hw_platform_0/system.hdf], Thread: main
-
-!ENTRY com.xilinx.sdk.utils 0 0 2018-12-21 06:02:21.797
-!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json /home/parallels/vivado/aes7/aes7.sdk/aes7_wrapper_hw_platform_0/system.hdf], Result: [null, {"ENCODER_0": {"hier_name": "ENCODER_0",
-"type": "ENCODER",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"PWM_MODULE_0": {"hier_name": "PWM_MODULE_0",
-"type": "PWM_MODULE",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"axi_gpio_0": {"hier_name": "axi_gpio_0",
-"type": "axi_gpio",
-"version": "2.0",
-"ip_type": "PERIPHERAL",
-},
-"processing_system7_0": {"hier_name": "processing_system7_0",
-"type": "processing_system7",
-"version": "5.5",
-"ip_type": "",
-},
-"ps7_0_axi_periph": {"hier_name": "ps7_0_axi_periph",
-"type": "axi_interconnect",
-"version": "2.1",
-"ip_type": "BUS",
-},
-"rst_ps7_0_50M": {"hier_name": "rst_ps7_0_50M",
-"type": "proc_sys_reset",
-"version": "5.0",
-"ip_type": "PERIPHERAL",
-},
-"setpointgenerator_0": {"hier_name": "setpointgenerator_0",
-"type": "setpointgenerator",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"ps7_clockc_0": {"hier_name": "ps7_clockc_0",
-"type": "ps7_clockc",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_uart_1": {"hier_name": "ps7_uart_1",
-"type": "ps7_uart",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_pl310_0": {"hier_name": "ps7_pl310_0",
-"type": "ps7_pl310",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_pmu_0": {"hier_name": "ps7_pmu_0",
-"type": "ps7_pmu",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_qspi_0": {"hier_name": "ps7_qspi_0",
-"type": "ps7_qspi",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_qspi_linear_0": {"hier_name": "ps7_qspi_linear_0",
-"type": "ps7_qspi_linear",
-"version": "1.00.a",
-"ip_type": "MEMORY_CNTLR",
-},
-"ps7_axi_interconnect_0": {"hier_name": "ps7_axi_interconnect_0",
-"type": "ps7_axi_interconnect",
-"version": "1.00.a",
-"ip_type": "BUS",
-},
-"ps7_cortexa9_0": {"hier_name": "ps7_cortexa9_0",
-"type": "ps7_cortexa9",
-"version": "5.2",
-"ip_type": "PROCESSOR",
-},
-"ps7_cortexa9_1": {"hier_name": "ps7_cortexa9_1",
-"type": "ps7_cortexa9",
-"version": "5.2",
-"ip_type": "PROCESSOR",
-},
-"ps7_ddr_0": {"hier_name": "ps7_ddr_0",
-"type": "ps7_ddr",
-"version": "1.00.a",
-"ip_type": "MEMORY_CNTLR",
-},
-"ps7_ethernet_0": {"hier_name": "ps7_ethernet_0",
-"type": "ps7_ethernet",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_usb_0": {"hier_name": "ps7_usb_0",
-"type": "ps7_usb",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_sd_0": {"hier_name": "ps7_sd_0",
-"type": "ps7_sdio",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_gpio_0": {"hier_name": "ps7_gpio_0",
-"type": "ps7_gpio",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_ddrc_0": {"hier_name": "ps7_ddrc_0",
-"type": "ps7_ddrc",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_dev_cfg_0": {"hier_name": "ps7_dev_cfg_0",
-"type": "ps7_dev_cfg",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_xadc_0": {"hier_name": "ps7_xadc_0",
-"type": "ps7_xadc",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_ocmc_0": {"hier_name": "ps7_ocmc_0",
-"type": "ps7_ocmc",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_coresight_comp_0": {"hier_name": "ps7_coresight_comp_0",
-"type": "ps7_coresight_comp",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_gpv_0": {"hier_name": "ps7_gpv_0",
-"type": "ps7_gpv",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_scuc_0": {"hier_name": "ps7_scuc_0",
-"type": "ps7_scuc",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_globaltimer_0": {"hier_name": "ps7_globaltimer_0",
-"type": "ps7_globaltimer",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_intc_dist_0": {"hier_name": "ps7_intc_dist_0",
-"type": "ps7_intc_dist",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_l2cachec_0": {"hier_name": "ps7_l2cachec_0",
-"type": "ps7_l2cachec",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_dma_s": {"hier_name": "ps7_dma_s",
-"type": "ps7_dma",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_iop_bus_config_0": {"hier_name": "ps7_iop_bus_config_0",
-"type": "ps7_iop_bus_config",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_ram_0": {"hier_name": "ps7_ram_0",
-"type": "ps7_ram",
-"version": "1.00.a",
-"ip_type": "MEMORY_CNTLR",
-},
-"ps7_ram_1": {"hier_name": "ps7_ram_1",
-"type": "ps7_ram",
-"version": "1.00.a",
-"ip_type": "MEMORY_CNTLR",
-},
-"ps7_scugic_0": {"hier_name": "ps7_scugic_0",
-"type": "ps7_scugic",
-"version": "1.00.a",
-"ip_type": "INTERRUPT_CNTLR",
-},
-"ps7_scutimer_0": {"hier_name": "ps7_scutimer_0",
-"type": "ps7_scutimer",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_scuwdt_0": {"hier_name": "ps7_scuwdt_0",
-"type": "ps7_scuwdt",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_slcr_0": {"hier_name": "ps7_slcr_0",
-"type": "ps7_slcr",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_dma_ns": {"hier_name": "ps7_dma_ns",
-"type": "ps7_dma",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_afi_0": {"hier_name": "ps7_afi_0",
-"type": "ps7_afi",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_afi_1": {"hier_name": "ps7_afi_1",
-"type": "ps7_afi",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_afi_2": {"hier_name": "ps7_afi_2",
-"type": "ps7_afi",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_afi_3": {"hier_name": "ps7_afi_3",
-"type": "ps7_afi",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-"ps7_m_axi_gp0": {"hier_name": "ps7_m_axi_gp0",
-"type": "ps7_m_axi_gp",
-"version": "1.00.a",
-"ip_type": "PERIPHERAL",
-},
-}]. Thread: main
+!ENTRY org.eclipse.ui 2 0 2019-01-08 11:37:05.458
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-01-08 11:37:05.458
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'

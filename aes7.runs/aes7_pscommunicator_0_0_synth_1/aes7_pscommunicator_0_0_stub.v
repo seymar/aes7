@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Fri Dec 21 22:58:59 2018
-// Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
+// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+// Date        : Mon Jan  7 23:21:36 2019
+// Host        : LAPTOP-TQUFNLMN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ aes7_pscommunicator_0_0_stub.v
 // Design      : aes7_pscommunicator_0_0
@@ -15,10 +15,10 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "pscommunicator,Vivado 2018.3" *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(clk, data, SP, P, I, D, RST, PID)
-/* synthesis syn_black_box black_box_pad_pin="clk,data[31:0],SP[10:0],P[7:0],I[7:0],D[7:0],RST,PID[12:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,data[31:0],SP[12:0],P[7:0],I[7:0],D[7:0],RST,PID[12:0]" */;
   input clk;
   input [31:0]data;
-  output [10:0]SP;
+  output [12:0]SP;
   output [7:0]P;
   output [7:0]I;
   output [7:0]D;

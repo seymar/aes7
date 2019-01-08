@@ -20,7 +20,7 @@ entity pwm is
     ( 
         -- INPUT PORTS
         clk : in STD_LOGIC;
-        cv : in signed(12 downto 0);
+        cv : in signed(20 downto 0);
            
         -- OUTPUT PORTS
         en : out STD_LOGIC := '0';

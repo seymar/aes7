@@ -2,12 +2,12 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="aes7" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1545498966"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1545498966"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1545498966"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1545498966"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1546944121"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1546944121"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1546944121"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1546944121"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="ip/aes7_processing_system7_0_0/aes7_processing_system7_0_0.xci" Type="IP">
+      <File Name="ip\aes7_processing_system7_0_0\aes7_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -15,17 +15,17 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="synth/aes7.vhd" Type="VHDL">
+      <File Name="synth\aes7.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
       </File>
-      <File Name="sim/aes7.vhd" Type="VHDL">
+      <File Name="sim\aes7.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/aes7_rst_ps7_0_50M_2/aes7_rst_ps7_0_50M_2.xci" Type="IP">
+      <File Name="ip\aes7_rst_ps7_0_50M_2\aes7_rst_ps7_0_50M_2.xci" Type="IP">
         <Instance HierarchyPath="rst_ps7_0_50M"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -33,7 +33,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/aes7_axi_gpio_0_0/aes7_axi_gpio_0_0.xci" Type="IP">
+      <File Name="ip\aes7_axi_gpio_0_0\aes7_axi_gpio_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_gpio_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -41,7 +41,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/aes7_ps7_0_axi_periph_1/aes7_ps7_0_axi_periph_1.xci" Type="IP">
+      <File Name="ip\aes7_ps7_0_axi_periph_1\aes7_ps7_0_axi_periph_1.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -49,7 +49,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/aes7_quaddecoder_0_0/aes7_quaddecoder_0_0.xci" Type="IP">
+      <File Name="ip\aes7_quaddecoder_0_0\aes7_quaddecoder_0_0.xci" Type="IP">
         <Instance HierarchyPath="quaddecoder_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -57,7 +57,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/aes7_pscommunicator_0_0/aes7_pscommunicator_0_0.xci" Type="IP">
+      <File Name="ip\aes7_pscommunicator_0_0\aes7_pscommunicator_0_0.xci" Type="IP">
         <Instance HierarchyPath="pscommunicator_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -65,7 +65,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/aes7_pwm_0_0/aes7_pwm_0_0.xci" Type="IP">
+      <File Name="ip\aes7_pwm_0_0\aes7_pwm_0_0.xci" Type="IP">
         <Instance HierarchyPath="pwm_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -73,7 +73,31 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/aes7_auto_pc_0/aes7_auto_pc_0.xci" Type="IP">
+      <File Name="ip\aes7_PID_CONTROLLER_0_0\aes7_PID_CONTROLLER_0_0.xci" Type="IP">
+        <Instance HierarchyPath="PID_CONTROLLER_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\aes7_xlconstant_0_0\aes7_xlconstant_0_0.xci" Type="IP">
+        <Instance HierarchyPath="kp"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\aes7_xlconstant_1_0\aes7_xlconstant_1_0.xci" Type="IP">
+        <Instance HierarchyPath="kd"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\aes7_auto_pc_0\aes7_auto_pc_0.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph/s00_couplers/auto_pc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -88,22 +112,22 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="OUT_OF_CONTEXT"/>
       </File>
-      <File Name="hw_handoff/aes7.hwh" Type="HwHandoff">
+      <File Name="hw_handoff\aes7.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="hw_handoff/aes7_bd.tcl">
+      <File Name="hw_handoff\aes7_bd.tcl">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="synth/aes7.hwdef">
+      <File Name="synth\aes7.hwdef">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="sim/aes7.protoinst">
+      <File Name="sim\aes7.protoinst">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1545498972">
-  <File Type="VDS-TIMING-PB" Name="aes7_wrapper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="aes7_wrapper_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="aes7_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="aes7_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="aes7_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="aes7_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="aes7_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="aes7_wrapper_reports.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1546944128">
   <File Type="PA-TCL" Name="aes7_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="aes7_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="aes7_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="aes7_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="aes7_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="aes7_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="aes7_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="aes7_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="aes7_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/vivado/quaddecoder.vhd">
@@ -31,6 +31,12 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../pwm.vhd"/>
         <Attr Name="ImportTime" Val="1545398559"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PID.vhd">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -73,7 +79,7 @@
     <File Path="$PSRCDIR/utils_1/imports/impl_1/aes7_wrapper_routed.dcp">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PRUNDIR/impl_1/aes7_wrapper_routed.dcp"/>
-        <Attr Name="ImportTime" Val="1545497572"/>
+        <Attr Name="ImportTime" Val="1546943490"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedInSteps" Val="impl_1"/>
@@ -88,8 +94,9 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="aes7_pscommunicator_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="aes7_quaddecoder_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="aes7_pwm_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="aes7_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aes7_quaddecoder_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aes7_PID_CONTROLLER_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aes7_pscommunicator_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aes7_pwm_0_0"/>
 </GenRun>

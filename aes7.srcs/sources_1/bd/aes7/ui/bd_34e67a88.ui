@@ -1,44 +1,51 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 TLS
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port A -pg 1 -y 460 -defaultsOSRD
-preplace port DDR -pg 1 -y 60 -defaultsOSRD
-preplace port B -pg 1 -y 480 -defaultsOSRD
-preplace port pwmfreq -pg 1 -y 160 -defaultsOSRD
-preplace port ledb -pg 1 -y 140 -defaultsOSRD
-preplace port R -pg 1 -y 200 -defaultsOSRD
-preplace port ledr -pg 1 -y 280 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 80 -defaultsOSRD
-preplace port ledg -pg 1 -y 260 -defaultsOSRD
-preplace port L -pg 1 -y 180 -defaultsOSRD
-preplace port btn0 -pg 1 -y 380 -defaultsOSRD
-preplace portBus led -pg 1 -y 370 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -y 350 -defaultsOSRD
-preplace inst pscommunicator_0 -pg 1 -lvl 4 -y 350 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 3 -y 220 -defaultsOSRD
-preplace inst pwm_0 -pg 1 -lvl 5 -y 170 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 200 -defaultsOSRD
-preplace inst quaddecoder_0 -pg 1 -lvl 5 -y 360 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y 120 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 5 NJ 60 NJ 60 NJ 60 NJ 60 NJ
-preplace netloc pwm_0_R 1 5 1 NJ
-preplace netloc RESET_0_1 1 0 5 20J 470 NJ 470 NJ 470 NJ 470 1380J
-preplace netloc clk_0_1 1 0 5 20J 240 440J 40 NJ 40 NJ 40 1360J
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 470
-preplace netloc B_0_1 1 0 6 NJ 480 NJ 480 NJ 480 NJ 480 1370 260 NJ
-preplace netloc A_0_1 1 0 6 NJ 460 NJ 460 NJ 460 NJ 460 1360 280 NJ
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 450 430
-preplace netloc axi_gpio_0_gpio_io_o 1 3 1 1090
-preplace netloc processing_system7_0_FIXED_IO 1 1 5 450J 70 NJ 70 NJ 70 NJ 70 1620J
-preplace netloc pwm_0_en 1 5 1 NJ
-preplace netloc pwm_0_L 1 5 1 NJ
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 480 50 790J
-preplace netloc quaddecoder_0_AV 1 4 2 1380 80 1610
-preplace netloc quaddecoder_0_leds 1 5 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 30 250 460 80 780 140 1100J
+preplace port A -pg 1 -y 590 -defaultsOSRD
+preplace port DDR -pg 1 -y 410 -defaultsOSRD
+preplace port B -pg 1 -y 610 -defaultsOSRD
+preplace port pwmfreq -pg 1 -y 350 -defaultsOSRD
+preplace port ledb -pg 1 -y 150 -defaultsOSRD
+preplace port R -pg 1 -y 210 -defaultsOSRD
+preplace port ledr -pg 1 -y 510 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 430 -defaultsOSRD
+preplace port ledg -pg 1 -y 530 -defaultsOSRD
+preplace port L -pg 1 -y 190 -defaultsOSRD
+preplace port btn0 -pg 1 -y 630 -defaultsOSRD
+preplace portBus led -pg 1 -y 620 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -y 250 -defaultsOSRD
+preplace inst pscommunicator_0 -pg 1 -lvl 4 -y 230 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -y 230 -defaultsOSRD
+preplace inst kp -pg 1 -lvl 2 -y -90 -defaultsOSRD
+preplace inst PID_CONTROLLER_0 -pg 1 -lvl 5 -y 190 -defaultsOSRD
+preplace inst kd -pg 1 -lvl 3 -y -90 -defaultsOSRD
+preplace inst pwm_0 -pg 1 -lvl 6 -y 180 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 210 -defaultsOSRD
+preplace inst quaddecoder_0 -pg 1 -lvl 6 -y 610 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 470 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 6 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ
+preplace netloc quaddecoder_0_av 1 4 3 1360 60 NJ 60 1920
+preplace netloc pwm_0_R 1 6 1 NJ
+preplace netloc kd_dout 1 3 2 N -90 1340J
+preplace netloc RESET_0_1 1 0 6 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ
+preplace netloc clk_0_1 1 0 6 10J 50 NJ 50 NJ 50 NJ 50 NJ 50 1690J
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 440
+preplace netloc B_0_1 1 0 7 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 1700 530 NJ
+preplace netloc A_0_1 1 0 7 NJ 590 NJ 590 NJ 590 NJ 590 NJ 590 1690 510 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 350 430
+preplace netloc PID_CONTROLLER_0_PID_OUT 1 5 1 N
+preplace netloc pscommunicator_0_SP 1 4 1 N
+preplace netloc kp_dout 1 2 3 760J -150 NJ -150 1350
+preplace netloc axi_gpio_0_gpio_io_o 1 3 1 N
+preplace netloc processing_system7_0_FIXED_IO 1 1 6 NJ 430 NJ 430 NJ 430 NJ 430 NJ 430 NJ
+preplace netloc pwm_0_en 1 6 1 NJ
+preplace netloc pwm_0_L 1 6 1 NJ
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 460 330 770J
+preplace netloc quaddecoder_0_leds 1 6 1 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 20 600 450 340 760 310 1050 120 N
 preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N
-levelinfo -pg 1 0 230 630 940 1230 1500 1640 -top 0 -bot 500
+levelinfo -pg 1 -10 230 610 910 1220 1550 1820 1950 -top -270 -bot 690
 "
 }
 {

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# pscommunicator, pwm, quaddecoder
+# PID_CONTROLLER, pscommunicator, pwm, quaddecoder
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -181,6 +181,17 @@ proc create_root_design { parentCell } {
   set ledr [ create_bd_port -dir O -type data ledr ]
   set pwmfreq [ create_bd_port -dir I -type clk pwmfreq ]
 
+  # Create instance: PID_CONTROLLER_0, and set properties
+  set block_name PID_CONTROLLER
+  set block_cell_name PID_CONTROLLER_0
+  if { [catch {set PID_CONTROLLER_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $PID_CONTROLLER_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
   set_property -dict [ list \
@@ -195,6 +206,20 @@ proc create_root_design { parentCell } {
    CONFIG.GPIO_BOARD_INTERFACE {Custom} \
    CONFIG.USE_BOARD_FLOW {true} \
  ] $axi_gpio_0
+
+  # Create instance: kd, and set properties
+  set kd [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 kd ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {10} \
+   CONFIG.CONST_WIDTH {8} \
+ ] $kd
+
+  # Create instance: kp, and set properties
+  set kp [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 kp ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {30} \
+   CONFIG.CONST_WIDTH {8} \
+ ] $kp
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -692,10 +717,6 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_HIGH} \
- ] [get_bd_pins /pscommunicator_0/RST]
-
   # Create instance: pwm_0, and set properties
   set block_name pwm
   set block_cell_name pwm_0
@@ -730,15 +751,19 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net A_0_1 [get_bd_ports A] [get_bd_ports ledr] [get_bd_pins quaddecoder_0/a]
   connect_bd_net -net B_0_1 [get_bd_ports B] [get_bd_ports ledg] [get_bd_pins quaddecoder_0/b]
+  connect_bd_net -net PID_CONTROLLER_0_PID_OUT [get_bd_pins PID_CONTROLLER_0/PID_OUT] [get_bd_pins pwm_0/cv]
   connect_bd_net -net RESET_0_1 [get_bd_ports btn0] [get_bd_pins quaddecoder_0/reset]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins pscommunicator_0/data]
   connect_bd_net -net clk_0_1 [get_bd_ports pwmfreq] [get_bd_pins pwm_0/clk]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins pscommunicator_0/clk] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net kd_dout [get_bd_pins PID_CONTROLLER_0/KD_IN] [get_bd_pins kd/dout]
+  connect_bd_net -net kp_dout [get_bd_pins PID_CONTROLLER_0/KP_IN] [get_bd_pins kp/dout]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins PID_CONTROLLER_0/CLK] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins pscommunicator_0/clk] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
+  connect_bd_net -net pscommunicator_0_SP [get_bd_pins PID_CONTROLLER_0/SP] [get_bd_pins pscommunicator_0/SP]
   connect_bd_net -net pwm_0_L [get_bd_ports L] [get_bd_pins pwm_0/l]
   connect_bd_net -net pwm_0_R [get_bd_ports R] [get_bd_pins pwm_0/r]
   connect_bd_net -net pwm_0_en [get_bd_ports ledb] [get_bd_pins pwm_0/en]
-  connect_bd_net -net quaddecoder_0_AV [get_bd_pins pwm_0/cv] [get_bd_pins quaddecoder_0/av]
+  connect_bd_net -net quaddecoder_0_av [get_bd_pins PID_CONTROLLER_0/AV] [get_bd_pins quaddecoder_0/av]
   connect_bd_net -net quaddecoder_0_leds [get_bd_ports led] [get_bd_pins quaddecoder_0/leds]
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
 

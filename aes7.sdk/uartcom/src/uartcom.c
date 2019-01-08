@@ -22,7 +22,7 @@ int main(void){
 
 	// Main loop
 	while(1) {
-		uint32_t data = 0xFFFFFFFF;
+		uint32_t data = 1500;
 
 		XGpio_DiscreteWrite(&Gpio, SEND_CHANNEL, data);
 	}

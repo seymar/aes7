@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Dec 22 18:17:46 2018
-| Host         : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.1 LTS
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Jan  8 11:45:01 2019
+| Host         : LAPTOP-TQUFNLMN running 64-bit major release  (build 9200)
 | Command      : report_incremental_reuse -file aes7_wrapper_incremental_reuse_pre_placed.rpt
 | Design       : aes7_wrapper
 | Device       : xc7z010
@@ -24,20 +24,19 @@ Table of Contents
 +-------+----------------------+--------------------+--------------------+-------+
 |  Type | Matched % (of Total) | Reuse % (of Total) | Fixed % (of Total) | Total |
 +-------+----------------------+--------------------+--------------------+-------+
-| Cells |                96.33 |              98.91 |               8.64 |  1666 |
-| Nets  |                99.57 |              97.07 |               0.00 |  1335 |
-| Pins  |                    - |              96.18 |                  - |  5529 |
+| Cells |                97.79 |              97.07 |               7.93 |  1815 |
+| Nets  |                98.44 |              95.00 |               0.00 |  1461 |
+| Pins  |                    - |              95.52 |                  - |  6036 |
 | Ports |               100.00 |             100.00 |             100.00 |   143 |
 +-------+----------------------+--------------------+--------------------+-------+
-* Reused % can exceed matched % when unmatched cells take their placement directly from other cells that have been matched
 
 
 2. Reference Checkpoint Information
 -----------------------------------
 
-+----------------+--------------------------------------------------------------------------------------+
-| DCP Location:  | /home/parallels/vivado/aes7/aes7.srcs/utils_1/imports/impl_1/aes7_wrapper_routed.dcp |
-+----------------+--------------------------------------------------------------------------------------+
++----------------+------------------------------------------------------------------------------------+
+| DCP Location:  | D:/school/AES/aes7-master/aes7.srcs/utils_1/imports/impl_1/aes7_wrapper_routed.dcp |
++----------------+------------------------------------------------------------------------------------+
 
 
 +--------------------------------+----------------------------+
@@ -45,8 +44,8 @@ Table of Contents
 +--------------------------------+----------------------------+
 | Vivado Version                 |                    v2018.3 |
 | DCP State                      |                 POST_ROUTE |
-| Recorded WNS                   |                     13.354 |
-| Recorded WHS                   |                      0.031 |
+| Recorded WNS                   |                      3.015 |
+| Recorded WHS                   |                      0.045 |
 | Reference Speed File Version   | PRODUCTION 1.11 2014-09-11 |
 | Incremental Speed File Version | PRODUCTION 1.11 2014-09-11 |
 +--------------------------------+----------------------------+
@@ -73,12 +72,11 @@ Table of Contents
 +------------------------------------------------------+------+
 |                         Type                         |   %  |
 +------------------------------------------------------+------+
-| Non-Reused Cells                                     | 1.08 |
-|   New                                                | 0.54 |
-|   Discarded illegal placement due to netlist changes | 0.48 |
-|   Discarded to improve timing                        | 0.06 |
-| Partially reused nets                                | 0.22 |
-| Non-Reused nets                                      | 2.69 |
+| Non-Reused Cells                                     | 2.92 |
+|   New                                                | 2.20 |
+|   Discarded illegal placement due to netlist changes | 0.71 |
+| Partially reused nets                                | 0.06 |
+| Non-Reused nets                                      | 4.92 |
 | Non-Reused Ports                                     | 0.00 |
 +------------------------------------------------------+------+
 
